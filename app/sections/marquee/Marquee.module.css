@@ -1,0 +1,17 @@
+.icon{
+    width: 40px;
+    height: 40px;
+    border-radius: 8px;
+    background-color: var(--light);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.3s;
+    border: 1px solid var(--main);
+    cursor: pointer;
+}
+.icon:hover{
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* subtle shadow */
+  transform: translateY(-2px) scale(1.05); /* lift and slight scale */
+  color: #fff;
+}

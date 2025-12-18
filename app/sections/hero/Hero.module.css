@@ -1,0 +1,37 @@
+/* overlay.css */
+
+.overlay {
+  position: fixed;        /* cover entire viewport */
+  inset: 0;
+  z-index: -2;            /* behind content */
+  pointer-events: none;   /* allow clicks through */
+  background: rgba(0, 0, 0, 0); /* transparent base */
+  overflow: hidden;
+}
+
+/* Horizontal scanning line */
+.overlay::before {
+  content: '';
+  position: absolute;
+  top: 0;                 /* fixed vertical position */
+  right: -50px;            /* start left outside viewport */
+  width: 50px;            /* thickness of line */
+  height: 100%;           /* full height of screen */
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.2) 50%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  animation: scanLeftRight 4s linear infinite alternate;
+}
+
+/* Keyframes: left → right and reverse */
+@keyframes scanLeftRight {
+  0% {
+    right: -50px;    /* start outside left */
+  }
+  100% {
+    right: 100vw;    /* move across viewport to the right */
+  }
+}
