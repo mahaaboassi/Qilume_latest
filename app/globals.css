@@ -2,6 +2,16 @@
 @import "tw-animate-css";
 
 @custom-variant dark (&:is(.dark *));
+@theme {
+  --breakpoint-xxs: 400px;
+  --breakpoint-xs: 480px;
+  --breakpoint-sm: 640px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 1024px;
+  --breakpoint-xl: 1280px;
+  --breakpoint-2xl: 1536px;
+  
+}
 
 :root {
   --light : #ffffff;
@@ -60,7 +70,20 @@ body {
 .layout-doc{
   padding: 0 4rem !important;
 }
-
+h2{
+  font-size: 2.5rem;
+  line-height: 3.2rem;
+}
+button{
+  background: var(--main);
+  color: var(--light);
+  border-radius: 10px;
+  padding: 10px 20px;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  cursor: pointer;
+}
 @theme inline {
   --radius-sm : calc(var(--radius) - 4px);
   --radius-md : calc(var(--radius) - 2px);
@@ -142,5 +165,14 @@ body {
   }
   body {
     @apply bg-background text-foreground;
+  }
+}
+@media (max-width:1024px) {
+  .layout-doc{
+    padding: 0 2rem !important;
+  }
+  h2{
+    font-size: 2rem;
+    line-height: 2.5rem;
   }
 }

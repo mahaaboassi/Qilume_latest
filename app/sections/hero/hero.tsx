@@ -17,7 +17,7 @@ const Hero = ()=>{
                 </h1>
                 <p onClick={()=>{alert("hh")}}>⁠Safe and Effective Skin Treatments guided by Global Aesthetic Experts</p>
                 <div>
-                    <button className="bg-[var(--main)] text-[var(--light)] flex gap-2 p-3 rounded-xl items-center h-[60px]">
+                    <button className="h-[60px]">
                         <div>BOOK APPOINTEMENT</div>
                         <div>
                             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 26 26" fill="none">

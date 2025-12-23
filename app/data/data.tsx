@@ -30,46 +30,46 @@ export const social = [{
 export const services = [{
     name: "Botox",
     desc: "Smooth fine lines and reduce dynamic wrinkles with precision-placed Botox for a refreshed, youthful look all without altering your natural expression.",
-    img: "",
+    img: "/images/service_1.png",
     link: ""
 },{
     name: "Fillers",
     desc: "Restore volume, enhance facial contours, and rejuvenate skin with hyaluronic acid-based fillers tailored to your aesthetic goals.",
-    img: "",
+    img: "/images/service_2.png",
     link: ""
 },{
     name: "Thread Lifts",
     desc: "Experience a subtle lift without surgery. Our collagen-stimulating threads provide natural contouring and firmness with minimal downtime.",
-    img: "",
+    img: "/images/service_3.png",
     link: ""
 },{
     name: "HIFU",
     desc: "Tighten and lift skin non-invasively using high-intensity focused ultrasound. Ideal for jawline, neck, and cheek sculpting.",
-    img: "",
+    img: "/images/service_4.png",
     link: ""
 },{
     name: "Laser Skin Toning",
     desc: "Achieve an even, radiant complexion while reducing pigmentation and dullness with gentle yet powerful laser toning.",
-    img: "",
+    img: "/images/service_5.png",
     link: ""
 },{
     name: "Cryo T-Shock",
     desc: "Target stubborn fat pockets with non-surgical fat freezing that contours your body while preserving skin health.",
-    img: "",
+    img: "/images/service_6.png",
     link: ""
 },{
     name: "Laser Hair Reduction",
     desc: "Advanced laser systems for painless, long-lasting hair reduction—safe for all skin types and body areas.",
-    img: "",
+    img: "/images/service_7.png",
     link: ""
 },{
     name: "Dermaplaning",
     desc: "Reveal smoother, brighter skin by gently removing dead skin cells and peach fuzz—perfect before makeup or events.",
-    img: "",
+    img: "/images/service_8.png",
     link: ""
 },{
     name: "MediFacials",
     desc: "Customized, doctor-backed facials targeting concerns like acne, sensitivity, or aging—combining luxury and medical-grade care.",
-    img: "",
+    img: "/images/service_9.png",
     link: ""
 }]
