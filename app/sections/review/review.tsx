@@ -50,18 +50,18 @@ const Review = ()=>{
 
     return(<div className="landing-doc">
         <Heading title="Customer Reviews" />
-        <div className="overflow-hidden px-20 md:px-26 lg:px-40">
+        <div className="overflow-hidden px-15 xs:px-20 md:px-26 lg:px-40">
             <Carousel
                 opts={{
                     align: "start",
                 }}
-                className="w-full p-5 md:p-10 "
+                className="w-full  md:p-10 "
                 >
                 <CarouselContent>
                     {data.map((item, index) => (
                     <CarouselItem key={index} className="">
                         <div className="p-1 space-y-2 flex gap-2 md:gap-5 flex-col items-center">
-                            <Image className={`object-cover shadow-lg !h-[120px] !w-[120px] rounded-full`} width={100} height={100} src={item.img} alt={item.name } />
+                            <Image className={`object-cover shadow-lg !h-[80px] !w-[80px] md:!h-[120px] md:!w-[120px] rounded-full`} width={100} height={100} src={item.img} alt={item.name } />
                             <div className="flex gap-2">
                                 {[...Array(5)].map((_,idx)=><div key={`Star_${idx}`}>
                                     <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 32 32" fill="none">
@@ -76,15 +76,15 @@ const Review = ()=>{
                                     </svg>
                                 </div>)}
                             </div>
-                            <p className="text-sm font-medium text-center md:w-3/4">{item.desc}</p>
-                            <hr className="bg-[var(--main)] opacity-30 h-[2px] w-1/4" />
-                            <h3 className="text-xl font-semibold">{item.name }</h3>
+                            <p className="text-xs md:text-sm font-medium text-center md:w-3/4">{item.desc}</p>
+                            <hr className="bg-[var(--main)] opacity-30 h-[2px] w-1/2 md:w-1/4" />
+                            <h3 className="text-sm md:text-xl font-semibold">{item.name }</h3>
                         </div>
                     </CarouselItem>
                     ))}
                 </CarouselContent>
-                <CarouselPrevious className="w-[50px] h-[50px] p-0 !rounded-full"/>
-                <CarouselNext className="w-[50px] h-[50px] p-0 !rounded-full" />
+                <CarouselPrevious className="w-[30px] h-[30px] md:w-[50px] md:h-[50px] !p-0 !rounded-full"/>
+                <CarouselNext className="w-[30px] h-[30px] md:w-[50px] md:h-[50px] !p-0 !rounded-full" />
             </Carousel>
         </div>
     </div>)

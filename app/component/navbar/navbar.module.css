@@ -1,0 +1,25 @@
+.nav{
+
+}
+.logo{
+
+}
+@media (max-width:768px) {
+    .logo{
+        width: 120px !important;
+    }
+    .nav button svg{
+        height: 17px;
+        width: auto;
+    }
+    
+}
+@media (max-width: 480px) {
+    .nav button svg{
+        height: 15px;
+        width: auto;
+    }
+    .logo{
+        width: 100px !important;
+    }
+}

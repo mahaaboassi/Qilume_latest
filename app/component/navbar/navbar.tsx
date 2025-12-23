@@ -1,3 +1,4 @@
+import Style from "./navbar.module.css"
 type Item = {
     name: string,
     link: string
@@ -19,9 +20,9 @@ const Navbar = ()=>{
         name: "Contact",
         link: "/contact",
     }]
-    return(<nav className="fixed left-0 right-0 top-0 bg-[var(--light)] flex items-center justify-between z-100 px-10 py-3 shadow-xl">
+    return(<nav className={`fixed left-0 right-0 top-0 bg-[var(--light)] flex items-center justify-between z-100 layout-doc !py-3 shadow-xl ${Style.nav}`}>
         <div>
-            <svg xmlns="http://www.w3.org/2000/svg" width="202" height="57" viewBox="0 0 232 87" fill="none">
+            <svg className={`${Style.logo}`} xmlns="http://www.w3.org/2000/svg" width="202" height="57" viewBox="0 0 232 87" fill="none">
                 <g clipPath="url(#clip0_1839_1417)">
                 <path d="M110.768 0.751861C105.381 3.42098 107.225 11.5254 113.243 11.5254C119.358 11.5254 121.008 2.93568 115.378 0.557742C113.243 -0.315787 112.806 -0.315787 110.768 0.751861Z" fill="black"/>
                 <path d="M88.9313 12.7884C88.5431 12.934 87.8636 13.1767 87.4754 13.3222C87.0386 13.4678 87.7181 13.8561 89.0769 14.2928C91.0666 14.8752 92.571 16.0884 98.3945 21.7664C106.45 29.5796 107.858 30.4046 113.147 30.4531C118.437 30.4531 120.039 29.5311 127.512 21.9605C133.578 15.7972 136.102 14.0017 138.528 13.9046C139.499 13.8561 139.402 13.759 137.995 13.1281C136.83 12.6428 135.617 12.4972 134.112 12.7399C129.696 13.4193 126.59 15.7487 120.815 22.5914C116.836 27.3958 113.972 29.6281 112.517 29.1914C110.818 28.6575 109.071 27.0561 104.946 22.2031C100.336 16.8164 99.171 15.7487 96.0651 14.1472C93.7842 12.934 90.2901 12.3031 88.9313 12.7884Z" fill="black"/>
@@ -60,12 +61,12 @@ const Navbar = ()=>{
                 </defs>
                 </svg>
         </div>
-        <ul className="flex gap-5 items-center font-semibold text-[1.1rem] uppercase">
+        <ul className="hidden lg:flex gap-5 items-center font-semibold text-[0.9rem] xl:text-[1.1rem] uppercase">
                 {data.map((e,idx)=>(<li key={`Navbar_${idx}`}>{e.name}</li>))}
         </ul>
         <div className="flex items-center gap-10">
             <div>
-                <button className="bg-[var(--main)] text-[var(--light)] flex gap-2 p-3 rounded-xl items-center">
+                <button className="bg-[var(--main)] text-[var(--light)] flex gap-0.5 xs:gap-2 !p-3 rounded-xl items-center">
                     <div>
                         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="21" viewBox="0 0 20 21" fill="none">
                         <g clipPath="url(#clip0_2059_1346)">
@@ -78,7 +79,7 @@ const Navbar = ()=>{
                         </defs>
                         </svg>
                     </div>
-                    <div className="font-black text-l">+91 96679 29992</div>
+                    <div className="font-black text-xs xs:text-sm md:text-lg">+91 96679 29992</div>
                 </button>
             </div>
         </div>

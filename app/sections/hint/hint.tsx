@@ -1,3 +1,4 @@
+import TypingText from "@/app/component/retypeText/retypeText"
 import Image from "next/image"
 
 const Hint = ()=>{
@@ -9,10 +10,7 @@ const Hint = ()=>{
             
         </div>
         <div className="relative inset-0  h-full z-2 items-center flex flex-col justify-center gap-10 layout-doc">
-            <h3 className="text-[var(--light)] heading text-[1rem] md:text-[1.6rem] text-center ">
-                Advanced treatments. Personalized care. Real, visible results you can trust.
-                Book your appointment today and invest in the best version of yourself.
-            </h3>
+            <TypingText text="Advanced treatments. Personalized care. Real, visible results you can trust. Book your appointment today and invest in the best version of yourself." />
             
             <div>
                 <button className="h-[60px]">

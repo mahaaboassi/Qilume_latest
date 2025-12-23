@@ -49,7 +49,7 @@ const Instagram = ()=>{
     return(<div className="layout-doc">
     <Heading title="Follow us on Instagram" /> 
     <div className="relative w-full flex flex-col items-center mt-10">
-      <div className="relative w-full flex justify-center items-center gap-4 h-[500px]">
+      <div className="relative w-full flex justify-center items-center gap-4 h-[200px] xxs:h-[280px] xs:h-[350px] md:h-[500px]">
         {slides.map((slide, index) => {
           // calculate position relative to active
           const isActive = index === activeIndex;
@@ -67,8 +67,8 @@ const Instagram = ()=>{
                 ${offset <= -2 ? "-translate-x-[80%] scale-80  border border-[2px] border-[var(--light)] " : ""}
                 ${offset >= 2 ? "translate-x-[80%] scale-80 border border-[2px] border-[var(--light)]" : ""}
                 rounded-xl 
+                ${isActive ? "w-[150px] xxs:w-[200px] xs:w-[250px] sm:w-[300] md:w-[350px] lg:w-[400px] xl:w-[550px]" : "w-[120px] xxs:w-[150px] xs:w-[200px] sm:w-[250] md:w-[300px] lg:w-[350px] xl:w-[500px]"} h-[200px] xxs:h-[250px] xs:h-[350px] md:h-[500px]
               `}
-              style={{ width: isActive ? "550px" : "500px", height: "500px" }}
             >
                 {!isActive && <div className="absolute inset-0 bg-gradient-to-r bg-[var(--dark)]  opacity-80" ></div>}
               <Image
@@ -92,7 +92,7 @@ const Instagram = ()=>{
       <div className="flex gap-4 mt-6">
         <button
           onClick={prevSlide}
-          className="w-[50px] h-[50px] !p-0 cursor-pointer !rounded-full flex justify-center items-center bg-[var(--main)]  text-white hover:bg-[#7a3b3f] transition rotate-[180deg]"
+          className="w-[30px] h-[30px] md:w-[50px] md:h-[50px] !p-0 cursor-pointer !rounded-full flex justify-center items-center bg-[var(--main)]  text-white hover:bg-[#7a3b3f] transition rotate-[180deg]"
         >
           <svg xmlns="http://www.w3.org/2000/svg" width="21" height="15" viewBox="0 0 31 25" fill="none">
             <g clipPath="url(#clip0_1896_2002)">
@@ -107,7 +107,7 @@ const Instagram = ()=>{
         </button>
         <button
           onClick={nextSlide}
-          className="w-[50px] h-[50px] !p-0 !rounded-full cursor-pointer flex justify-center items-center bg-[var(--main)]  text-white hover:bg-[#7a3b3f] transition"
+          className="w-[30px] h-[30px] md:w-[50px] md:h-[50px] !p-0 !rounded-full cursor-pointer flex justify-center items-center bg-[var(--main)]  text-white hover:bg-[#7a3b3f] transition"
         >
           <svg xmlns="http://www.w3.org/2000/svg" width="21" height="15" viewBox="0 0 31 25" fill="none">
             <g clipPath="url(#clip0_1896_2002)">

@@ -2,7 +2,7 @@
 import React, { ReactNode } from "react";
 import { motion, useInView } from "framer-motion";
 import CountUp from "react-countup";
-
+import Style from "./metrics.module.css"
 
 
 type Item = {
@@ -56,7 +56,7 @@ const Metrics = () => {
   return (
     <motion.div
       ref={ref}
-      className=" text-[var(--light)] flex flex-col md:flex-row gap-2 md:gap-5 justify-between items-center "
+      className={`text-[var(--light)] w-full flex flex-row gap-2 md:gap-5 justify-between items-center ${Style.metrics}`}
       initial={{ opacity: 0, y: 50 }}
       animate={isInView ? { opacity: 1, y: 0 } : {}}
       transition={{ duration: 0.8, ease: "easeOut" }}
@@ -64,11 +64,11 @@ const Metrics = () => {
       {data.map((e, idx) => (
         <div
           key={`Metrics_${e.hint}_${idx}`}
-          className="flex  gap-4"
+          className="flex flex-col xs:flex-row xs:gap-2 lg:gap-4"
         >
-        <div>{e.icon}</div>
-          <div className="flex flex-col gap-1 items-start justify-center">
-            <h2 className="!text-xl xs:!text-lg md:!text-4xl font-bold">
+        <div className="flex lg:justify-start justify-center ">{e.icon}</div>
+          <div className="flex flex-col gap-0.5 xs:gap-1 items-start justify-center">
+            <h2 className="!text-sm xs:!text-lg xs:text-start text-center w-full md:!text-4xl font-bold">
               {isInView ? (
                 <CountUp  end={e.number} duration={2.5} />
               ) : (
@@ -76,7 +76,7 @@ const Metrics = () => {
               )}
               {e.signal && <span className="heading">{e.signal}</span>}
             </h2>
-            <h3 className="text-gray-300 !text-sm xs:!text-xs md:!text-lg">{e.hint}</h3>
+            <h3 className="text-gray-300 !text-[0.6rem] md:!text-lg xs:text-start text-center w-full">{e.hint}</h3>
           </div>
         </div>
       ))}

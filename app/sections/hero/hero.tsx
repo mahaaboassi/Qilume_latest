@@ -3,19 +3,19 @@ import Image from "next/image"
 import styles from "./Hero.module.css"
 const Hero = ()=>{
     return(<div className="!pt-20 ">
-        <div className="h-[800px] fixed top-0 -z-5 w-full">
+        <div className="h-[500px] md:h-[650px] xl:h-[720px] fixed top-0 -z-5 w-full">
             <Image fill className="object-cover" src={"/images/bg_banner.png"} alt="banner" />
         </div>
         <div className={styles.overlay}>
             
         </div>
-        <div className="flex justify-between items-center h-[700px] layout-doc">
-            <div className="flex gap-6 flex-col ">
-                <h1 className="heading text-7xl font-bold">
-                    Feel Confident in 
-                    <br/><span className="text-[var(--main)]">QILUME Clinic</span>
+        <div className="flex justify-between items-center h-[400px] md:h-[550px] xl:h-[620px]  layout-doc">
+            <div className="flex gap-4 md:gap-6 flex-col ">
+                <h1 className="heading text-5xl md:text-7xl font-bold">
+                    <span className="text-[var(--main)]">QILUMÈ</span>
                 </h1>
-                <p onClick={()=>{alert("hh")}}>⁠Safe and Effective Skin Treatments guided by Global Aesthetic Experts</p>
+                <h2 className="!text-[1.2rem] sm:!text-xl md:!text-3xl font-medium">Designed for Beauty, Grounded in Wellness</h2>
+                <p className="text-sm sm:text-[1rem] md:text-[1.2rem]">India’s Emerging Integrative Beauty & Wellness House</p>
                 <div>
                     <button className="h-[60px]">
                         <div>BOOK APPOINTEMENT</div>
@@ -35,7 +35,7 @@ const Hero = ()=>{
                 </div>
 
             </div>
-            <div className="">
+            <div className="hidden md:flex">
                 <Image width={400} height={400} className="object-cover bg-[var(--main)] rounded-xl" src={"/images/banner.png"} alt="banner" />
             </div>
         </div>

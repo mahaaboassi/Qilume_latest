@@ -1,0 +1,13 @@
+.metrics{
+    
+}
+@media (max-width:786px) {
+    .metrics svg{
+        width: 50px;
+    }
+}
+@media (max-width:480px) {
+    .metrics svg{
+        width: 40px;
+    }
+}
