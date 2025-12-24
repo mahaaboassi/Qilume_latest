@@ -35,3 +35,11 @@
     right: 100vw;    /* move across viewport to the right */
   }
 }
+.container{
+    background: linear-gradient(
+    to bottom,
+    #72383d77 0%,
+    var(--light) 55%,
+    var(--light) 100%
+  );
+}

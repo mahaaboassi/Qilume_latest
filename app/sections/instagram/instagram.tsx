@@ -64,10 +64,10 @@ const Instagram = ()=>{
                 ${isActive ? "z-20 scale-100 opacity-100" : "z-10 opacity-100"}
                 ${offset === -1 ? "-translate-x-[40%] scale-90  z-11 border border-[2px] border-[var(--light)]" : ""}
                 ${offset === 1 ? "translate-x-[40%] scale-90  z-11 border border-[2px] border-[var(--light)]" : ""}
-                ${offset <= -2 ? "-translate-x-[80%] scale-80  border border-[2px] border-[var(--light)] " : ""}
-                ${offset >= 2 ? "translate-x-[80%] scale-80 border border-[2px] border-[var(--light)]" : ""}
+                ${offset <= -2 ? "-translate-x-[80%] scale-80 hidden md:flex border border-[2px] border-[var(--light)] " : ""}
+                ${offset >= 2 ? "translate-x-[80%] scale-80 hidden md:flex border border-[2px] border-[var(--light)]" : ""}
                 rounded-xl 
-                ${isActive ? "w-[150px] xxs:w-[200px] xs:w-[250px] sm:w-[300] md:w-[350px] lg:w-[400px] xl:w-[550px]" : "w-[120px] xxs:w-[150px] xs:w-[200px] sm:w-[250] md:w-[300px] lg:w-[350px] xl:w-[500px]"} h-[200px] xxs:h-[250px] xs:h-[350px] md:h-[500px]
+                ${isActive ? "w-[200px] xxs:w-[250px] xs:w-[300px] sm:w-[430px] md:w-[350px] lg:w-[420px] xl:w-[550px]" : "w-[180px] xxs:w-[200px] xs:w-[250px] sm:w-[380px] md:w-[300px] lg:w-[380px] xl:w-[500px]"} h-[200px] xxs:h-[250px] xs:h-[350px] md:h-[500px]
               `}
             >
                 {!isActive && <div className="absolute inset-0 bg-gradient-to-r bg-[var(--dark)]  opacity-80" ></div>}
