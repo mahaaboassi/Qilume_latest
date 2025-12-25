@@ -1,3 +1,4 @@
+import Link from "next/link"
 import Style from "./navbar.module.css"
 type Item = {
     name: string,
@@ -67,7 +68,9 @@ const Navbar = ()=>{
             </svg>
         </div>
         <ul className="hidden  lg:flex gap-5 items-center font-semibold text-[0.9rem] xl:text-[1.05rem] uppercase">
-                {data.map((e,idx)=>(<li key={`Navbar_${idx}`}>{e.name}</li>))}
+                {data.map((e,idx)=>(<li key={`Navbar_${idx}`}>
+                    <Link href={e.link}>{e.name}</Link>
+                </li>))}
         </ul>
         <div className="flex items-center gap-10">
             <div>
