@@ -1,0 +1,11 @@
+.container svg path{
+    fill: var(--main);
+}
+.card{
+    transition: 0.3s;
+    border-top: 10px solid var(--third);
+}
+.card:hover{
+    transform: translateY(5px);
+    border-color: var(--main);
+}

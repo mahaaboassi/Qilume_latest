@@ -9,7 +9,7 @@ const TypingText = ({ text }: { text: string }) => {
   return (
     <motion.p
       ref={ref}
-      className="text-[var(--light)] heading text-[1rem] md:text-[1.6rem] flex flex-wrap justify-center text-center leading-relaxed"
+      className="text-[var(--light)] !text-[var(--light)]  heading text-[1rem] md:text-[1.6rem] flex flex-wrap justify-center text-center leading-relaxed"
       initial="hidden"
       animate={isInView ? "visible" : "hidden"}
       variants={{

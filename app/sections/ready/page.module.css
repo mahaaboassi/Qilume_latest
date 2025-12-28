@@ -1,0 +1,9 @@
+.container{
+
+}
+.container svg{
+    width: 30px;
+}
+.container svg path{
+    fill: var(--light);
+}
