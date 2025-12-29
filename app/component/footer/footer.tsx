@@ -149,8 +149,8 @@ const Footer = ()=>{
             <div className="flex flex-col lg:flex-row justify-between gap-2 pb-5">
                 <p className="text-[0.9rem]">© 2025, All Rights Reserved, Powered by <Link href={"https://arizglobal.com"}>ArizGlobal</Link></p>
                 <div className="flex  gap-2 text-[0.9rem]">
-                    <div><Link className="underline" href={"/"}>Terms & Conditions</Link></div>
-                    <div><Link className="underline" href={"/"}>Privacy Policy</Link></div>
+                    <div><Link className="underline" href={"/terms-and-conditions"}>Terms & Conditions</Link></div>
+                    <div><Link className="underline" href={"/privacy-policy"}>Privacy Policy</Link></div>
                 </div>
             </div>
         </div>
