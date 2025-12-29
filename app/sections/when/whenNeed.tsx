@@ -145,51 +145,51 @@ const WhenNeed = ()=>{
             </div>
             </div>
        <motion.div
-  className="grid grid-cols-2 md:grid-cols-4 gap-5 xl:gap-10 layout-doc my-20"
-  variants={containerVariants}
-  initial="hidden"
-  whileInView="visible"
-  viewport={{ once: true, margin: "-100px" }}
->
-  {gallery.map((item, i) => (
-    <motion.div
-      key={i}
-      variants={itemVariants}
-      className="relative w-full h-[200px] xs:h-[300px] md:h-[400px] lg:h-[500px] overflow-hidden rounded-2xl group"
-      whileHover="hover"
-    >
-      {/* Base Image */}
-      <motion.div
-        className="absolute inset-0"
-        initial={{ opacity: 1 }}
-        variants={{ hover: { opacity: 0 } }}
-        transition={{ duration: 0.6, ease: "easeInOut" }}
-      >
-        <Image
-          src={item.img}
-          alt="Before"
-          fill
-          className="object-cover"
-        />
-      </motion.div>
+        className="grid grid-cols-2 md:grid-cols-4 gap-5 xl:gap-10 layout-doc my-20"
+        variants={containerVariants}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, margin: "-100px" }}
+        >
+        {gallery.map((item, i) => (
+            <motion.div
+            key={i}
+            variants={itemVariants}
+            className="relative w-full h-[250px] xs:h-[300px] md:h-[400px] lg:h-[500px] overflow-hidden rounded-2xl group"
+            whileHover="hover"
+            >
+            {/* Base Image */}
+            <motion.div
+                className="absolute inset-0"
+                initial={{ opacity: 1 }}
+                variants={{ hover: { opacity: 0 } }}
+                transition={{ duration: 0.6, ease: "easeInOut" }}
+            >
+                <Image
+                src={item.img}
+                alt="Before"
+                fill
+                className="object-cover"
+                />
+            </motion.div>
 
-      {/* Hover Image */}
-      <motion.div
-        className="absolute inset-0"
-        initial={{ opacity: 0 }}
-        variants={{ hover: { opacity: 1 } }}
-        transition={{ duration: 0.6, ease: "easeInOut" }}
-      >
-        <Image
-          src={item.hoverImg}
-          alt="After"
-          fill
-          className="object-cover"
-        />
-      </motion.div>
-    </motion.div>
-  ))}
-</motion.div>
+            {/* Hover Image */}
+            <motion.div
+                className="absolute inset-0"
+                initial={{ opacity: 0 }}
+                variants={{ hover: { opacity: 1 } }}
+                transition={{ duration: 0.6, ease: "easeInOut" }}
+            >
+                <Image
+                src={item.hoverImg}
+                alt="After"
+                fill
+                className="object-cover"
+                />
+            </motion.div>
+            </motion.div>
+        ))}
+        </motion.div>
 
 
     </div>
