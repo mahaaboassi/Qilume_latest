@@ -43,8 +43,8 @@ const Marquee = ()=>{
           </motion.div>
         </div>
         <div className="flex gap-4">
-            {social.map((item: SocialItem, idx: number)=>(<Link href={item.link} target="_blank" aria-label={item.name}>
-            <div className={styles.icon} key={`Social_${item.name}_${idx}`}>
+            {social.map((item: SocialItem, idx: number)=>(<Link key={`Social_${item.name}_${idx}`} href={item.link} target="_blank" aria-label={item.name}>
+            <div className={styles.icon}>
                 {item.icon}
             </div>
             </Link>))}
