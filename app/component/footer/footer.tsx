@@ -14,13 +14,13 @@ const companyLinks:Item[] = [{
     link: "/"
 },{
     name: "About",
-    link: "/"
+    link: "/about"
 },{
     name: "Contact",
-    link: "/"
+    link: "/contact"
 },{
     name: "News",
-    link: "/"
+    link: "/news"
 }]
 const servicesLinks:Item[] = [{
     name: "Botox",

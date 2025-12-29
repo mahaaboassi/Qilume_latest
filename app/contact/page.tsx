@@ -1,7 +1,7 @@
 "use client"
 import HeroForPages from "../sections/hero/heroForPages"
 import Style from "./page.module.css"
-import Ready from "../sections/ready/page"
+import Ready from "../sections/ready/ready"
 import { contact } from "../data/data"
 import Heading from "../component/heading/heading"
 import { Input } from "@/components/ui/input"
@@ -94,6 +94,7 @@ const Contact = ()=>{
 
             </div>
             <Ready title="Prefer to Book Directly?" description="Call us now to schedule your consultation with one of our expert aestheticians." 
+            link= "tel:+919667929992"
             label={<div className="flex gap-2 items-center">
                 <div>
                     <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 70 70" fill="none">

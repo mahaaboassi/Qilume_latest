@@ -70,14 +70,14 @@ export default function HeroForPages({ title, description }: Props) {
           variants={containerVariants}
         >
           <motion.h1
-            className="heading text-5xl md:text-7xl font-bold text-center"
+            className="heading text-3xl xs:text-5xl md:text-7xl font-bold text-center"
             variants={titleVariants}
           >
             <span className="text-[var(--main)]">{title}</span>
           </motion.h1>
           <div className="w-[100px] bg-[var(--main)] m-auto h-[3.5px]"></div>
           <motion.p
-            className="text-sm sm:text-[1rem] w-3/4 text-center md:text-[1.2rem]"
+            className="text-[0.8rem] sm:text-[1rem] md:w-3/4 text-center md:text-[1.2rem]"
             variants={textVariants}
           >
             {description}

@@ -4,6 +4,7 @@ import { redirect } from "next/navigation"
 import HeroForPages from "@/app/sections/hero/heroForPages"
 import { news, social } from "@/app/data/data"
 import Style from "../page.module.css"
+import Link from "next/link"
 
 
 
@@ -27,8 +28,8 @@ const NewsDetails = () => {
         title={article.title}
         description={article.hint}
       />
-      <div className="grid grid-cols-3 layout-doc">
-        <div className="col-span-2 flex flex-col gap-4"> 
+      <div className="grid md:grid-cols-3 layout-doc">
+        <div className="md:col-span-2 flex flex-col gap-4"> 
           <div className="flex flex-col gap-2">
             <h2 className="heading !text-3xl text-[var(--main)]">
               {article.section.title_1}
@@ -91,20 +92,22 @@ const NewsDetails = () => {
             <p>{article.section.desc_6}</p>
           </div>
         </div>
-        <div className="col-span-1 relative">
+        <div className="md:col-span-1 relative">
               <div className="p-5 bg-[var(--grey)] rounded-xl flex flex-col justify-center items-center gap-3 sticky top-25">
-                <h2 className="heading">Ready to begin?</h2>
+                <h2 className="heading !text-2xl md:!text-3xl">Ready to begin?</h2>
                 <p>Book a consultation with our experts.</p>
                 <div>
-                  <button>Book Now</button>
+                  <Link href={"/contact"}><button>Book Now</button></Link>
                 </div>
                 <div className="h-[1px] bg-[var(--main)] w-3/4 my-5 "></div>
                 <div className="flex flex-col gap-2">
                   <h3 className="heading text-center">Follow Us</h3>
                   <div className="flex gap-4">
-                      {social.map((item, idx: number)=>(<div className={Style.icon}  key={`Social_${item.name}_${idx}`}>
+                      {social.map((item, idx: number)=>(<Link href={item.link} target="_blank" aria-label={item.name}>
+                      <div className={Style.icon}  key={`Social_${item.name}_${idx}`}>
                           {item.icon}
-                      </div>))}
+                      </div>
+                      </Link>))}
                   </div>
                 </div>
               </div>

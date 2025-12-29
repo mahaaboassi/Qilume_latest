@@ -4,7 +4,7 @@ import Image from "next/image";
 import HeroForPages from "../sections/hero/heroForPages";
 import { useState } from "react";
 import { motion, AnimatePresence, type Variants } from "framer-motion";
-import Ready from "../sections/ready/page";
+import Ready from "../sections/ready/ready";
 import { services } from "../data/data";
 
 /* =======================
@@ -188,6 +188,7 @@ const Services = () => {
           title="Ready to Begin Your Transformation?"
           description="Schedule a consultation with our expert team and discover how we can help you achieve your aesthetic and wellness goals."
           label="Book Your Consultation"
+          link= "/contact"
         />
       </div>
 

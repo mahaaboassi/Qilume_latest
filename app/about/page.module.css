@@ -10,3 +10,21 @@
         transform: translateY(0);
     }
 }
+@media (max-width:1200px) {
+    .text svg{
+        width: 350px;
+    }
+    
+}
+@media (max-width:1024px) {
+    .text svg{
+        width: 450px;
+    }
+    
+}
+@media (max-width:768px) {
+    .text svg{
+        width: 300px;
+    }
+    
+}
