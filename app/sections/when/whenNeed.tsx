@@ -64,7 +64,7 @@ const WhenNeed = ()=>{
     },{
         title: "Enjoy the Results",
         desc: "Relax and enjoy natural-looking results.",
-        img: "/images/finalizing.png"
+        img: "/images/final.png"
     }] 
     const ref = useRef<HTMLDivElement>(null);
     const isInView = useInView(ref, { once: true, margin: "-100px" });
