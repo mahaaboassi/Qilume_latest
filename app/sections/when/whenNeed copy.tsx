@@ -2,7 +2,7 @@
 import Heading from "@/app/component/heading/heading"
 import Metrics from "@/app/component/metrics/metrics"
 import Image from "next/image"
-import { motion, Variants } from "framer-motion";
+import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
 import Link from "next/link";
@@ -11,29 +11,7 @@ type Item = {
     desc: string,
     img: string
 }
-const containerVariants: Variants = {
-  hidden: {},
-  visible: {
-    transition: {
-      staggerChildren: 0.35, // فرق التوقيت بين الأعمدة
-    },
-  },
-}
 
-const itemVariants: Variants = {
-  hidden: {
-    opacity: 0,
-    y: 40,
-  },
-  visible: {
-    opacity: 1,
-    y: 0,
-    transition: {
-      duration: 0.9,
-      ease: "easeOut",
-    },
-  },
-}
 const WhenNeed = ()=>{
     const data: Item[] = [{
         title: "Book a Consultation",
@@ -126,36 +104,39 @@ const WhenNeed = ()=>{
                 </div>
             </div>
             </div>
-       <motion.div
-  className="grid grid-cols-2 md:grid-cols-4 gap-5 xl:gap-10 layout-doc my-20"
-  variants={containerVariants}
-  initial="hidden"
-  whileInView="visible"
-  viewport={{ once: true, margin: "-100px" }}
->
-  {[
-    "/images/test_1.png",
-    "/images/test_2.png",
-    "/images/test_3.png",
-    "/images/test_4.png",
-  ].map((src, i) => (
-    <motion.div
-      key={i}
-      variants={itemVariants}
-      whileHover={{ scale: 1.05 }}
-      className="relative w-full h-[200px] xs:h-[300px] md:h-[400px] lg:h-[500px] overflow-hidden rounded-2xl"
-    >
-      <Image
-        src={src}
-        alt={`Gallery image ${i + 1}`}
-        fill
-        sizes="25vw"
-        className="object-cover"
-      />
-    </motion.div>
-  ))}
-</motion.div>
-
+        <motion.div
+        className="grid md:grid-cols-2 h-[400px] lg:h-[600px] gap-5 xl:gap-10 layout-doc"
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
+        variants={{
+            hidden: {},
+            visible: {
+            transition: { staggerChildren: 0.2 },
+            },
+        }}
+        >
+        {["/images/test_1.png", "/images/test_2.png"].map((src, i) => (
+            <motion.div
+            key={i}
+            className="relative w-full h-full overflow-hidden rounded-xl"
+            variants={{
+                hidden: { opacity: 0, y: 40 },
+                visible: { opacity: 1, y: 0 },
+            }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
+            whileHover={{ scale: 1.05 }}
+            >
+            <Image
+                src={src}
+                alt={`Image ${i + 1}`}
+                fill
+                sizes="50vw"
+                className="object-cover"
+            />
+            </motion.div>
+        ))}
+        </motion.div>
     </div>
 }
 export default WhenNeed
