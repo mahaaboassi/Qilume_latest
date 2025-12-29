@@ -108,11 +108,11 @@ const News = () => {
           {news.slice(1).map((ele) => (
             <Link key={ele.title} href={ele.link}>
               <motion.div
-                className="flex flex-col gap-2 cursor-pointer hover:shadow-lg hover:scale-105 transition-transform rounded-xl overflow-hidden"
+                className="flex flex-col gap-2 cursor-pointer group rounded-xl overflow-hidden"
                 variants={cardVariants}
               >
                 <Image
-                  className="h-[200px] md:h-[300px] rounded-xl w-full object-cover"
+                  className="h-[200px] md:h-[300px] transition-transform group-hover:scale-105 rounded-xl w-full object-cover"
                   width={400}
                   height={400}
                   src={ele.img}

@@ -1,0 +1,18 @@
+.icon{
+    width: 40px;
+    height: 40px;
+    border-radius: 8px;
+    background-color: var(--light);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.icon svg{
+    height: 22px;
+}
+.icon svg path{
+    fill: var(--main)
+}
+.icon:hover{
+
+}

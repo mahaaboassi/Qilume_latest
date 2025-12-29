@@ -2,8 +2,8 @@
 import { useParams } from "next/navigation"
 import { redirect } from "next/navigation"
 import HeroForPages from "@/app/sections/hero/heroForPages"
-import { news } from "@/app/data/data"
-
+import { news, social } from "@/app/data/data"
+import Style from "../page.module.css"
 
 
 
@@ -22,23 +22,94 @@ const NewsDetails = () => {
   }
 
   return (
-    <div>
+    <div className="">
       <HeroForPages
         title={article.title}
         description={article.hint}
       />
-
-      {/* Content */}
-      <section className="container mx-auto py-12">
-        <h2 className="text-2xl font-semibold mb-4">
-          {article.section.title_1}
-        </h2>
-        <p className="text-gray-600 mb-8">
-          {article.section.desc_1}
-        </p>
-
-        {/* You can continue rendering sections dynamically */}
-      </section>
+      <div className="grid grid-cols-3 layout-doc">
+        <div className="col-span-2 flex flex-col gap-4"> 
+          <div className="flex flex-col gap-2">
+            <h2 className="heading !text-3xl text-[var(--main)]">
+              {article.section.title_1}
+            </h2>
+            <p className="">
+              {article.section.desc_1}
+            </p>
+          </div>
+          <div className="flex flex-col gap-2">
+            <h2 className="heading !text-3xl text-[var(--main)]">
+              {article.section.title_2}
+            </h2>
+            <h3 className="heading text-xl">{article.section.sub_title_1}</h3>
+            <p>{article.section.sub_desc_1}</p>
+            <h3 className="heading text-xl">{article.section.sub_title_2}</h3>
+            <ul className="text-md flex flex-col gap-1">
+              {article.section.options.map((e,idx)=>(<li className="flex items-center gap-2" key={`Options_${e}_${idx}`}>
+                <div className="w-[6px] h-[6px] rounded-xl bg-[var(--main)]"></div>{e}
+              </li>))}
+            </ul>
+          </div>
+          <div className="flex flex-col gap-2">
+            <h2 className="heading !text-3xl text-[var(--main)]">
+              {article.section.title_3}
+            </h2>
+            <p>{article.section.desc_3}</p>
+            <ul className="text-md flex flex-col gap-1">
+              {article.section.options_2.map((e,idx)=>(<li className="flex items-center gap-2" key={`Options_${e}_${idx}`}>
+                <div className="w-[6px] h-[6px] rounded-xl bg-[var(--main)]"></div>{e}
+              </li>))}
+            </ul>
+          </div>
+          <div className="flex flex-col gap-2">
+            <h2 className="heading !text-3xl text-[var(--main)]">
+              {article.section.title_4}
+            </h2>
+            <h3 className="heading text-xl">{article.section.sub_title_3}</h3>
+            <ul className="text-md flex flex-col gap-1">
+              {article.section.options_3.map((e,idx)=>(<li className="flex items-center gap-2" key={`Options_${e}_${idx}`}>
+                <div className="w-[6px] h-[6px] rounded-xl bg-[var(--main)]"></div>{e}
+              </li>))}
+            </ul>
+            <h3 className="heading text-xl">{article.section.sub_title_4}</h3>
+            <ul className="text-md flex flex-col gap-1">
+              {article.section.option_4.map((e,idx)=>(<li className="flex items-center gap-2" key={`Options_${e}_${idx}`}>
+                <div className="w-[6px] h-[6px] rounded-xl bg-[var(--main)]"></div>{e}
+              </li>))}
+            </ul>
+            <h3 className="heading text-xl">{article.section.sub_title_5}</h3>
+            <ul className="text-md flex flex-col gap-1">
+              {article.section.option_5.map((e,idx)=>(<li className="flex items-center gap-2" key={`Options_${e}_${idx}`}>
+                <div className="w-[6px] h-[6px] rounded-xl bg-[var(--main)]"></div>{e}
+              </li>))}
+            </ul>
+          </div>
+          <div className="flex flex-col gap-2">
+            <h2 className="heading !text-3xl text-[var(--main)]">
+              {article.section.title_6}
+            </h2>
+            <p>{article.section.desc_6}</p>
+          </div>
+        </div>
+        <div className="col-span-1 relative">
+              <div className="p-5 bg-[var(--grey)] rounded-xl flex flex-col justify-center items-center gap-3 sticky top-25">
+                <h2 className="heading">Ready to begin?</h2>
+                <p>Book a consultation with our experts.</p>
+                <div>
+                  <button>Book Now</button>
+                </div>
+                <div className="h-[1px] bg-[var(--main)] w-3/4 my-5 "></div>
+                <div className="flex flex-col gap-2">
+                  <h3 className="heading text-center">Follow Us</h3>
+                  <div className="flex gap-4">
+                      {social.map((item, idx: number)=>(<div className={Style.icon}  key={`Social_${item.name}_${idx}`}>
+                          {item.icon}
+                      </div>))}
+                  </div>
+                </div>
+              </div>
+        </div>
+      </div>
     </div>
   )
 }

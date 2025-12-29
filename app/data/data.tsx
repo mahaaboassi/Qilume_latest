@@ -1,4 +1,3 @@
-import { option } from "framer-motion/client";
 
 export const social = [{
     name: "Facebook",
