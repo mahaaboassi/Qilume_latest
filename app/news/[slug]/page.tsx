@@ -108,8 +108,8 @@ const NewsDetails = () => {
                 <div className="flex flex-col gap-2">
                   <h3 className="heading text-center">Follow Us</h3>
                   <div className="flex gap-4">
-                      {social.map((item, idx: number)=>(<Link href={item.link} target="_blank" aria-label={item.name}>
-                      <div className={Style.icon}  key={`Social_${item.name}_${idx}`}>
+                      {social.map((item, idx: number)=>(<Link key={`Social_${item.name}_${idx}`} href={item.link} target="_blank" aria-label={item.name}>
+                      <div className={Style.icon}>
                           {item.icon}
                       </div>
                       </Link>))}

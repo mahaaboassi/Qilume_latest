@@ -3,7 +3,7 @@ import Image from "next/image"
 import styles from "./Hero.module.css"
 import Link from "next/link"
 const Hero = ()=>{
-    return(<div className="!pt-20 ">
+    return(<div className="!pt-15 md:!pt-20 ">
         <div className="h-[500px] md:h-[650px] xl:h-[720px] fixed top-0 -z-5 w-full">
             <Image fill className="object-cover" src={"/images/bg_banner.png"} alt="banner" />
         </div>
@@ -19,7 +19,7 @@ const Hero = ()=>{
                 <p className="text-sm sm:text-[1rem] md:text-[1.2rem]">India’s Emerging Integrative Beauty & Wellness House</p>
                 <div>
                     <Link href={"/contact"}>
-                        <button className="h-[60px]">
+                        <button className="md:h-[60px]">
                             <div>BOOK APPOINTEMENT</div>
                             <div>
                                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 26 26" fill="none">

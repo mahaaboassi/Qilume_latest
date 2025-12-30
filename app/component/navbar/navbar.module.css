@@ -4,6 +4,36 @@
 .logo{
 
 }
+.nav button {
+    font-size: 1.2rem;
+}
+.active{
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--light);
+    width: 0;
+    right: 0;
+    bottom: 0;
+    top: 66px;
+    padding:10px;
+    justify-content: start;
+    align-items: start;
+    box-shadow: 2px 2px 5px rgb(169, 169, 169);
+    animation: overlayDiv 0.5s forwards linear;
+}
+@keyframes overlayDiv {
+    from{
+        width: 0;
+    }to{
+        width: 100%;
+    }
+}
+@media (max-width: 1100px) {
+    .nav button {
+        font-size: 1rem;
+    }
+}
 @media (max-width:768px) {
     .logo{
         width: 120px !important;
@@ -11,6 +41,9 @@
     .nav button svg{
         height: 17px;
         width: auto;
+    }
+    .nav button {
+        font-size: 0.8rem;
     }
     
 }
@@ -21,5 +54,20 @@
     }
     .logo{
         width: 100px !important;
+    }
+    .nav button {
+        font-size: 0.7rem;
+    }
+}
+@media (max-width: 350px) {
+    .nav button svg{
+        height: 13px;
+        width: auto;
+    }
+    .logo{
+        width: 90px !important;
+    }
+    .nav button {
+        font-size: 0.6rem;
     }
 }

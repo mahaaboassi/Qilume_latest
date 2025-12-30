@@ -58,7 +58,7 @@ const textVariants: Variants = {
 
 export default function HeroForPages({ title, description }: Props) {
   return (
-    <div className="!pt-20">
+    <div className="!pt-15 md:!pt-20 ">
       <motion.div
         className={`flex justify-center items-center h-[300px] md:h-[350px] xl:h-[420px] ${styles.container} layout-doc`}
         variants={containerVariants}

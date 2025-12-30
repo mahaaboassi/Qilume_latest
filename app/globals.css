@@ -10,7 +10,6 @@
   --breakpoint-lg: 1024px;
   --breakpoint-xl: 1280px;
   --breakpoint-2xl: 1536px;
-  
 }
 
 :root {
@@ -210,11 +209,18 @@ footer button{
     font-size: 2rem;
     line-height: 2.5rem;
   }
+
 }
 @media (max-width:768px) {
   h2{
     font-size: 1.5rem;
     line-height: 1.8rem;
   }
-
+  button{
+    font-size: 0.7rem ;
+  }
+  button svg{
+    width: 15px;
+    height: auto;
+  }
 }
