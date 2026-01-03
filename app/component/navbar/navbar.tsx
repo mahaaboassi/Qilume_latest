@@ -1,10 +1,21 @@
 "use client"
 import Link from "next/link"
 import Style from "./navbar.module.css"
-import { useState } from "react"
+import { ReactNode, useRef, useState } from "react"
+import { servicesRef } from "@/app/data/data"
 type Item = {
     name: string,
     link: string
+}
+type ItemService = {
+    name: string,
+    link: string,
+    id: number
+}
+type ItemCategory = {
+    name?: string,
+    icon?: ReactNode,
+    services?: ItemService[]
 }
 const Navbar = ()=>{
     const data: Item[] = [ {
@@ -24,6 +35,18 @@ const Navbar = ()=>{
         link: "/contact",
     }]
     const [ openMenu, setOpenMenu ] = useState<Boolean>(false)
+    const [ currentCat, setCurrentCat ] = useState<ItemCategory>({}) 
+
+    const closeTimeout = useRef<NodeJS.Timeout | null>(null);
+
+    const handleLeave = () => {
+    closeTimeout.current = setTimeout(() => setCurrentCat({}), 150);
+    };
+
+    const handleEnter = (cat?: any) => {
+    if (closeTimeout.current) clearTimeout(closeTimeout.current);
+    if (cat) setCurrentCat(cat);
+    };
     return(<nav className={`fixed left-0 right-0 top-0 bg-[var(--light)] flex items-center justify-between z-100 layout-doc !py-1 md:!py-3 shadow-xl ${Style.nav}`}>
         <div>
             <Link  onClick={()=>setOpenMenu(false)} href={"/"}>
@@ -62,14 +85,61 @@ const Navbar = ()=>{
                 </svg>
             </Link>
         </div>
-        <ul className={`hidden lg:flex gap-5 items-center font-semibold text-[0.9rem] xl:text-[1.05rem] uppercase ${openMenu?Style.active:""}`}>
+        <ul className={`hidden lg:flex gap-5 items-center  ${openMenu?Style.active:""}`}>
                 <li className="flex md:hidden" onClick={()=>setOpenMenu(false)}>
                         <svg xmlns="http://www.w3.org/2000/svg" width="10" height="21" viewBox="0 0 29 40" fill="none">
                         <path d="M29 4.7L11.0756 20L29 35.3L23.4818 40L-1.31887e-06 20L23.4818 3.33228e-06L29 4.7Z" fill="#72383D"/>
                         </svg>
                 </li>
-                {data.map((e,idx)=>(<li  key={`Navbar_${idx}`}>
-                    <Link onClick={()=>setOpenMenu(false)} href={e.link}>{e.name}</Link>
+                {data.map((e,idx)=>(<li   key={`Navbar_${idx}`}>
+                    {e.name == "Services" ? 
+                        <div  onMouseEnter={() => handleEnter(servicesRef[0])}
+                            onMouseLeave={handleLeave}
+                              className="relative">
+                                <div className="flex gap-2">
+                                    <span className="uppercase font-semibold text-[0.9rem] xl:text-[1.05rem] " >{e.name}</span>
+                                    <span className="flex md:hidden">
+                                        <svg style={{transform:"rotate(180deg)"}} xmlns="http://www.w3.org/2000/svg" width="10" height="21" viewBox="0 0 29 40" fill="none">
+                                        <path d="M29 4.7L11.0756 20L29 35.3L23.4818 40L-1.31887e-06 20L23.4818 3.33228e-06L29 4.7Z" fill="#72383D"/>
+                                        </svg>
+                                    </span>
+                                </div>
+                                {/* Services Menu  */}
+                                { "name" in currentCat &&  <div className="fixed shadow-xl grid grid-cols-3 lg:flex lg:flex-col gap-2 lg:gap-10 left-0 right-0 layout-doc !py-[30px] top-[95px] md:top-[70px] z-100 bg-white">
+                                    <div className="col-span-1 lg:flex gap-5 items-center justify-center">
+                                        {
+                                            servicesRef && servicesRef.map((e,idx)=>{
+                                                    return(<div className={`flex xs:flex-row flex-col p-1 xs:p-2 gap-2 items-center ${currentCat.name == e.name ? Style.catSameHover: ""}  ${Style.cat}`}
+                                                            onMouseEnter={()=>setCurrentCat(e)}
+                                                            key={`category_services_${e.name}_${idx}`}
+                                                            >
+                                                        <div>
+                                                            {e.icon}
+                                                        </div>
+                                                        <div className="heading text-center xs:text-start text-xs md:text-sm lg:text-md">{e.name}</div>
+                                                    </div>)
+                                                })
+                                        }
+                                        
+                                    </div>
+                                    <div className="col-span-2">
+                                        <div className={` grid grid-cols-1  max-h-[60vh] overflow-y-auto lg:h-full md:grid-cols-2 lg:grid-cols-4 xl:grid-cols-5 !font-medium !capitalize gap-2 text-[0.8rem] md:text-[0.9rem]`}>
+                                            {currentCat.services && currentCat.services.map((ele,idx)=>(<div className={`${Style.containerServices}`}>
+                                                    <Link href={ele.link}>{ele.name}</Link>
+                                                </div>))}
+                                        </div>
+                                    </div>
+                                    <div className="hidden lg:block">
+                                        <div className="h-[2px] w-3/4 bg-[var(--main)] m-auto"></div>
+                                        <div className="flex gap-4 justify-center mt-1 text-sm">
+                                            QiLumé Aesthetics
+                                        </div>
+                                    </div>
+                                    
+                                </div>}
+                        </div> 
+                        : <Link className="uppercase font-semibold text-[0.9rem] xl:text-[1.05rem] " onMouseEnter={()=>setCurrentCat({})} onClick={()=>setOpenMenu(false)} href={e.link}>{e.name}</Link> }
+                    
                 </li>))}
                 <li className="flex md:hidden">
                     <Link onClick={()=>setOpenMenu(false)} href={"/contact"}>
@@ -119,6 +189,8 @@ const Navbar = ()=>{
                 </svg>
             </div>
         </div>
+
+
     </nav>)
 }
 export default Navbar

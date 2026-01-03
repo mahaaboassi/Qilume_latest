@@ -29,6 +29,41 @@
         width: 100%;
     }
 }
+.cat{
+    border: 1px solid var(--main);
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.cat svg{
+    width:  30px;
+    height: auto;
+}
+.cat:hover, .catSameHover{
+    background-color: var(--main);
+    color: var(--light);
+}
+.cat:hover path, .catSameHover path{
+    fill: var(--light);
+}
+
+.containerServices{
+    position: relative;
+}
+.containerServices::before{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 40px;
+    height: 1px;
+    background-color: var(--second);
+    transition: 0.3s;
+}
+.containerServices:hover::before{
+     width: 80%;
+}
+
 @media (max-width: 1100px) {
     .nav button {
         font-size: 1rem;
@@ -69,5 +104,9 @@
     }
     .nav button {
         font-size: 0.6rem;
+    }
+    .cat svg{
+        width:  20px;
+        height: auto;
     }
 }
