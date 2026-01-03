@@ -125,7 +125,9 @@ const Navbar = ()=>{
                                     <div className="col-span-2">
                                         <div className={` grid grid-cols-1  max-h-[60vh] overflow-y-auto lg:h-full md:grid-cols-2 lg:grid-cols-4 xl:grid-cols-5 !font-medium !capitalize gap-2 text-[0.8rem] md:text-[0.9rem]`}>
                                             {currentCat.services && currentCat.services.map((ele,idx)=>(<div className={`${Style.containerServices}`}>
-                                                    <Link  onClick={()=>setCurrentCat({})}  href={ele.link}>{ele.name }</Link>
+                                                    <Link  onClick={()=>{
+                                                        setOpenMenu(false)
+                                                        setCurrentCat({})}}  href={ele.link}>{ele.name }</Link>
                                                 </div>))}
                                         </div>
                                     </div>
