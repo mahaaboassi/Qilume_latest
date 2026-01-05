@@ -67,6 +67,7 @@ const ServiceDetails = ()=>{
       useEffect(()=>{
         function getRandomImages(data:any, count = 5) {
             const shuffled = [...data].sort(() => 0.5 - Math.random());
+            console.log("Shuffled Images: ", shuffled.slice(0, count));
             return shuffled.slice(0, count);
         }
         let category:any = {}
@@ -75,7 +76,8 @@ const ServiceDetails = ()=>{
           if(data) category = element
 
         })
-        // Usage
+        
+        
         if(category) setImages(getRandomImages(category?.images || [], 2))
       },[article])
     return(<div>
@@ -194,12 +196,12 @@ const ServiceDetails = ()=>{
                         </li>
                       ))}
                     </ul>
-                    <p className="flex flex-wrap gap-2">
+                    <div className="flex flex-wrap gap-2">
                         <span className="heading !text-xl">Treatment Areas</span>
                         <ul className="flex gap-2 flex-wrap">
                             {article.areas.map((e,idx)=>(<li key={`Areas_${e}_${idx}`} className="bg-[var(--second)] rounded py-1 px-2 text-[var(--light)] text-sm">{e}</li>))}
                         </ul>
-                    </p>
+                    </div>
                   </motion.div>
                 )}
 

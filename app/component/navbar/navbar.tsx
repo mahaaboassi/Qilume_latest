@@ -91,7 +91,7 @@ const Navbar = ()=>{
                         <path d="M29 4.7L11.0756 20L29 35.3L23.4818 40L-1.31887e-06 20L23.4818 3.33228e-06L29 4.7Z" fill="#72383D"/>
                         </svg>
                 </li>
-                {data.map((e,idx)=>(<li   key={`Navbar_${idx}`}>
+                {data.map((e,idx)=>(<li key={`Navbar_${idx}`}>
                     {e.name == "Services" ? 
                         <div  onMouseEnter={() => handleEnter(servicesRef[0])}
                             onMouseLeave={handleLeave}
@@ -111,7 +111,7 @@ const Navbar = ()=>{
                                             servicesRef && servicesRef.map((e,idx)=>{
                                                     return(<div className={`flex xs:flex-row flex-col p-1 xs:p-2 gap-2 items-center ${currentCat.name == e.name ? Style.catSameHover: ""}  ${Style.cat}`}
                                                             onMouseEnter={()=>setCurrentCat(e)}
-                                                            key={`category_services_${e.name}_${idx}`}
+                                                            key={`Category_of_services_${e.name}_${idx}`}
                                                             >
                                                         <div>
                                                             {e.icon}
