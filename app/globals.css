@@ -200,7 +200,30 @@ footer button{
   border-bottom-left-radius: 0px;
   border-top-left-radius: 0px;
 }
+/* Video */
+/* Standard fullscreen */
+.video-player:fullscreen {
+  width: 100vw;
+  height: 100vh;
+  object-fit: contain; /* or cover */
+  background: black;
+  border-radius: 0;
+}
 
+/* Chrome / Safari */
+.video-player:-webkit-full-screen {
+  width: 100vw;
+  height: 100vh;
+  object-fit: contain;
+  background: rgba(0, 0, 0, 0.705);
+}
+
+/* Firefox */
+.video-player:-moz-full-screen {
+  width: 100vw;
+  height: 100vh;
+  object-fit: contain;
+}
 @media (max-width:1024px) {
   .layout-doc{
     padding: 0 2rem !important;

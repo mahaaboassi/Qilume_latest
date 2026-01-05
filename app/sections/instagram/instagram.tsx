@@ -1,42 +1,54 @@
 "use client"
 import Heading from "@/app/component/heading/heading"
 import Image from "next/image"
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 const Instagram = ()=>{
     const slides = [{
-        video: "/videos/Reel 1.mp4",
+        video: "/videos/reel_small_size_1.mp4",
         image: "",
         name: "",
         id: 1
     },{
-        video: "/videos/Reel 2.mp4",
+        video: "/videos/reel_small_size_2.mp4",
         image: "",
         name: "",
         id: 2
     },{
-        video: "/videos/Reel 3.mp4",
+        video: "/videos/reel_small_size_3.mp4",
         image: "",
         name: "",
         id: 3
     },{
-        video: "/videos/Reel 4.mp4",
+        video: "/videos/reel_small_size_4.mp4",
         image: "",
         name: "",
         id: 4
     },{
-        video: "/videos/Reel 5.mp4",
+        video: "/videos/reel_small_size_5.mp4",
         image: "",
         name: "",
         id: 5
     },{
-        video: "/videos/Reel 6.mp4",
+        video: "/videos/reel_small_size_6.mp4",
         image: "",
         name: "",
         id: 6
     }]
+    const videoRefs = useRef<(HTMLVideoElement | null)[]>([]);
     const [activeIndex, setActiveIndex] = useState(2); // 
-
+    useEffect(() => {
+      videoRefs.current.forEach((video, index) => {
+        if (!video) return;
+        if (video && index !== activeIndex) {
+          video.pause();
+          video.currentTime = 0; // optional reset
+        }
+        if (index === activeIndex) {
+          video.play().catch(() => {});
+        }
+      });
+    }, [activeIndex]);
     const prevSlide = () => {
         setActiveIndex((prev) => (prev === 0 ? slides.length - 1 : prev - 1));
     };
@@ -70,14 +82,16 @@ const Instagram = ()=>{
             >
                 {!isActive && <div className="absolute inset-0 bg-gradient-to-r bg-[var(--dark)]  opacity-80" ></div>}
                 <video
-                onClick={() => window.open("https://www.instagram.com/qilumeaesthetics/", "_blank")}
+                  ref={(el) => {
+                    videoRefs.current[index] = el; 
+                  }}
+                  onClick={() => window.open("https://www.instagram.com/qilumeaesthetics/", "_blank")}
                   width={400}
                   height={400}
                   src={slide.video}
-                  className={`!w-full !h-full object-cover rounded-xl  ${isActive? "relative z-1" : ""}`}
+                  className={`video-player !w-full !h-full object-cover rounded-xl  ${isActive? "relative z-1" : ""}`}
                   controls={true}
                   muted
-                  autoPlay={false}
                   loop
                   playsInline
                 />
