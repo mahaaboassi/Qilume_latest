@@ -195,7 +195,7 @@ const About = ()=>{
                 >
                     <iframe
                     className="w-full h-full"
-                    src="https://www.youtube.com/embed/elE50fXfJms?autoplay=1&controls=0&modestbranding=1&rel=0"
+                    src="https://www.youtube.com/embed/_pamAT7Dpks?si=y5x_A5olDqZBRBip"
                     title="About Us Video"
                     allow="autoplay; encrypted-media"
                     allowFullScreen
