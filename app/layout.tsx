@@ -4,6 +4,7 @@ import "./globals.css";
 import localFont from 'next/font/local'
 import Footer from "./component/footer/footer";
 import Navbar from "./component/navbar/navbar";
+import Chat from "./component/chat/chat";
 
 // load your Monik font
 const monik = localFont({
@@ -49,6 +50,7 @@ export default function RootLayout({
           {children}
         </main>
         <Footer/>
+        <Chat/>
       </body>
     </html>
   );
