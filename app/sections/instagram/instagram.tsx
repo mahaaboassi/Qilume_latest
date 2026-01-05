@@ -5,37 +5,35 @@ import { useState } from "react";
 
 const Instagram = ()=>{
     const slides = [{
-        video: "/images/service_1.png",
+        video: "/videos/Reel 1.mp4",
+        image: "",
         name: "",
         id: 1
     },{
-        video: "/images/service_4.png",
+        video: "/videos/Reel 2.mp4",
+        image: "",
         name: "",
         id: 2
     },{
-        video: "/images/service_3.png",
+        video: "/videos/Reel 3.mp4",
+        image: "",
         name: "",
         id: 3
     },{
-        video: "/images/service_2.png",
+        video: "/videos/Reel 4.mp4",
+        image: "",
         name: "",
         id: 4
     },{
-        video: "/images/service_1.png",
+        video: "/videos/Reel 5.mp4",
+        image: "",
         name: "",
         id: 5
     },{
-        video: "/images/service_3.png",
+        video: "/videos/Reel 6.mp4",
+        image: "",
         name: "",
         id: 6
-    },{
-        video: "/images/service_2.png",
-        name: "",
-        id: 7
-    },{
-        video: "/images/service_1.png",
-        name: "",
-        id: 8
     }]
     const [activeIndex, setActiveIndex] = useState(2); // 
 
@@ -49,7 +47,7 @@ const Instagram = ()=>{
     return(<div className="layout-doc">
     <Heading title="Follow us on Instagram" /> 
     <div className="relative w-full flex flex-col items-center mt-10">
-      <div className="relative w-full flex justify-center items-center gap-4 h-[200px] xxs:h-[280px] xs:h-[350px] md:h-[500px]">
+      <div className="relative w-full flex justify-center items-center gap-4 h-[300px] xxs:h-[380px] xs:h-[450px] md:h-[600px]">
         {slides.map((slide, index) => {
           // calculate position relative to active
           const isActive = index === activeIndex;
@@ -67,17 +65,22 @@ const Instagram = ()=>{
                 ${offset <= -2 ? "-translate-x-[80%] scale-80 hidden md:flex border border-[2px] border-[var(--light)] " : ""}
                 ${offset >= 2 ? "translate-x-[80%] scale-80 hidden md:flex border border-[2px] border-[var(--light)]" : ""}
                 rounded-xl 
-                ${isActive ? "w-[200px] xxs:w-[250px] xs:w-[300px] sm:w-[430px] md:w-[350px] lg:w-[420px] xl:w-[550px]" : "w-[180px] xxs:w-[200px] xs:w-[250px] sm:w-[380px] md:w-[300px] lg:w-[380px] xl:w-[500px]"} h-[200px] xxs:h-[250px] xs:h-[350px] md:h-[500px]
+                ${isActive ? "w-[200px] xxs:w-[250px] xs:w-[300px] sm:w-[430px] md:w-[350px] lg:w-[420px] xl:w-[550px]" : "w-[180px] xxs:w-[200px] xs:w-[250px] sm:w-[380px] md:w-[300px] lg:w-[380px] xl:w-[500px]"} h-[300px] xxs:h-[350px] xs:h-[450px] md:h-[600px]
               `}
             >
                 {!isActive && <div className="absolute inset-0 bg-gradient-to-r bg-[var(--dark)]  opacity-80" ></div>}
-              <Image
-                width={400}
-                height={400}
-                src={slide.video}
-                alt={`Slide ${slide.id}`}
-                className="!w-full !h-full object-cover rounded-xl"
-              />
+                <video
+                onClick={() => window.open("https://www.instagram.com/qilumeaesthetics/", "_blank")}
+                  width={400}
+                  height={400}
+                  src={slide.video}
+                  className={`!w-full !h-full object-cover rounded-xl  ${isActive? "relative z-1" : ""}`}
+                  controls={true}
+                  muted
+                  autoPlay={false}
+                  loop
+                  playsInline
+                />
               {isActive && (
                 <div className="absolute inset-0 flex justify-center items-center text-white text-4xl">
                   {/* <FaInstagram /> */}
