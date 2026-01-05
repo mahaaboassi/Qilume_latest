@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 const Chat = () => {
-    return(<div className="fixed bottom-5 right-5 z-100 cursor-pointer">
+    return(<div className="fixed bottom-2 right-2 md:bottom-5 md:right-5 z-100 cursor-pointer">
         <Link href={"https://wa.me/+919667929992"} target="_blank">
             {/* <svg xmlns="http://www.w3.org/2000/svg" width="70" height="70" viewBox="0 0 80 80" fill="none">
             <path d="M0 39C0 17.4609 17.4609 0 39 0H76C78.2091 0 80 1.79086 80 4V41C80 62.5391 62.5391 80 41 80H39C17.4609 80 0 62.5391 0 41V39Z" fill="#C76B64"/>
