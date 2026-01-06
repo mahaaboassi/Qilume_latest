@@ -47,7 +47,7 @@ const Navbar = ()=>{
     if (closeTimeout.current) clearTimeout(closeTimeout.current);
     if (cat) setCurrentCat(cat);
     };
-    return(<nav className={`fixed left-0 right-0 top-0 bg-white flex items-end justify-between z-100 layout-doc !py-1 md:!py-3 shadow-xl ${Style.nav}`}>
+    return(<nav className={`fixed left-0 right-0 top-0 bg-white flex items-center lg:items-end justify-between z-100 layout-doc !py-1 md:!py-3 shadow-xl ${Style.nav}`}>
         <div>
             <Link  onClick={()=>setOpenMenu(false)} href={"/"}>
                 <svg className={`${Style.logo}`} xmlns="http://www.w3.org/2000/svg" width="175" height="58" viewBox="0 0 175 58" fill="none">
@@ -85,7 +85,7 @@ const Navbar = ()=>{
                 </svg>
             </Link>
         </div>
-        <ul className={`hidden lg:flex gap-5 items-center back-blur  ${openMenu?Style.active:""}`}>
+        <ul className={`hidden lg:flex gap-5 items-center ${openMenu?Style.active:""}`}>
                 <li className="flex lg:hidden" onClick={()=>setOpenMenu(false)}>
                         <svg xmlns="http://www.w3.org/2000/svg" width="10" height="21" viewBox="0 0 29 40" fill="none">
                         <path d="M29 4.7L11.0756 20L29 35.3L23.4818 40L-1.31887e-06 20L23.4818 3.33228e-06L29 4.7Z" fill="#72383D"/>
@@ -175,7 +175,7 @@ const Navbar = ()=>{
         <div className="flex items-center gap-2">
             <div>
                 <Link href={"tel:+919667929992"}>
-                    <button className="bg-[var(--main)] h-[45px] text-[var(--light)] flex !gap-0.5 md:gap-2 !p-2 md:!p-3 rounded-xl items-center">
+                    <button className="bg-[var(--main)] h-[35px] md:h-[45px] text-[var(--light)] flex !gap-0.5 md:gap-2 !p-2 md:!p-3 rounded-xl items-center">
                         <div>
                             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="21" viewBox="0 0 20 21" fill="none">
                             <g clipPath="url(#clip0_2059_1346)">
