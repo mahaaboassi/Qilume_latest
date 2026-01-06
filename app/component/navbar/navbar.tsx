@@ -119,7 +119,7 @@ const Navbar = ()=>{
                                     </span>
                                 </div>
                                 {/* Services Menu  */}
-                                { "name" in currentCat &&  <div className="fixed shadow-xl grid grid-cols-3 lg:flex lg:flex-col gap-2 lg:gap-10 left-0 right-0 layout-doc !py-[30px] top-[95px] md:top-[100px]  z-100 bg-white">
+                                { "name" in currentCat &&  <div className="fixed shadow-xl grid grid-cols-3 lg:flex lg:flex-col gap-2 lg:gap-10 left-0 right-0 layout-doc !py-[30px] top-[95px] md:top-[100px] lg:top-[70px]  z-100 bg-white">
                                     <div className="col-span-1 lg:flex gap-5 items-center justify-center">
                                         {
                                             servicesRef && servicesRef.map((e,idx)=>{
