@@ -25,7 +25,7 @@ const companyLinks:Item[] = [{
 }]
 
 const Footer = ()=>{
-    return(<footer className="pt-10 bg-[var(--dark)] text-[var(--grey)]">
+    return(<footer className="pt-10 bg-[var(--main)] text-[var(--grey)]">
 
         <div className="layout-doc flex flex-col gap-5">
             <div className="grid lg:grid-cols-2 ">
@@ -105,7 +105,7 @@ const Footer = ()=>{
                         <ul className="text-[0.8rem] flex flex-col gap-2">
                             {ele.services.map((e:any,idx:number)=>(idx <5 &&<li key={`Services_Footer_${e.name}_${idx}`}>
                                 <Link className="relative after:content-[''] after:absolute after:-bottom-1 after:left-0 after:w-[30%] after:h-[1px]
-                                after:bg-[var(--main)] hover:after:w-[80%] after:transition-all after:duration-300" href={e.link} >{e.name}</Link>
+                                after:bg-[var(--second)] hover:after:w-[80%] after:transition-all after:duration-300" href={e.link} >{e.name}</Link>
                             </li>))}
                         </ul>
                     </div>))}
