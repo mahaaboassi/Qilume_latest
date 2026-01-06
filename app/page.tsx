@@ -11,11 +11,9 @@ export default function Home() {
     <Hero/>
 
     
-    <div className="bg-[var(--light)] flex flex-col gap-5 md:gap-20 ">
+    <div className="bg-[var(--light)] flex flex-col gap-15 md:gap-20 ">
       <Marquee/>
-      <div className="pt-10">
-        <Treatments/>
-      </div>
+      <Treatments/>
       <WhenNeed/> 
       <Review/>
       <Hint/>

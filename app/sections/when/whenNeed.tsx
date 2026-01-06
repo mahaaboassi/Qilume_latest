@@ -69,7 +69,7 @@ const WhenNeed = ()=>{
     const ref = useRef<HTMLDivElement>(null);
     const isInView = useInView(ref, { once: true, margin: "-100px" });
 
-    return<div className="flex flex-col gap-5 md:gap-20">
+    return<div className="flex flex-col gap-15 md:gap-20">
         <div>
             <div className="grid md:grid-cols-2 gap-2  items-center">
                 <div className="">
