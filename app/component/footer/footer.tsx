@@ -1,5 +1,5 @@
 "use client"
-import { contact, servicesData } from "@/app/data/data"
+import { contact, servicesData, servicesRef } from "@/app/data/data"
 import Image from "next/image"
 import Link from "next/link"
 import { ReactNode, useEffect, useState } from "react"
@@ -25,16 +25,6 @@ const companyLinks:Item[] = [{
 }]
 
 const Footer = ()=>{
-    const [ servicesLinks, setServicesLinks ] = useState<any>([])
-    useEffect(()=>{
-       function getRandomServices(data:any, count = 5) {
-            const shuffled = [...data].sort(() => 0.5 - Math.random());
-            return shuffled.slice(0, count);
-        }
-
-        // Usage
-        setServicesLinks(getRandomServices(servicesData, 5))
-    },[])
     return(<footer className="bg-[var(--light)] pt-10 ">
         <div className="bg-[var(--main)] layout-doc mb-10 !py-4 flex flex-col gap-4 text-[var(--light)]">
             <h4 className="font-semibold text-lg">Be the First to Know, Subscribe Now!</h4>
@@ -99,9 +89,9 @@ const Footer = ()=>{
                         </ul>
                     </div>
                     <div className="">
-                        <h4 className="heading uppercase text-xl h-[70px] flex items-center">Services</h4>
+                        <h4 className="heading uppercase text-xl h-[70px] flex items-center">Treatment</h4>
                         <ul className="text-[0.9rem] flex flex-col gap-1">
-                            {servicesLinks.map((e:any,idx:number)=>(<li key={`Service_Links_${e.name}_${idx}`}>
+                            {servicesRef.map((e:any,idx:number)=>(<li key={`Service_Links_${e.name}_${idx}`}>
                                 <Link href={e.link} >{e.name}</Link>
                             </li>))}
                         </ul>
