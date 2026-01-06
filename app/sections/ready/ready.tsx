@@ -11,8 +11,8 @@ type Props = {
 
 const Ready = ({ title, description, label, link}: Props)=>{
     return(<section className={`layout-doc flex flex-col gap-5 justify-center items-center !py-10 ${Style.container}`}>
-        <h2 className="heading">{title}</h2>
-        <p className="text-[0.7rem] xxs:text-sm text-center md:text-md xl:text-[1.1rem] font-medium">{description}</p>
+        <h2 className="heading text-center">{title}</h2>
+        <p className="text-[0.7rem]  xxs:text-sm text-center md:text-md xl:text-[1.1rem] font-medium">{description}</p>
         <div>
             <Link href={link}><button>{label}</button></Link>
         </div>
