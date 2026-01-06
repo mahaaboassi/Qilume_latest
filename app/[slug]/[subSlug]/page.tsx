@@ -5,9 +5,10 @@ import Image from "next/image"
 import { redirect, useParams } from "next/navigation"
 import { motion, AnimatePresence, type Variants } from "framer-motion";
 import ContactForm from "@/app/component/contactForm/contact";
-import Ready from "@/app/sections/ready/ready";
+
 import { servicesData, servicesRef } from "@/app/data/data";
 import { useEffect, useState } from "react";
+import Ready from "@/app/sections/ready/ready";
 
 /* =======================
    Animation Variants

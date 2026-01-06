@@ -10,7 +10,7 @@ const Chat = () => {
                 {
                     contact.map((e,idx)=>{
                         const delay = idx * 150;
-                    if(e.name != "Working Hours")
+                    if(e.name != "Working Hours" && e.name != "Find Us")
                         return<Link style={{
                             // animation: ``,
                             animationDelay: `${delay}ms`,
@@ -25,11 +25,11 @@ const Chat = () => {
             </div>
         </div>
 
-        <div className="fixed bottom-2 right-2 md:bottom-5 md:right-5 z-100 cursor-pointer">
+        {/* <div className="fixed bottom-2 right-2 md:bottom-5 md:right-5 z-100 cursor-pointer">
             <Link href={"https://wa.me/+919667929992"} target="_blank">
                 <Image className="!w-[60px] md:!w-[70px]" alt="Whatsapp" src={"/images/whatsapp_image.png"} width={70} height={70} /> 
             </Link>
-        </div>
+        </div> */}
     </div>)
 }
 

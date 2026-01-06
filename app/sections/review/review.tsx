@@ -11,40 +11,47 @@ import Image from "next/image"
 const Review = ()=>{
     const data = [
     {
-        name: "John Doe",
-        desc: "Amazing service! The team was professional and attentive from start to finish. They took the time to understand my needs and provided personalized recommendations. I felt completely comfortable throughout the process, and the results exceeded my expectations. Highly recommend for anyone seeking quality care and a trustworthy team.",
+        name: "Shikha Kaushik",
+        desc: "I had an absolutely wonderful experience at this place. The hair care was done with great attention and professionalism by Prem bhaiya leaving and giving fresh look. The body massage was extremely relaxing and melt away all my stress by Savita di. The skin care treatment was gentle, effective, and left my skin glowing. The staff is very skilled, friendly, and made me feel comfortable throughout my service 😍😍Highly recommended for those looking for quality service and true pampering. My all time favorite is Kabish, Khushi, Simran, Deb bhaiya and Aparna ❤️❤️",
         rate: 5,
         img: "/images/profile_1.png",
         id: 1
     },
     {
-        name: "Sarah Smith",
-        desc: "I loved my experience! From the initial consultation to the final results, everything was seamless and well-organized. The staff was friendly, knowledgeable, and extremely supportive. They made sure I was comfortable at every step, and I left feeling confident and happy with the outcome. Truly satisfied and will return for future treatments.",
+        name: "nikita rohilla",
+        desc: "Got body polishing done here and absolutely loved the experience! The staff was incredibly patient, gentle, and so professional throughout. The service felt luxurious, relaxing, and left the skin glowing. Highly recommend this place if you want quality care and real results!",
         rate: 5,
         img: "/images/profile_2.png",
         id: 2
     },
     {
-        name: "Maya Lee",
-        desc: "The staff was very professional and welcoming. They took the time to explain each step of the process and answered all my questions thoroughly. The results were excellent, and I felt genuinely cared for throughout the experience. I appreciate the attention to detail and the high-quality service. Highly recommend for anyone looking for professional and reliable care.",
+        name: "Anjali Singh",
+        desc: "I got my hair colored done from Qilume Aesthetics and it turned out amazing.  There’s this guy named Prem who did my hair — he’s super nice and really humble. Overall, it was such a great experience!",
         rate: 5,
         img: "/images/profile_3.png",
         id: 3
     },
     {
-        name: "Emily Johnson",
-        desc: "Highly recommend! The team provided exceptional service and made sure I understood every step of the process. Their expertise and care were evident, and the final results were amazing. I felt comfortable, informed, and supported throughout my visit. It’s rare to find such a professional and friendly team that genuinely prioritizes the client’s experience.",
+        name: "neha bansal",
+        desc: "Services are very nice. Staff is very cooperative. I am taking my laser and routine beauty services from here. And I am very satisfied.",
         rate: 5,
         img: "/images/profile_4.png",
         id: 4
     },
     {
-        name: "Maha Abo Assi",
-        desc: "Fantastic experience! The staff was friendly, attentive, and highly skilled. They guided me through every part of the process and ensured I felt comfortable and confident. The results were impressive and exactly what I was hoping for. I will definitely return for future treatments and recommend this team to friends and family. Excellent service all around!",
+        name: "Raj Kumar",
+        desc: "Consultation is excellent. You can connect over call also. Very humble and treats like family. They also understand and negotiate on financial terms. Very few doctors, I have seen many but she is best. I am taking the acne treatment it cures within 6 months.",
         rate: 5,
         img: "/images/profile_5.png",
         id: 5
-    }
+    },
+    {
+        name: "Khushii Sidhu",
+        desc: "I had a major acne pop out concern two months back. and then came to the rescue team Qilumé🤌🏻... My Skin has started behaving well and now acnes have stopped and marks have also started fading. i truely trust them with my skin. Love the team. All thanks to Dr. Payal and Arpana ji …",
+        rate: 5,
+        img: "/images/profile_1.png",
+        id: 1
+    },
     ];
 
 
@@ -61,7 +68,8 @@ const Review = ()=>{
                     {data.map((item, index) => (
                     <CarouselItem key={index} className="">
                         <div className="p-1 space-y-2 flex gap-2 md:gap-5 flex-col items-center">
-                            <Image className={`object-cover shadow-lg !h-[80px] !w-[80px] md:!h-[120px] md:!w-[120px] rounded-full`} width={100} height={100} src={item.img} alt={item.name } />
+                            <div className="object-cover shadow-lg !h-[80px] !w-[80px] md:!h-[100px] md:!w-[100px] rounded-full bg-[var(--second)] uppercase text-[var(--light)] flex justify-center items-center text-3xl">{item.name.substring(0, 2)}</div>
+                            {/* <Image className={`object-cover shadow-lg !h-[80px] !w-[80px] md:!h-[120px] md:!w-[120px] rounded-full`} width={100} height={100} src={item.img} alt={item.name } /> */}
                             <div className="flex gap-2">
                                 {[...Array(5)].map((_,idx)=><div key={`Star_${idx}`}>
                                     <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 32 32" fill="none">
@@ -78,7 +86,7 @@ const Review = ()=>{
                             </div>
                             <p className="text-xs md:text-sm font-medium text-center md:w-3/4">{item.desc}</p>
                             <hr className="bg-[var(--main)] opacity-30 h-[2px] w-1/2 md:w-1/4" />
-                            <h3 className="text-sm md:text-xl font-semibold">{item.name }</h3>
+                            <h3 className="text-sm md:text-xl font-semibold capitalize">{item.name }</h3>
                         </div>
                     </CarouselItem>
                     ))}

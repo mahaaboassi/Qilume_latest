@@ -56,7 +56,7 @@ const Instagram = ()=>{
     const nextSlide = () => {
         setActiveIndex((prev) => (prev === slides.length - 1 ? 0 : prev + 1));
     };
-    return(<div className="layout-doc">
+    return(<div className="layout-doc !py-10">
     <Heading title="Follow us on Instagram" /> 
     <div className="relative w-full flex flex-col items-center mt-10">
       <div className="relative w-full flex justify-center items-center gap-4 h-[300px] xxs:h-[380px] xs:h-[450px] md:h-[600px]">

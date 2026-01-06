@@ -74,7 +74,7 @@ const WhenNeed = ()=>{
             <div className="">
                 <Image className="w-auto h-[400px] md:h-[500px] object-cover" src={"/images/indian.png"} alt="banner" width={400} height={400} />
             </div>
-            <div className="flex flex-col gap-5 text-center md:text-start  md:items-center !pb-10 md:!pb-0  md:gap-10 md:!pl-0 layout-doc">
+            <div className="flex flex-col gap-4 text-center md:text-start  md:items-center !pb-10 md:!pb-0  md:!pl-0 layout-doc">
                 <h2 className="heading">When your skin glows, your confidence shows.</h2>
                 <p className="text-xs md:text-sm xl:text-lg">At QiLumé Aesthetics, beauty isn’t covered, it’s revealed. We believe in enhancing what’s already yours through thoughtful, personalized care designed to restore balance, radiance, and self-assurance.</p>
                 <p className="w-full text-xs md:text-sm xl:text-lg">Every treatment is guided by expertise, precision, and an understanding that true beauty goes deeper than the surface. The result? Healthy, glowing skin and confidence that feels natural, effortless, and long-lasting far beyond any filter.</p>
