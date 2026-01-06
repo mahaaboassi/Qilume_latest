@@ -499,7 +499,16 @@ export const servicesRef = [
     name: "Beauty Services",
     img: "/images/service_1.png",
     description: "Essential beauty treatments including threading, waxing, facials, manicure, pedicure, and relaxing therapies for everyday care.",
-    link: "/services/beauty-services",
+    section_1: {
+      desc_1:
+        "Full face waxing is a carefully performed treatment designed to remove unwanted facial hair evenly while maintaining skin comfort and safety throughout the entire process.",
+      desc_2:
+        "Specialized waxing formulas are chosen specifically for facial use, helping to protect sensitive skin, reduce irritation, and support the skin’s natural moisture balance.",
+      desc_3:
+        "After the treatment, the skin appears smoother, clearer, and more refined, with a fresh feeling and long-lasting, well-groomed results.",
+    },
+    isCat: true,
+    link: "/beauty-services",
     icon: <svg xmlns="http://www.w3.org/2000/svg" width="104" height="109" viewBox="0 0 104 109" fill="none">
           <g clipPath="url(#clip0_2199_1343)">
           <path d="M76.5253 66.3961C76.8658 66.4777 77.1979 66.5906 77.5174 66.7332L75.8549 50.9527C75.8297 50.6898 75.9091 50.4276 76.0761 50.2221C76.2431 50.0165 76.4845 49.884 76.7487 49.8527C76.8796 49.8392 77.0119 49.8515 77.138 49.8888C77.2641 49.926 77.3816 49.9876 77.4837 50.07C77.5858 50.1524 77.6705 50.254 77.7331 50.3689C77.7956 50.4838 77.8347 50.6099 77.8481 50.7398L79.7071 68.3033C80.7518 69.4516 81.3313 70.943 81.3338 72.4901V82.7089H97.4218L101.354 36.7688H71.6452L73.2094 53.9775C74.3317 55.331 75.2749 56.8215 76.0158 58.4127C76.1821 58.5243 76.3158 58.6772 76.4037 58.8563C76.4915 59.0353 76.5304 59.2342 76.5163 59.4328V66.4139L76.5253 66.3961ZM24.2929 77.9277C40.6133 82.6556 55.5751 82.3629 69.3929 77.9277V96.5556C55.9862 101.807 41.221 102.57 24.2929 96.5556V77.9277ZM63.7264 48.8326C58.4521 45.5413 52.6 43.2662 46.4765 42.1266C45.7614 50.039 42.6153 54.8912 37.7621 57.6942C33.3647 60.2045 27.7071 61.0029 21.2004 60.8521C21.5939 61.0836 21.9996 61.2938 22.4159 61.4819C27.3049 63.7172 36.5555 64.9768 45.9759 65.101C55.3964 65.2252 64.924 64.214 70.3582 61.9786C71.7728 61.5071 73.0286 60.6568 73.9869 59.5215C72.1994 55.3347 68.2846 51.6978 63.7264 48.877V48.8326ZM74.2283 68.2057C74.3981 67.5138 74.2283 63.389 74.2283 62.4488C73.3009 63.1067 72.299 63.6545 71.243 64.0809C65.5229 66.4582 55.6555 67.5049 45.9491 67.3719C36.2427 67.2388 26.6346 65.9082 21.4507 63.5487C20.7506 63.2371 20.0805 62.863 19.4486 62.431V68.4629C23.2204 71.8958 34.6428 73.7231 46.2619 73.7852C57.8811 73.8473 69.7415 72.1087 74.2372 68.4629V68.25L74.2283 68.2057ZM17.1605 68.5782C16.4848 68.747 15.8673 69.0932 15.373 69.5806C15.0196 69.929 14.7396 70.3437 14.5493 70.8006C14.359 71.2575 14.2623 71.7474 14.2647 72.2417V100.201L14.7652 100.538C22.6036 105.612 37.4135 107.218 50.9722 106.65C64.2805 106.091 76.2393 103.519 79.0189 100.139V72.4901C79.018 71.964 78.9125 71.4433 78.7085 70.9578C78.5045 70.4722 78.2061 70.0314 77.8302 69.6604C77.4547 69.2826 77.0083 68.9813 76.5163 68.7734V68.9153C76.5154 69.0864 76.4755 69.255 76.3996 69.4086C76.3238 69.5622 76.214 69.6968 76.0784 69.8024C71.395 74.0602 58.6855 76.0738 46.2441 76.0117C33.8027 75.9496 21.3524 73.8029 17.4823 69.7137C17.2867 69.5036 17.1781 69.228 17.1784 68.9419V68.596L17.1605 68.5782ZM37.2705 55.2726C33.9954 55.4469 30.7434 55.919 27.5552 56.683C25.6223 57.1411 23.7349 57.7704 21.9154 58.5635C27.725 58.6433 32.7748 57.8982 36.5734 55.6984C36.8117 55.5623 37.0441 55.4204 37.2705 55.2726ZM81.3338 85.574V90.0092C86.5266 90.3641 95.0354 90.2665 96.1437 89.2375C96.7267 88.6063 97.06 87.7872 97.0822 86.9312L97.2073 85.574H81.3338ZM80.9763 101.337C77.9732 105.293 65.1743 108.282 51.1152 108.868C37.056 109.453 21.835 107.741 13.5765 102.392C13.2011 102.144 12.8436 101.896 12.4861 101.638C12.3809 101.556 12.2902 101.457 12.2179 101.346H1.31385C0.969173 101.343 0.638988 101.208 0.393594 100.968C0.148199 100.727 0.00697951 100.401 0 100.059L0 61.8633C0 61.5175 0.138423 61.1858 0.384819 60.9413C0.631214 60.6967 0.965398 60.5594 1.31385 60.5594H3.30698V38.6228C3.30934 38.2949 3.44221 37.9813 3.67662 37.7504C3.91102 37.5194 4.22795 37.3898 4.55827 37.3898H6.93572V15.2669C11.4046 15.9676 15.5517 18.3627 19.3145 23.6938V37.3898H21.2451C21.5746 37.3898 21.8906 37.5197 22.1236 37.7509C22.3566 37.9821 22.4875 38.2958 22.4875 38.6228V55.8846C23.9612 55.3248 25.4686 54.8567 27.001 54.4831C31.2343 53.4726 35.5711 52.9517 39.9251 52.9308H39.9966C42.4276 50.1898 43.9381 46.2602 44.2509 40.7428C44.2578 40.594 44.2943 40.4481 44.3584 40.3134C44.4224 40.1787 44.5128 40.0579 44.6241 39.9581C44.7355 39.8583 44.8657 39.7814 45.0072 39.7319C45.1488 39.6823 45.2988 39.6611 45.4486 39.6695H45.6005C47.5425 39.9365 49.463 40.3396 51.3475 40.8759V26.2928C51.3428 26.2546 51.3428 26.2158 51.3475 26.1775L43.1158 6.66255C43.0223 6.48396 42.9971 6.27782 43.0447 6.08218C43.0923 5.88654 43.2097 5.7146 43.375 5.5981C52.9653 -1.40068 59.463 -2.43852 68.7136 5.5981C68.8599 5.72595 68.9568 5.90027 68.9878 6.09122C69.0187 6.28217 68.9819 6.47787 68.8835 6.64481L61.4651 26.5057V44.9208C62.6449 45.5328 63.8068 46.1981 64.933 46.8989C67.0981 48.2439 69.1195 49.8042 70.966 51.5559L69.5895 36.3697C69.4505 36.1955 69.3749 35.9798 69.375 35.7576C69.3766 35.5941 69.4163 35.4331 69.4912 35.2875L69.0175 30.0539C68.9924 29.792 69.0721 29.5309 69.2393 29.3267C69.4065 29.1226 69.6479 28.9919 69.9113 28.9628H102.981C103.249 28.9628 103.506 29.0685 103.695 29.2564C103.885 29.4444 103.991 29.6994 103.991 29.9652C103.995 30.0124 103.995 30.0599 103.991 30.1071L103.526 35.527C103.536 35.6036 103.536 35.681 103.526 35.7576C103.526 35.8918 103.499 36.0245 103.446 36.1479L99.0842 87.0731C99.0886 87.0966 99.0886 87.1206 99.0842 87.1441C99.0071 88.4779 98.445 89.7386 97.5022 90.6923C96.9922 91.1547 96.3799 91.492 95.7147 91.6769V99.5893C95.7159 99.8156 95.6718 100.04 95.5851 100.249C95.4984 100.459 95.3707 100.649 95.2095 100.809C95.0482 100.969 94.8566 101.096 94.6457 101.182C94.4348 101.268 94.2088 101.311 93.9807 101.31H80.9495L80.9763 101.337ZM17.1873 60.5328V59.4328C17.1879 59.2476 17.2337 59.0653 17.3209 58.9015C17.408 58.7377 17.534 58.5974 17.6879 58.4926C18.4185 57.9276 19.2028 57.4345 20.0296 57.0201V39.8469H5.79168V60.5594H17.1605L17.1873 60.5328ZM53.0278 41.4169C55.3376 42.1529 57.595 43.042 59.7848 44.0781V40.9912H53.0278V41.4169ZM53.0278 39.3235H59.7848V27.6323H53.0278V39.3235ZM75.0773 41.2928C75.0516 41.1609 75.0527 41.0253 75.0808 40.8939C75.1089 40.7625 75.1633 40.6381 75.2407 40.528C75.3182 40.4179 75.4172 40.3243 75.5318 40.2529C75.6464 40.1815 75.7743 40.1337 75.9079 40.1123C76.0415 40.0909 76.178 40.0963 76.3094 40.1283C76.4408 40.1603 76.5645 40.2182 76.6729 40.2985C76.7813 40.3788 76.8724 40.48 76.9407 40.5959C77.009 40.7119 77.0531 40.8402 77.0705 40.9734L77.6604 44.699C77.694 44.9572 77.625 45.2183 77.4681 45.4269C77.3112 45.6356 77.0787 45.7755 76.8197 45.817C76.5607 45.8585 76.2956 45.7983 76.0805 45.6493C75.8654 45.5002 75.7172 45.2739 75.6672 45.0183L75.0773 41.2928ZM98.5211 30.9853V34.773H101.524L101.846 30.9853H98.5211ZM96.528 34.773V30.9764H93.087V34.773H96.528ZM91.076 34.773V30.9764H87.6528V34.773H91.076ZM85.6329 34.773V30.9764H82.2276V34.773H85.6329ZM80.1808 34.773V30.9764H76.7576V34.773H80.1808ZM74.7288 34.773V30.9764H71.1179L71.5022 34.773H74.7288Z" fill="#72383D"/>
@@ -512,32 +521,33 @@ export const servicesRef = [
           </svg>, 
     images: ["/images/beauty_1.webp","/images/beauty_2.webp","/images/beauty_3.webp","/images/beauty_4.webp"],
     services: [
-          { id: 140, name: "Upper Lip Threading", link: "/services/upper-lip-threading" },
-          { id: 141, name: "Eyebrow Threading", link: "/services/eyebrow-threading" },
-          { id: 142, name: "Chin Threading", link: "/services/chin-threading" },
-          { id: 143, name: "Forehead Threading", link: "/services/forehead-threading" },
-          { id: 144, name: "Full Face Waxing Rica", link: "/services/full-face-waxing-rica" },
-          { id: 145, name: "Full Face Waxing Brazlian", link: "/services/full-face-waxing-brazlian" },
-          { id: 146, name: "Upper Lip Waxing- Rica", link: "/services/upper-lip-waxing-rica" },
-          { id: 147, name: "Upper Lip Waxing- Brazlian", link: "/services/upper-lip-waxing-brazlian" },
-          { id: 148, name: "Sides of face - Threading", link: "/services/sides-of-face-threading" },
-          { id: 149, name: "Pedicure- Basic", link: "/services/pedicure-basic" },
-          { id: 150, name: "Pedicure- Advance", link: "/services/pedicure-advance" },
-          { id: 151, name: "Manicure- Basic", link: "/services/manicure-basic" },
-          { id: 152, name: "Manicure- Advance", link: "/services/manicure-advance" },
-          { id: 153, name: "Nail cutting and shaping", link: "/services/nail-cutting-and-shaping" },
-          { id: 154, name: "Anti Tan Facial", link: "/services/anti-tan-facial" },
-          { id: 155, name: "Signature Facial", link: "/services/signature-facial" },
-          { id: 156, name: "Face Cleanup", link: "/services/face-cleanup" },
-          { id: 157, name: "Full Arm Waxing- Honey", link: "/services/full-arm-waxing-honey" },
-          { id: 158, name: "Full Arm Waxing- Rica", link: "/services/full-arm-waxing-rica" },
-          { id: 159, name: "Under Arm Waxing- Honey", link: "/services/under-arm-waxing-honey" },
-          { id: 160, name: "Under Arm Waxing- Rica", link: "/services/under-arm-waxing-rica" },
-          { id: 161, name: "Full Legs Waxing- Honey", link: "/services/full-legs-waxing-honey" },
-          { id: 162, name: "Full Legs Waxing- Rica", link: "/services/full-legs-waxing-rica" },
-          { id: 163, name: "Foot Reflexology", link: "/services/foot-reflexology" },
-          { id: 164, name: "Head Champi", link: "/services/head-champi" }
-        ]
+      { id: 140, name: "Upper Lip Threading", link: "/beauty-services/upper-lip-threading" },
+      { id: 141, name: "Eyebrow Threading", link: "/beauty-services/eyebrow-threading" },
+      { id: 142, name: "Chin Threading", link: "/beauty-services/chin-threading" },
+      { id: 143, name: "Forehead Threading", link: "/beauty-services/forehead-threading" },
+      { id: 144, name: "Full Face Waxing Rica", link: "/beauty-services/full-face-waxing-rica" },
+      { id: 145, name: "Full Face Waxing Brazlian", link: "/beauty-services/full-face-waxing-brazlian" },
+      { id: 146, name: "Upper Lip Waxing- Rica", link: "/beauty-services/upper-lip-waxing-rica" },
+      { id: 147, name: "Upper Lip Waxing- Brazlian", link: "/beauty-services/upper-lip-waxing-brazlian" },
+      { id: 148, name: "Sides of face - Threading", link: "/beauty-services/sides-of-face-threading" },
+      { id: 149, name: "Pedicure- Basic", link: "/beauty-services/pedicure-basic" },
+      { id: 150, name: "Pedicure- Advance", link: "/beauty-services/pedicure-advance" },
+      { id: 151, name: "Manicure- Basic", link: "/beauty-services/manicure-basic" },
+      { id: 152, name: "Manicure- Advance", link: "/beauty-services/manicure-advance" },
+      { id: 153, name: "Nail cutting and shaping", link: "/beauty-services/nail-cutting-and-shaping" },
+      { id: 154, name: "Anti Tan Facial", link: "/beauty-services/anti-tan-facial" },
+      { id: 155, name: "Signature Facial", link: "/beauty-services/signature-facial" },
+      { id: 156, name: "Face Cleanup", link: "/beauty-services/face-cleanup" },
+      { id: 157, name: "Full Arm Waxing- Honey", link: "/beauty-services/full-arm-waxing-honey" },
+      { id: 158, name: "Full Arm Waxing- Rica", link: "/beauty-services/full-arm-waxing-rica" },
+      { id: 159, name: "Under Arm Waxing- Honey", link: "/beauty-services/under-arm-waxing-honey" },
+      { id: 160, name: "Under Arm Waxing- Rica", link: "/beauty-services/under-arm-waxing-rica" },
+      { id: 161, name: "Full Legs Waxing- Honey", link: "/beauty-services/full-legs-waxing-honey" },
+      { id: 162, name: "Full Legs Waxing- Rica", link: "/beauty-services/full-legs-waxing-rica" },
+      { id: 163, name: "Foot Reflexology", link: "/beauty-services/foot-reflexology" },
+      { id: 164, name: "Head Champi", link: "/beauty-services/head-champi" }
+    ]
+
   },
 
   // Salon: 
@@ -545,7 +555,16 @@ export const servicesRef = [
     name: "Salon",
     img: "/images/service_2.png",
     description: "Professional hair services such as cutting, coloring, styling, treatments, and grooming for men and women.",
-    link: "/services/salon",
+    section_1: {
+      desc_1:
+        "Salon services are designed to enhance your overall appearance by improving hair shape, texture, and style while maintaining the natural health of your hair.",
+      desc_2:
+        "Experienced stylists apply professional techniques and high-quality products to achieve precise results tailored to your hair type and personal preferences.",
+      desc_3:
+        "Each visit leaves your hair looking polished, balanced, and easy to manage, with results that remain consistent and long-lasting.",
+    },
+    isCat: true,
+    link: "/salon",
     icon: <svg xmlns="http://www.w3.org/2000/svg" width="101" height="101" viewBox="0 0 101 101" fill="none">
           <g clipPath="url(#clip0_2203_1417)">
           <path d="M65.4922 2.95995V5.91894H74.3691H83.2461V8.87792V11.8369H74.3691H65.4922V14.7959V17.7549H74.3691H83.2461V20.7139V23.6728H74.3691H65.4922V26.6318V29.5908H74.3691H83.2461V32.5498V35.5088H74.3691H65.4922V38.4678V41.4267H74.3691H83.2461V44.3857V47.3447H74.3691H65.4922V50.3037V53.2627H74.3691H83.2461V56.2217V59.1807H74.3691H65.4922V62.1396V65.0986H74.3691H83.2461V78.8875C83.2461 87.4291 83.325 93.0709 83.4434 93.7219C84.1338 97.391 87.073 100.232 90.8211 100.843C95.3779 101.593 99.915 98.3576 100.803 93.7219C101.079 92.2621 101.079 8.73983 100.803 7.28007C100.132 3.72929 97.2717 0.868935 93.7209 0.198232C93.0699 0.0798723 87.4873 0.000966074 79.0838 0.000966074H65.4922V2.95995Z" fill="#72383D"/>
@@ -561,54 +580,63 @@ export const servicesRef = [
           </svg>,
     images: ["/images/salon_1.webp","/images/salon_2.webp","/images/salon_3.webp","/images/salon_4.webp"],
     services: [
-        { id: 100, name: "Hair cut - Short", link: "/services/hair-cut-short" },
-        { id: 101, name: "Hair cut- Medium", link: "/services/hair-cut-medium" },
-        { id: 102, name: "Hair cut - Long", link: "/services/hair-cut-long" },
-        { id: 103, name: "Hair cut- Men", link: "/services/hair-cut-men" },
-        { id: 104, name: "Hair styling", link: "/services/hair-styling" },
-        { id: 105, name: "Hair Trimming", link: "/services/hair-trimming" },
-        { id: 106, name: "Inoa Hair color- Global- Short", link: "/services/inoa-hair-color-global-short" },
-        { id: 107, name: "Inoa Hair color- Global- Medium", link: "/services/inoa-hair-color-global-medium" },
-        { id: 108, name: "Inoa Hair color- Global - Long", link: "/services/inoa-hair-color-global-long" },
-        { id: 109, name: "Hair Root Touch up- Majirel", link: "/services/hair-root-touch-up-majirel" },
-        { id: 110, name: "Hair Root Touch up- Inoa", link: "/services/hair-root-touch-up-inoa" },
-        { id: 111, name: "Majirel Hair color- Global - Short", link: "/services/majirel-hair-color-global-short" },
-        { id: 112, name: "Majirel Hair color- Global - Medium", link: "/services/majirel-hair-color-global-medium" },
-        { id: 113, name: "Majirel Hair color- Global- Long", link: "/services/majirel-hair-color-global-long" },
-        { id: 114, name: "Hair Keratin- Short", link: "/services/hair-keratin-short" },
-        { id: 115, name: "Hair Keratin- Medium", link: "/services/hair-keratin-medium" },
-        { id: 116, name: "Hair Keratin- Long", link: "/services/hair-keratin-long" },
-        { id: 117, name: "Hair Smoothening- Short", link: "/services/hair-smoothening-short" },
-        { id: 118, name: "Hair Smoothening - Medium", link: "/services/hair-smoothening-medium" },
-        { id: 119, name: "Hair Smoothening- Long", link: "/services/hair-smoothening-long" },
-        { id: 120, name: "Beard Trim", link: "/services/beard-trim" },
-        { id: 121, name: "Beard Shave", link: "/services/beard-shave" },
-        { id: 122, name: "Hair Highlights- Per Streak", link: "/services/hair-highlights-per-streak" },
-        { id: 123, name: "Balliage Treatment- Short", link: "/services/balliage-treatment-short" },
-        { id: 124, name: "Balliage Treatment- Medium", link: "/services/balliage-treatment-medium" },
-        { id: 125, name: "Balliage Treatment- Long", link: "/services/balliage-treatment-long" },
-        { id: 126, name: "Hair Blow Dry", link: "/services/hair-blow-dry" },
-        { id: 127, name: "Hair Spa- Loreal - Short", link: "/services/hair-spa-loreal-short" },
-        { id: 128, name: "Hair Spa- Loreal - Medium", link: "/services/hair-spa-loreal-medium" },
-        { id: 129, name: "Hair spa- Loreal- Long", link: "/services/hair-spa-loreal-long" },
-        { id: 130, name: "Hair Spa- Moroccon- Short", link: "/services/hair-spa-moroccon-short" },
-        { id: 131, name: "Hair Spa- Moroccon- Medium", link: "/services/hair-spa-moroccon-medium" },
-        { id: 132, name: "Hair Spa- Moroccon- Long", link: "/services/hair-spa-moroccon-long" },
-        { id: 133, name: "Hair Botox- Short", link: "/services/hair-botox-short" },
-        { id: 134, name: "Hair Botox - Medium", link: "/services/hair-botox-medium" },
-        { id: 135, name: "Hair Botox- Long", link: "/services/hair-botox-long" },
-        { id: 136, name: "Olaplex- Short", link: "/services/olaplex-short" },
-        { id: 137, name: "Olaplex- Medium", link: "/services/olaplex-medium" },
-        { id: 138, name: "Olaplex- Long", link: "/services/olaplex-long" },
-        { id: 139, name: "Hair Wash", link: "/services/hair-wash" }
-      ]
+      { id: 100, name: "Hair cut - Short", link: "/salon/hair-cut-short" },
+      { id: 101, name: "Hair cut- Medium", link: "/salon/hair-cut-medium" },
+      { id: 102, name: "Hair cut - Long", link: "/salon/hair-cut-long" },
+      { id: 103, name: "Hair cut- Men", link: "/salon/hair-cut-men" },
+      { id: 104, name: "Hair styling", link: "/salon/hair-styling" },
+      { id: 105, name: "Hair Trimming", link: "/salon/hair-trimming" },
+      { id: 106, name: "Inoa Hair color- Global- Short", link: "/salon/inoa-hair-color-global-short" },
+      { id: 107, name: "Inoa Hair color- Global- Medium", link: "/salon/inoa-hair-color-global-medium" },
+      { id: 108, name: "Inoa Hair color- Global - Long", link: "/salon/inoa-hair-color-global-long" },
+      { id: 109, name: "Hair Root Touch up- Majirel", link: "/salon/hair-root-touch-up-majirel" },
+      { id: 110, name: "Hair Root Touch up- Inoa", link: "/salon/hair-root-touch-up-inoa" },
+      { id: 111, name: "Majirel Hair color- Global - Short", link: "/salon/majirel-hair-color-global-short" },
+      { id: 112, name: "Majirel Hair color- Global - Medium", link: "/salon/majirel-hair-color-global-medium" },
+      { id: 113, name: "Majirel Hair color- Global- Long", link: "/salon/majirel-hair-color-global-long" },
+      { id: 114, name: "Hair Keratin- Short", link: "/salon/hair-keratin-short" },
+      { id: 115, name: "Hair Keratin- Medium", link: "/salon/hair-keratin-medium" },
+      { id: 116, name: "Hair Keratin- Long", link: "/salon/hair-keratin-long" },
+      { id: 117, name: "Hair Smoothening- Short", link: "/salon/hair-smoothening-short" },
+      { id: 118, name: "Hair Smoothening - Medium", link: "/salon/hair-smoothening-medium" },
+      { id: 119, name: "Hair Smoothening- Long", link: "/salon/hair-smoothening-long" },
+      { id: 120, name: "Beard Trim", link: "/salon/beard-trim" },
+      { id: 121, name: "Beard Shave", link: "/salon/beard-shave" },
+      { id: 122, name: "Hair Highlights- Per Streak", link: "/salon/hair-highlights-per-streak" },
+      { id: 123, name: "Balliage Treatment- Short", link: "/salon/balliage-treatment-short" },
+      { id: 124, name: "Balliage Treatment- Medium", link: "/salon/balliage-treatment-medium" },
+      { id: 125, name: "Balliage Treatment- Long", link: "/salon/balliage-treatment-long" },
+      { id: 126, name: "Hair Blow Dry", link: "/salon/hair-blow-dry" },
+      { id: 127, name: "Hair Spa- Loreal - Short", link: "/salon/hair-spa-loreal-short" },
+      { id: 128, name: "Hair Spa- Loreal - Medium", link: "/salon/hair-spa-loreal-medium" },
+      { id: 129, name: "Hair spa- Loreal- Long", link: "/salon/hair-spa-loreal-long" },
+      { id: 130, name: "Hair Spa- Moroccon- Short", link: "/salon/hair-spa-moroccon-short" },
+      { id: 131, name: "Hair Spa- Moroccon- Medium", link: "/salon/hair-spa-moroccon-medium" },
+      { id: 132, name: "Hair Spa- Moroccon- Long", link: "/salon/hair-spa-moroccon-long" },
+      { id: 133, name: "Hair Botox- Short", link: "/salon/hair-botox-short" },
+      { id: 134, name: "Hair Botox - Medium", link: "/salon/hair-botox-medium" },
+      { id: 135, name: "Hair Botox- Long", link: "/salon/hair-botox-long" },
+      { id: 136, name: "Olaplex- Short", link: "/salon/olaplex-short" },
+      { id: 137, name: "Olaplex- Medium", link: "/salon/olaplex-medium" },
+      { id: 138, name: "Olaplex- Long", link: "/salon/olaplex-long" },
+      { id: 139, name: "Hair Wash", link: "/salon/hair-wash" }
+    ]
   },
 
   // LHR: 
   {
     name: "Laser Removal",
     img: "/images/service_3.png",
-    link: "/services/laser-removal",
+    link: "/laser-removal",
+    section_1: {
+      desc_1:
+        "Laser hair removal is a modern treatment that targets hair follicles with focused light energy to gradually reduce unwanted hair growth over multiple sessions.",
+      desc_2:
+        "Advanced laser systems are used to deliver controlled energy safely, ensuring effective treatment while minimizing discomfort and protecting surrounding skin.",
+      desc_3:
+        "With continued sessions, hair growth becomes finer and less frequent, leaving the skin smoother, clearer, and more comfortable for extended periods.",
+    },
+    isCat: true,
     description: "Advanced laser hair removal solutions for face and body, delivering smooth, long-lasting results safely and effectively.",
     icon: <svg xmlns="http://www.w3.org/2000/svg" width="106" height="106" viewBox="0 0 106 106" fill="none">
           <path d="M8.26055 5.57012C7.34961 6.48105 7.49453 7.18496 8.86094 8.36504C12.5668 11.5533 16.1898 15.1971 18.7156 18.2818L19.5023 19.2549L18.1566 20.6834C13.8297 25.2795 13.9953 30.9521 18.6121 35.631C20.5168 37.5357 21.8832 38.281 24.968 39.0678C26.8934 39.5439 27.3488 39.7303 28.0527 40.3928L28.8809 41.1795L28.9016 46.2103C28.9016 51.5725 29.0465 52.649 30.1438 56.4791C31.3445 60.6611 33.2906 63.3111 36.1891 64.7603L37.7625 65.5264L40.7852 65.5057C43.518 65.485 46.7684 65.0502 49.998 64.2635C50.3293 64.1807 50.909 64.781 52.8965 67.224C55.7949 70.8264 62.3785 77.4928 65.2563 79.7908C69.5211 83.1654 74.2 86.0225 78.5684 87.9064C83.1645 89.8939 86.4563 90.8463 92.2738 91.9228C96.6836 92.7303 97.0356 92.8545 97.4082 93.5791C98.1535 95.0076 97.5324 96.0221 95.5863 96.6639C93.4953 97.3264 92.1703 97.5334 89.2305 97.6576C85.0277 97.8232 81.0527 97.3264 68.4238 95.0697C67.1609 94.8627 65.3391 94.7385 62.834 94.7385C59.5629 94.7385 58.652 94.8213 55.443 95.401C45.9609 97.0986 40.0605 96.5189 37.1414 93.5998C35.3402 91.8193 34.9469 89.8111 35.4852 85.2771C36.4582 77.265 34.657 71.758 28.8188 64.8018C26.3551 61.8412 22.4629 58.1975 16.0449 52.7939C12.8566 50.1232 9.75117 47.4525 9.10938 46.8728C7.68086 45.5685 7.05977 45.1338 6.56289 45.1338C5.9625 45.1338 4.96875 46.2518 4.96875 46.935C4.96875 47.6803 6.08672 48.7361 13.3535 54.8643C19.6266 60.1642 21.3863 61.7377 24.2227 64.6982C31.0754 71.8615 33.2285 77.2443 32.2141 84.7803C31.8 87.8236 31.8 89.1279 32.1934 90.9912C33.1043 95.3182 36.2512 98.1338 41.3648 99.2103C42.9176 99.5416 44.1184 99.6451 46.6855 99.6451C50.2465 99.6451 51.9027 99.4588 56.416 98.61C58.859 98.1338 59.8734 98.051 62.834 98.051C66.1051 98.051 66.7262 98.1131 71.7363 99.0033C81.3012 100.722 85.4418 101.177 89.748 100.949C92.7914 100.804 94.7168 100.473 96.8699 99.7279C98.6918 99.0861 99.6027 98.4029 100.348 97.14C100.845 96.3119 100.928 95.9393 100.928 94.6143C100.907 92.4818 100.182 91.1568 98.3191 89.9768C98.0086 89.7904 95.6484 89.2107 93.0398 88.6932C85.6695 87.2439 82.4605 86.2295 77.4297 83.7244C68.5895 79.356 60.5773 72.1721 52.4824 61.3857C49.5012 57.4107 45.3398 51.2205 39.8535 42.6494C29.916 27.1014 25.7754 21.2838 20.1648 14.9072C17.9289 12.3607 13.3328 7.80605 11.3246 6.1291C9.70977 4.7834 9.15078 4.67988 8.26055 5.57012Z" fill="#72383D"/>
@@ -617,40 +645,49 @@ export const servicesRef = [
           </svg>,
     images: ["/images/laser_1.webp","/images/laser_2.webp","/images/laser_3.webp","/images/laser_4.webp"],
     services: [
-        { id: 1, name: "Beard Shaping- Laser", link: "/services/beard-shaping-laser" },
-        { id: 2, name: "Full Body LHR- Female", link: "/services/full-body-lhr-female" },
-        { id: 3, name: "Full Body LHR- Male", link: "/services/full-body-lhr-male" },
-        { id: 4, name: "Upper Lip LHR", link: "/services/upper-lip-lhr" },
-        { id: 5, name: "Under Arm LHR", link: "/services/under-arm-lhr" },
-        { id: 6, name: "Full Arm LHR", link: "/services/full-arm-lhr" },
-        { id: 7, name: "Full Legs LHR", link: "/services/full-legs-lhr" },
-        { id: 8, name: "Front LHR", link: "/services/front-lhr" },
-        { id: 9, name: "Back LHR", link: "/services/back-lhr" },
-        { id: 10, name: "Upper Body LHR", link: "/services/upper-body-lhr" },
-        { id: 11, name: "Lower Body LHR", link: "/services/lower-body-lhr" },
-        { id: 12, name: "Half Face LHR", link: "/services/half-face-lhr" },
-        { id: 13, name: "Bikini LHR", link: "/services/bikini-lhr" },
-        { id: 14, name: "primelase LHR - Full Body Male", link: "/services/primelase-full-body-male" },
-        { id: 15, name: "Pimelase LHR- Full Body Female", link: "/services/primelase-full-body-female" },
-        { id: 16, name: "Primelase LHR- Full Face", link: "/services/primelase-full-face" },
-        { id: 17, name: "Primelase LHR- Half Face", link: "/services/primelase-half-face" },
-        { id: 18, name: "Primelase LHR- Beard Shaping", link: "/services/primelase-beard-shaping" },
-        { id: 19, name: "Primelase LHR- Lower Body", link: "/services/primelase-lower-body" },
-        { id: 20, name: "Primelase LHR- Upper Body", link: "/services/primelase-upper-body" },
-        { id: 21, name: "Primelase LHR- Front", link: "/services/primelase-front" },
-        { id: 22, name: "Primelase LHR- Back", link: "/services/primelase-back" },
-        { id: 23, name: "Primelase LHR- Full Arm", link: "/services/primelase-full-arm" },
-        { id: 24, name: "Primelase LHR- Full Legs", link: "/services/primelase-full-legs" },
-        { id: 25, name: "Primelase LHR - Under Arm", link: "/services/primelase-under-arm" },
-        { id: 26, name: "Primelase LHR- Upper Lip", link: "/services/primelase-upper-lip" }
-      ]
+      { id: 1, name: "Beard Shaping- Laser", link: "/laser-removal/beard-shaping-laser" },
+      { id: 2, name: "Full Body LHR- Female", link: "/laser-removal/full-body-lhr-female" },
+      { id: 3, name: "Full Body LHR- Male", link: "/laser-removal/full-body-lhr-male" },
+      { id: 4, name: "Upper Lip LHR", link: "/laser-removal/upper-lip-lhr" },
+      { id: 5, name: "Under Arm LHR", link: "/laser-removal/under-arm-lhr" },
+      { id: 6, name: "Full Arm LHR", link: "/laser-removal/full-arm-lhr" },
+      { id: 7, name: "Full Legs LHR", link: "/laser-removal/full-legs-lhr" },
+      { id: 8, name: "Front LHR", link: "/laser-removal/front-lhr" },
+      { id: 9, name: "Back LHR", link: "/laser-removal/back-lhr" },
+      { id: 10, name: "Upper Body LHR", link: "/laser-removal/upper-body-lhr" },
+      { id: 11, name: "Lower Body LHR", link: "/laser-removal/lower-body-lhr" },
+      { id: 12, name: "Half Face LHR", link: "/laser-removal/half-face-lhr" },
+      { id: 13, name: "Bikini LHR", link: "/laser-removal/bikini-lhr" },
+      { id: 14, name: "primelase LHR - Full Body Male", link: "/laser-removal/primelase-full-body-male" },
+      { id: 15, name: "Pimelase LHR- Full Body Female", link: "/laser-removal/primelase-full-body-female" },
+      { id: 16, name: "Primelase LHR- Full Face", link: "/laser-removal/primelase-full-face" },
+      { id: 17, name: "Primelase LHR- Half Face", link: "/laser-removal/primelase-half-face" },
+      { id: 18, name: "Primelase LHR- Beard Shaping", link: "/laser-removal/primelase-beard-shaping" },
+      { id: 19, name: "Primelase LHR- Lower Body", link: "/laser-removal/primelase-lower-body" },
+      { id: 20, name: "Primelase LHR- Upper Body", link: "/laser-removal/primelase-upper-body" },
+      { id: 21, name: "Primelase LHR- Front", link: "/laser-removal/primelase-front" },
+      { id: 22, name: "Primelase LHR- Back", link: "/laser-removal/primelase-back" },
+      { id: 23, name: "Primelase LHR- Full Arm", link: "/laser-removal/primelase-full-arm" },
+      { id: 24, name: "Primelase LHR- Full Legs", link: "/laser-removal/primelase-full-legs" },
+      { id: 25, name: "Primelase LHR - Under Arm", link: "/laser-removal/primelase-under-arm" },
+      { id: 26, name: "Primelase LHR- Upper Lip", link: "/laser-removal/primelase-upper-lip" }
+    ]
   },
 
   // Ayurveda: 
   {
     name: "Ayurveda",
     img: "/images/service_4.png",
-    link: "/services/ayurveda",
+    link: "/ayurveda",
+    section_1: {
+      desc_1:
+        "Ayurvedic therapies are rooted in ancient holistic healing traditions that aim to restore harmony between the body, mind, and natural energy systems.",
+      desc_2:
+        "These treatments use carefully selected herbal oils and therapeutic techniques to encourage relaxation, detoxification, and improved circulation.",
+      desc_3:
+        "Regular Ayurvedic sessions support long-term wellness by reducing stress, easing physical tension, and promoting balance and inner calm.",
+    },
+    isCat: true,
     description: "Traditional Ayurvedic therapies focused on relaxation, healing, and restoring balance to body and mind.",
     icon: <svg xmlns="http://www.w3.org/2000/svg" width="106" height="106" viewBox="0 0 106 106" fill="none">
           <path d="M47.095 8.61289C45.4801 8.84062 43.2649 9.42031 42.2918 9.83437C41.1118 10.3727 39.4555 11.7805 39 12.6707C38.7102 13.2504 38.7102 13.2504 39.3313 13.2504C40.118 13.2504 41.236 13.7059 41.7743 14.2441L42.1883 14.6582L43.6168 14.0992C47.7989 12.3809 53.161 12.1738 58.9371 13.4988C59.993 13.7473 60.9039 13.8922 60.966 13.8508C61.0075 13.7887 61.111 13.3746 61.1938 12.8984L61.318 12.0703L59.7446 11.0145C58.7715 10.3934 57.3844 9.73086 56.1422 9.3168C54.2582 8.675 53.927 8.63359 50.925 8.57148C49.1653 8.55078 47.4469 8.57148 47.095 8.61289Z" fill="#72383D"/>
@@ -676,16 +713,16 @@ export const servicesRef = [
           </svg>,
     images: ["/images/ayurveda_1.webp","/images/ayurveda_2.webp","/images/ayurveda_3.webp","/images/ayurveda_4.webp"],
     services: [
-        { id: 27, name: "Detox Therapy", link: "/services/detox-therapy" },
-        { id: 28, name: "Abhyangam Therapy", link: "/services/abhyangam-therapy" },
-        { id: 29, name: "Udawartanam Therapy", link: "/services/udawartanam-therapy" },
-        { id: 30, name: "Kati Vasti", link: "/services/kati-vasti" },
-        { id: 31, name: "Janu Vasti", link: "/services/janu-vasti" },
-        { id: 32, name: "Greeva Vasti", link: "/services/greeva-vasti" },
-        { id: 33, name: "Potli Massage- Full Body", link: "/services/potli-massage-full-body" },
-        { id: 34, name: "Accupressure Dry Massage", link: "/services/accupressure-dry-massage" },
-        { id: 35, name: "Deep Tissue Oil Massage", link: "/services/deep-tissue-oil-massage" },
-        { id: 36, name: "Body Steam", link: "/services/body-steam" }
+      { id: 27, name: "Detox Therapy", link: "/ayurveda/detox-therapy" },
+      { id: 28, name: "Abhyangam Therapy", link: "/ayurveda/abhyangam-therapy" },
+      { id: 29, name: "Udawartanam Therapy", link: "/ayurveda/udawartanam-therapy" },
+      { id: 30, name: "Kati Vasti", link: "/ayurveda/kati-vasti" },
+      { id: 31, name: "Janu Vasti", link: "/ayurveda/janu-vasti" },
+      { id: 32, name: "Greeva Vasti", link: "/ayurveda/greeva-vasti" },
+      { id: 33, name: "Potli Massage- Full Body", link: "/ayurveda/potli-massage-full-body" },
+      { id: 34, name: "Accupressure Dry Massage", link: "/ayurveda/accupressure-dry-massage" },
+      { id: 35, name: "Deep Tissue Oil Massage", link: "/ayurveda/deep-tissue-oil-massage" },
+      { id: 36, name: "Body Steam", link: "/ayurveda/body-steam" }
     ]
   },
 
@@ -693,7 +730,16 @@ export const servicesRef = [
   {
     name: "Skin",
     img: "/images/service_5.png",
-    link: "/services/skin",
+    link: "/skin",
+    section_1: {
+      desc_1:
+        "Our advanced skin treatments are carefully designed to rejuvenate, hydrate, and restore the natural radiance of your skin. Each procedure uses medical-grade technologies tailored to individual skin types for optimal results.",
+      desc_2:
+        "With expert application, these treatments target fine lines, pigmentation, and uneven textures while promoting deep hydration and collagen stimulation. The process ensures your skin feels nourished, refreshed, and visibly smoother.",
+      desc_3:
+        "Over time, regular sessions improve skin elasticity, tone, and overall health, leaving your face looking revitalized, luminous, and naturally youthful, all while maintaining a gentle, safe approach for sensitive skin.",
+    },
+    isCat: true,
     description: "Advanced skin treatments designed to rejuvenate, lift, hydrate, and enhance skin texture using medical-grade technologies and expert care.",
     icon: <svg xmlns="http://www.w3.org/2000/svg" width="106" height="106" viewBox="0 0 106 106" fill="none">
           <path d="M48.4414 6.93516C42.1477 8.07383 36.8891 12.0074 33.9699 17.7215C33.618 18.4254 33.3281 19.0465 33.3281 19.0879C33.3281 19.15 34.2805 18.7152 35.4605 18.1148C39.0422 16.3344 44.2801 14.5746 48.752 13.6844C53.4309 12.7527 56.5156 12.7734 59.2691 13.7879C60.0973 14.0777 62.2504 14.8645 64.0723 15.5063C67.6332 16.7898 70.366 17.9285 71.7945 18.7773L72.7055 19.2949L72.5605 18.8188C72.0637 17.1418 69.4758 13.5188 67.5297 11.759C64.7141 9.2332 61.1324 7.53555 57.3437 6.91445C55.1492 6.5625 50.491 6.5625 48.4414 6.93516Z" fill="#72383D"/>
@@ -707,62 +753,72 @@ export const servicesRef = [
           </svg>,
     images: ["/images/skin_1.webp","/images/skin_2.webp","/images/skin_3.webp","/images/skin_4.webp"],
     services: [
-          { id: 37, name: "Hydra Facial", link: "/services/hydra-facial" },
-          { id: 38, name: "Carbon Facial", link: "/services/carbon-facial" },
-          { id: 39, name: "Q-switch Laser", link: "/services/q-switch-laser" },
-          { id: 40, name: "RF Session", link: "/services/rf-session" },
-          { id: 41, name: "Cryo T-shock - Face", link: "/services/cryo-t-shock-face" },
-          { id: 42, name: "Skin Hyderation", link: "/services/skin-hyderation" },
-          { id: 43, name: "Face lifting", link: "/services/face-lifting" },
-          { id: 44, name: "Lip Tinting", link: "/services/lip-tinting" },
-          { id: 45, name: "Face PRP", link: "/services/face-prp" },
-          { id: 46, name: "Threadlift - MONO", link: "/services/threadlift-mono" },
-          { id: 47, name: "Threadlift- COG", link: "/services/threadlift-cog" },
-          { id: 48, name: "Face Botox- MR- 1 Unit- Dysport Allergan", link: "/services/face-botox-mr-1-unit-dysport-allergan" },
-          { id: 49, name: "Face Botox- MR- 1 Unit- Dysport Botulax", link: "/services/face-botox-mr-1-unit-dysport-botulax" },
-          { id: 50, name: "Face Botox- MR- 5 Unit - Dysport Allergan", link: "/services/face-botox-mr-5-unit-dysport-allergan" },
-          { id: 51, name: "Face Botox- MR- 5 Unit - Botulax", link: "/services/face-botox-mr-5-unit-botulax" },
-          { id: 52, name: "Face Botox- MR- 10 Unit - Allegran", link: "/services/face-botox-mr-10-unit-allegran" },
-          { id: 53, name: "Face Botox- MR- 10 Unit- Botulax", link: "/services/face-botox-mr-10-unit-botulax" },
-          { id: 54, name: "Tattoo Removal - per inch", link: "/services/tattoo-removal-per-inch" },
-          { id: 55, name: "Eyebrow lifting", link: "/services/eyebrow-lifting" },
-          { id: 56, name: "Lip Filler", link: "/services/lip-filler" },
-          { id: 57, name: "Fillers", link: "/services/fillers" },
-          { id: 58, name: "Nose Fillers", link: "/services/nose-fillers" },
-          { id: 59, name: "Face Peel", link: "/services/face-peel" },
-          { id: 60, name: "Arm Peel", link: "/services/arm-peel" },
-          { id: 61, name: "Knee Peel", link: "/services/knee-peel" },
-          { id: 62, name: "Elbow Peel", link: "/services/elbow-peel" },
-          { id: 63, name: "Lip Peel", link: "/services/lip-peel" },
-          { id: 64, name: "Under Eye Peel", link: "/services/under-eye-peel" },
-          { id: 65, name: "Under Arm Peel", link: "/services/under-arm-peel" },
-          { id: 66, name: "HIFU- (Face + Neck)", link: "/services/hifu-face-neck" },
-          { id: 67, name: "Carbon Facial - Tribeam", link: "/services/carbon-facial-tribeam" },
-          { id: 68, name: "Laser Toning- Tribeam", link: "/services/laser-toning-tribeam" },
-          { id: 69, name: "4D Laser - Tribeam", link: "/services/4d-laser-tribeam" },
-          { id: 70, name: "Photo Facial - Advance", link: "/services/photo-facial-advance" },
-          { id: 71, name: "Photo Facial- Pro", link: "/services/photo-facial-pro" },
-          { id: 72, name: "Pink Glow", link: "/services/pink-glow" },
-          { id: 73, name: "Derma pen", link: "/services/derma-pen" },
-          { id: 74, name: "Aquagold", link: "/services/aquagold" },
-          { id: 75, name: "Exocobio Exosomes (Face)", link: "/services/exocobio-exosomes-face" },
-          { id: 76, name: "Skinvive/ml Vital", link: "/services/skinvive-ml-vital" },
-          { id: 77, name: "Juverderm Fillers", link: "/services/juverderm-fillers" },
-          { id: 78, name: "Restylene Fillers", link: "/services/restylene-fillers" },
-          { id: 79, name: "Korean PDO Threads (Cogg)", link: "/services/korean-pdo-threads-cogg" },
-          { id: 80, name: "Mint (Cogg) PLLA Threads", link: "/services/mint-cogg-plla-threads" },
-          { id: 81, name: "ASCE Plus Exosomes", link: "/services/asce-plus-exosomes" },
-          { id: 82, name: "Ruby PDRN (1ml)", link: "/services/ruby-pdrn-1ml" },
-          { id: 83, name: "Ruby Dia PDRN (2ML)", link: "/services/ruby-dia-pdrn-2ml" },
-          { id: 84, name: "Black Diamond PDRN (1ML)", link: "/services/black-diamond-pdrn-1ml" }
-      ]
+      { id: 37, name: "Hydra Facial", link: "/skin/hydra-facial" },
+      { id: 38, name: "Carbon Facial", link: "/skin/carbon-facial" },
+      { id: 39, name: "Q-switch Laser", link: "/skin/q-switch-laser" },
+      { id: 40, name: "RF Session", link: "/skin/rf-session" },
+      { id: 41, name: "Cryo T-shock - Face", link: "/skin/cryo-t-shock-face" },
+      { id: 42, name: "Skin Hyderation", link: "/skin/skin-hyderation" },
+      { id: 43, name: "Face lifting", link: "/skin/face-lifting" },
+      { id: 44, name: "Lip Tinting", link: "/skin/lip-tinting" },
+      { id: 45, name: "Face PRP", link: "/skin/face-prp" },
+      { id: 46, name: "Threadlift - MONO", link: "/skin/threadlift-mono" },
+      { id: 47, name: "Threadlift- COG", link: "/skin/threadlift-cog" },
+      { id: 48, name: "Face Botox- MR- 1 Unit- Dysport Allergan", link: "/skin/face-botox-mr-1-unit-dysport-allergan" },
+      { id: 49, name: "Face Botox- MR- 1 Unit- Dysport Botulax", link: "/skin/face-botox-mr-1-unit-dysport-botulax" },
+      { id: 50, name: "Face Botox- MR- 5 Unit - Dysport Allergan", link: "/skin/face-botox-mr-5-unit-dysport-allergan" },
+      { id: 51, name: "Face Botox- MR- 5 Unit - Botulax", link: "/skin/face-botox-mr-5-unit-botulax" },
+      { id: 52, name: "Face Botox- MR- 10 Unit - Allegran", link: "/skin/face-botox-mr-10-unit-allegran" },
+      { id: 53, name: "Face Botox- MR- 10 Unit- Botulax", link: "/skin/face-botox-mr-10-unit-botulax" },
+      { id: 54, name: "Tattoo Removal - per inch", link: "/skin/tattoo-removal-per-inch" },
+      { id: 55, name: "Eyebrow lifting", link: "/skin/eyebrow-lifting" },
+      { id: 56, name: "Lip Filler", link: "/skin/lip-filler" },
+      { id: 57, name: "Fillers", link: "/skin/fillers" },
+      { id: 58, name: "Nose Fillers", link: "/skin/nose-fillers" },
+      { id: 59, name: "Face Peel", link: "/skin/face-peel" },
+      { id: 60, name: "Arm Peel", link: "/skin/arm-peel" },
+      { id: 61, name: "Knee Peel", link: "/skin/knee-peel" },
+      { id: 62, name: "Elbow Peel", link: "/skin/elbow-peel" },
+      { id: 63, name: "Lip Peel", link: "/skin/lip-peel" },
+      { id: 64, name: "Under Eye Peel", link: "/skin/under-eye-peel" },
+      { id: 65, name: "Under Arm Peel", link: "/skin/under-arm-peel" },
+      { id: 66, name: "HIFU- (Face + Neck)", link: "/skin/hifu-face-neck" },
+      { id: 67, name: "Carbon Facial - Tribeam", link: "/skin/carbon-facial-tribeam" },
+      { id: 68, name: "Laser Toning- Tribeam", link: "/skin/laser-toning-tribeam" },
+      { id: 69, name: "4D Laser - Tribeam", link: "/skin/4d-laser-tribeam" },
+      { id: 70, name: "Photo Facial - Advance", link: "/skin/photo-facial-advance" },
+      { id: 71, name: "Photo Facial- Pro", link: "/skin/photo-facial-pro" },
+      { id: 72, name: "Pink Glow", link: "/skin/pink-glow" },
+      { id: 73, name: "Derma pen", link: "/skin/derma-pen" },
+      { id: 74, name: "Aquagold", link: "/skin/aquagold" },
+      { id: 75, name: "Exocobio Exosomes (Face)", link: "/skin/exocobio-exosomes-face" },
+      { id: 76, name: "Skinvive/ml Vital", link: "/skin/skinvive-ml-vital" },
+      { id: 77, name: "Juverderm Fillers", link: "/skin/juverderm-fillers" },
+      { id: 78, name: "Restylene Fillers", link: "/skin/restylene-fillers" },
+      { id: 79, name: "Korean PDO Threads (Cogg)", link: "/skin/korean-pdo-threads-cogg" },
+      { id: 80, name: "Mint (Cogg) PLLA Threads", link: "/skin/mint-cogg-plla-threads" },
+      { id: 81, name: "ASCE Plus Exosomes", link: "/skin/asce-plus-exosomes" },
+      { id: 82, name: "Ruby PDRN (1ml)", link: "/skin/ruby-pdrn-1ml" },
+      { id: 83, name: "Ruby Dia PDRN (2ML)", link: "/skin/ruby-dia-pdrn-2ml" },
+      { id: 84, name: "Black Diamond PDRN (1ML)", link: "/skin/black-diamond-pdrn-1ml" }
+    ]
+
   },
 
   // Slimming: 
   {
     name: "Slimming",
     img: "/images/service_6.png",
-    link: "/services/slimming",
+    link: "/slimming",
+    section_1: {
+      desc_1:
+        "Our non-invasive slimming and body contouring treatments are expertly crafted to reduce fat deposits, tighten the skin, and reshape body contours with precision and comfort.",
+      desc_2:
+        "By combining advanced technologies with personalized care, these sessions stimulate fat metabolism, improve blood circulation, and enhance muscle tone for a firmer, more sculpted appearance.",
+      desc_3:
+        "With consistent treatments, clients experience a noticeable transformation in body shape and overall confidence, achieving a balanced silhouette while enjoying a safe and pain-free slimming experience.",
+    },
+    isCat: true,
     description: "Non-invasive body contouring and slimming solutions that help reduce fat, tone muscles, and reshape the body effectively.",
     icon: <svg xmlns="http://www.w3.org/2000/svg" width="106" height="106" viewBox="0 0 106 106" fill="none">
       <path d="M33.5818 10.2681C32.8365 10.7856 32.7537 11.3239 33.0435 13.4563C33.3541 15.8372 33.4162 21.5513 33.1263 24.1185C32.3603 31.0333 30.1244 37.3478 26.5427 42.6063C24.1826 46.0845 23.2923 47.6372 22.6919 49.5005C20.0212 57.554 22.1123 69.3341 28.6959 83.4743C31.1388 88.6915 34.9275 95.5028 35.6314 95.8548C36.1283 96.1239 69.8744 96.1239 70.3712 95.8548C70.806 95.6271 72.4208 92.9771 74.5119 89.0642C79.0665 80.5345 82.2548 72.0669 83.6212 65.0071C85.2775 56.4567 84.4701 50.0595 81.1162 45.1528C78.3212 41.0536 77.7623 40.122 76.8099 38.1966C74.9259 34.3044 73.5802 29.7911 72.9798 25.195C72.6072 22.2759 72.5658 16.6032 72.9177 13.2907L73.1662 10.9099L72.5865 10.4337L72.0275 9.93681H53.0427C35.9626 9.93681 33.9959 9.97822 33.5818 10.2681ZM69.5017 13.829C69.4396 14.1395 69.3154 15.6716 69.2533 17.1829C68.7978 26.1267 71.3857 36.4989 75.7333 43.1239C76.0232 43.538 76.2095 43.9313 76.1474 43.9935C76.106 44.0349 75.2365 44.3247 74.222 44.6145C73.2076 44.9044 70.7439 45.7946 68.7564 46.5606C62.6904 48.9208 58.7982 49.6868 53.0013 49.6868C47.2666 49.6868 42.8568 48.8173 37.2669 46.5813C35.5693 45.8981 33.2298 45.07 32.0705 44.7181C30.8904 44.3661 29.8966 44.0556 29.8552 43.9935C29.8138 43.952 30.1037 43.3724 30.497 42.7099C34.058 36.8095 36.0662 30.1845 36.6459 22.4622C36.8736 19.6259 36.8115 16.0235 36.5216 14.0153L36.3974 13.2493H53.0013H69.6259L69.5017 13.829ZM27.64 59.0032C32.0498 60.0177 36.6251 61.7153 40.8693 63.9306L43.54 65.3177L47.4322 71.7978L51.3451 78.2571V85.5032V92.7493H44.3474H37.3291L35.7142 89.8095C34.824 88.1739 33.9337 86.5591 33.7267 86.2071C33.5404 85.8345 32.7123 84.1575 31.9048 82.4392C27.8884 73.8888 25.5283 66.27 24.9279 59.8728L24.783 58.3614L25.2798 58.4649C25.549 58.527 26.6255 58.7755 27.64 59.0032ZM81.1576 59.3345C81.1576 61.5083 80.1845 66.2907 78.8388 70.7005C77.3275 75.7313 72.7521 85.8966 69.6673 91.1552L68.715 92.7493H61.6966H54.6576V85.5032V78.2778L58.5498 71.7978L62.4626 65.3177L64.7193 64.1376C69.1912 61.7774 73.9322 60.0177 78.7353 58.8997C79.8947 58.6306 80.9091 58.4028 81.0126 58.4028C81.0955 58.3821 81.1576 58.8169 81.1576 59.3345ZM51.9455 70.8454C52.7322 71.4458 53.4568 71.3009 54.8646 70.2657C55.5685 69.7481 56.0861 69.4376 56.0033 69.6032C55.465 70.5349 52.9599 74.5306 52.9185 74.5306C52.8564 74.5306 52.2353 73.4954 50.3306 70.1829L49.813 69.2513L50.6205 69.8517C51.0759 70.1829 51.6763 70.6384 51.9455 70.8454Z" fill="#72383D"/>
@@ -771,25 +827,35 @@ export const servicesRef = [
       <path d="M83.6844 21.7785C79.7715 24.3664 78.2188 25.5258 78.0325 25.9191C77.5563 27.0578 77.929 27.4098 83.4981 31.0949C86.3758 32.9996 88.8809 34.6145 89.088 34.6973C89.6262 34.8836 90.5993 34.4074 90.8684 33.8277C90.9926 33.5379 91.0962 32.8961 91.0962 32.3992V31.4676H97.2036H103.332L103.829 30.95C104.346 30.4531 104.346 30.4117 104.346 26.4988C104.346 22.5859 104.346 22.5445 103.829 22.0477L103.332 21.5301H97.2036H91.0962V20.4121C91.0962 19.1078 90.7028 18.4867 89.7298 18.3004C89.1708 18.1969 88.4876 18.5902 83.6844 21.7785Z" fill="#72383D"/>
       </svg>,
     images: ["/images/slimming_1.webp","/images/slimming_2.webp","/images/slimming_3.webp","/images/slimming_4.webp"],
-    services:  [
-          { id: 85, name: "Cryo T-shock - Tummy", link: "/services/cryo-t-shock-tummy" },
-          { id: 86, name: "Bipolar- Face", link: "/services/bipolar-face" },
-          { id: 87, name: "Bipolar- Tummy", link: "/services/bipolar-tummy" },
-          { id: 88, name: "Bipolar per body area", link: "/services/bipolar-per-body-area" },
-          { id: 89, name: "NMS- Neuro Muscular Stimulator", link: "/services/nms-neuro-muscular-stimulator" },
-          { id: 90, name: "Cryo T-shock Per Body Area", link: "/services/cryo-t-shock-per-body-area" },
-          { id: 91, name: "Focuslift", link: "/services/focuslift" },
-          { id: 92, name: "Cavitation", link: "/services/cavitation" },
-          { id: 93, name: "BCA Diet Consultation", link: "/services/bca-diet-consultation" },
-          { id: 94, name: "EGVT", link: "/services/egvt" }
-        ]
+    services: [
+      { id: 85, name: "Cryo T-shock - Tummy", link: "/slimming/cryo-t-shock-tummy" },
+      { id: 86, name: "Bipolar- Face", link: "/slimming/bipolar-face" },
+      { id: 87, name: "Bipolar- Tummy", link: "/slimming/bipolar-tummy" },
+      { id: 88, name: "Bipolar per body area", link: "/slimming/bipolar-per-body-area" },
+      { id: 89, name: "NMS- Neuro Muscular Stimulator", link: "/slimming/nms-neuro-muscular-stimulator" },
+      { id: 90, name: "Cryo T-shock Per Body Area", link: "/slimming/cryo-t-shock-per-body-area" },
+      { id: 91, name: "Focuslift", link: "/slimming/focuslift" },
+      { id: 92, name: "Cavitation", link: "/slimming/cavitation" },
+      { id: 93, name: "BCA Diet Consultation", link: "/slimming/bca-diet-consultation" },
+      { id: 94, name: "EGVT", link: "/slimming/egvt" }
+    ]
+
   },
 
   // Hair: 
   {
     name: "Hair",
     img: "/images/service_7.png",
-    link: "/services/hair",
+    link: "/hair",
+    section_1: {
+      desc_1:
+        "Our innovative hair restoration treatments are designed to strengthen hair, reduce hair loss, and stimulate healthy growth, targeting the root causes of thinning and scalp issues.",
+      desc_2:
+        "Using clinically proven techniques and high-quality products, these treatments nourish the scalp, reinforce follicles, and enhance blood flow, creating an optimal environment for hair growth and vitality.",
+      desc_3:
+        "Over multiple sessions, hair becomes thicker, stronger, and more resilient, leaving clients with a fuller, healthier-looking mane and improved scalp condition, all in a gentle, professional setting.",
+    },
+    isCat: true,
     description: "Innovative hair restoration and strengthening treatments to reduce hair loss, stimulate growth, and improve scalp health.E",
     icon: <svg xmlns="http://www.w3.org/2000/svg" width="104" height="104" viewBox="0 0 104 104" fill="none">
           <path d="M52.0991 2.15165C45.2132 2.82197 39.6069 4.95478 34.5288 8.83446C25.2866 15.9032 20.0866 27.9688 21.1022 39.9735C21.5288 44.8485 22.646 49.5813 23.4382 49.7235C23.7835 49.8048 26.5257 48.8704 26.8507 48.5657C26.9116 48.5048 26.6679 47.2048 26.2819 45.7017C25.4288 42.411 25.2054 39.3438 25.571 35.647C26.3632 27.4204 29.2882 21.0626 34.7319 15.6392C38.9975 11.3735 43.2429 9.03759 48.971 7.79853C51.3882 7.2704 56.1413 7.25009 56.9335 7.77822C58.0507 8.50947 57.5835 8.77353 54.11 9.34228C46.3913 10.5813 40.8663 13.1813 36.3366 17.6704C32.3554 21.6517 29.4913 27.2782 28.496 33.0876C27.8054 37.2313 28.1913 46.372 29.1257 47.286C29.471 47.6517 30.2632 47.4688 37.6772 45.3767C44.3804 43.4876 46.3507 42.797 49.4991 41.2329C57.2991 37.3735 64.7335 30.5485 67.821 24.4142C69.9132 20.2501 70.685 15.172 70.0757 9.34228C69.8319 6.96571 69.4257 5.70634 68.6944 5.01572C67.5772 3.93915 64.5913 2.90322 61.2397 2.43603C59.6757 2.21259 53.3991 2.02978 52.0991 2.15165ZM57.0554 14.847C58.2944 15.111 59.1069 15.9235 58.6397 16.3907C58.4772 16.5532 57.1772 16.8579 55.6335 17.0813C48.7272 18.0767 45.5788 19.4782 41.5772 23.3376C37.5757 27.197 35.9304 30.447 34.61 37.1704C34.021 40.2173 33.8179 40.8063 33.4522 40.4407C33.2897 40.2782 33.2085 39.1001 33.2288 36.7032C33.2288 33.7782 33.31 32.9454 33.6757 31.6048C34.285 29.3704 35.8694 26.2017 37.3116 24.272C39.7288 21.0423 43.6491 17.8329 46.8382 16.472C50.1288 15.0704 54.7194 14.3392 57.0554 14.847Z" fill="#72383D"/>
@@ -798,12 +864,12 @@ export const servicesRef = [
           </svg>,
     images: ["/images/hair_1.webp","/images/hair_2.webp","/images/hair_3.webp","/images/hair_4.webp"],
     services: [
-        { id: 95, name: "Hair PRP", link: "/services/hair-prp" },
-        { id: 96, name: "Hair GFC", link: "/services/hair-gfc" },
-        { id: 97, name: "QR678", link: "/services/qr678" },
-        { id: 98, name: "GFC Exosomes", link: "/services/gfc-exosomes" },
-        { id: 99, name: "Exocobio Exosomes (Hair)", link: "/services/exocobio-exosomes-hair" }
-      ]
+      { id: 95, name: "Hair PRP", link: "/hair/hair-prp" },
+      { id: 96, name: "Hair GFC", link: "/hair/hair-gfc" },
+      { id: 97, name: "QR678", link: "/hair/qr678" },
+      { id: 98, name: "GFC Exosomes", link: "/hair/gfc-exosomes" },
+      { id: 99, name: "Exocobio Exosomes (Hair)", link: "/hair/exocobio-exosomes-hair" }
+    ]
   },
 ];
 
@@ -1078,7 +1144,7 @@ export const servicesData = [
   {
     id: 140,
     name: "Upper Lip Threading",
-    link: "/services/upper-lip-threading",
+    link: "/beauty-services/upper-lip-threading",
     main_desc:
       "A precise threading technique to remove unwanted hair from the upper lip, leaving skin smooth and clean.",
     section_1: {
@@ -1106,7 +1172,7 @@ export const servicesData = [
   {
     id: 141,
     name: "Eyebrow Threading",
-    link: "/services/eyebrow-threading",
+    link: "/beauty-services/eyebrow-threading",
     main_desc:
       "Expert eyebrow shaping using traditional threading for a clean and defined look.",
     section_1: {
@@ -1134,7 +1200,7 @@ export const servicesData = [
   {
     id: 142,
     name: "Chin Threading",
-    link: "/services/chin-threading",
+    link: "/beauty-services/chin-threading",
     main_desc:
       "Gentle threading method to remove unwanted hair from the chin area.",
     section_1: {
@@ -1162,7 +1228,7 @@ export const servicesData = [
   {
     id: 143,
     name: "Forehead Threading",
-    link: "/services/forehead-threading",
+    link: "/beauty-services/forehead-threading",
     main_desc:
       "Threading treatment to remove fine hair from the forehead for a clean look.",
     section_1: {
@@ -1190,7 +1256,7 @@ export const servicesData = [
   {
     id: 144,
     name: "Full Face Waxing Rica",
-    link: "/services/full-face-waxing-rica",
+    link: "/beauty-services/full-face-waxing-rica",
     main_desc:
       "Premium Rica wax facial hair removal for smooth and nourished skin.",
     section_1: {
@@ -1218,7 +1284,7 @@ export const servicesData = [
   {
     id: 145,
     name: "Full Face Waxing Brazlian",
-    link: "/services/full-face-waxing-brazlian",
+    link: "/beauty-services/full-face-waxing-brazlian",
     main_desc:
       "Effective facial waxing using Brazilian wax for deep hair removal.",
     section_1: {
@@ -1246,7 +1312,7 @@ export const servicesData = [
   {
     id: 146,
     name: "Upper Lip Waxing- Rica",
-    link: "/services/upper-lip-waxing-rica",
+    link: "/beauty-services/upper-lip-waxing-rica",
     main_desc:
       "Gentle upper lip waxing using Rica wax for sensitive skin.",
     section_1: {
@@ -1274,7 +1340,7 @@ export const servicesData = [
   {
     id: 147,
     name: "Upper Lip Waxing- Brazlian",
-    link: "/services/upper-lip-waxing-brazlian",
+    link: "/beauty-services/upper-lip-waxing-brazlian",
     main_desc:
       "Strong Brazilian wax for effective upper lip hair removal.",
     section_1: {
@@ -1302,7 +1368,7 @@ export const servicesData = [
   {
     id: 148,
     name: "Sides of face - Threading",
-    link: "/services/sides-of-face-threading",
+    link: "/beauty-services/sides-of-face-threading",
     main_desc:
       "Threading technique to remove hair from sides of the face.",
     section_1: {
@@ -1329,7 +1395,7 @@ export const servicesData = [
 {
   id: 149,
   name: "Pedicure- Basic",
-  link: "/services/pedicure-basic",
+  link: "/beauty-services/pedicure-basic",
   main_desc:
     "Essential foot care treatment designed to maintain clean, healthy, and well-groomed feet.",
   section_1: {
@@ -1357,7 +1423,7 @@ export const servicesData = [
 {
   id: 150,
   name: "Pedicure- Advance",
-  link: "/services/pedicure-advance",
+  link: "/beauty-services/pedicure-advance",
   main_desc:
     "Advanced pedicure treatment with deep cleansing, exfoliation, and nourishment.",
   section_1: {
@@ -1385,7 +1451,7 @@ export const servicesData = [
 {
   id: 151,
   name: "Manicure- Basic",
-  link: "/services/manicure-basic",
+  link: "/beauty-services/manicure-basic",
   main_desc:
     "Basic nail care service for clean, neat, and well-maintained hands.",
   section_1: {
@@ -1413,7 +1479,7 @@ export const servicesData = [
 {
   id: 152,
   name: "Manicure- Advance",
-  link: "/services/manicure-advance",
+  link: "/beauty-services/manicure-advance",
   main_desc:
     "Advanced manicure treatment with exfoliation, hydration, and hand massage.",
   section_1: {
@@ -1441,7 +1507,7 @@ export const servicesData = [
 {
   id: 153,
   name: "Nail cutting and shaping",
-  link: "/services/nail-cutting-and-shaping",
+  link: "/beauty-services/nail-cutting-and-shaping",
   main_desc:
     "Professional nail trimming and shaping for hands and feet.",
   section_1: {
@@ -1469,7 +1535,7 @@ export const servicesData = [
 {
   id: 154,
   name: "Anti Tan Facial",
-  link: "/services/anti-tan-facial",
+  link: "/beauty-services/anti-tan-facial",
   main_desc:
     "Facial treatment designed to reduce tanning and restore natural skin tone.",
   section_1: {
@@ -1497,7 +1563,7 @@ export const servicesData = [
 {
   id: 155,
   name: "Signature Facial",
-  link: "/services/signature-facial",
+  link: "/beauty-services/signature-facial",
   main_desc:
     "Customized facial treatment designed to meet individual skin needs.",
   section_1: {
@@ -1525,7 +1591,7 @@ export const servicesData = [
 {
   id: 156,
   name: "Face Cleanup",
-  link: "/services/face-cleanup",
+  link: "/beauty-services/face-cleanup",
   main_desc:
     "Basic facial cleanup to refresh and maintain healthy skin.",
   section_1: {
@@ -1553,7 +1619,7 @@ export const servicesData = [
 {
   id: 157,
   name: "Full Arm Waxing- Honey",
-  link: "/services/full-arm-waxing-honey",
+  link: "/beauty-services/full-arm-waxing-honey",
   main_desc:
     "Gentle honey wax hair removal for smooth and soft arms.",
   section_1: {
@@ -1581,7 +1647,7 @@ export const servicesData = [
 {
   id: 158,
   name: "Full Arm Waxing- Rica",
-  link: "/services/full-arm-waxing-rica",
+  link: "/beauty-services/full-arm-waxing-rica",
   main_desc:
     "Premium Rica wax for sensitive and delicate arm skin.",
   section_1: {
@@ -1609,7 +1675,7 @@ export const servicesData = [
 {
   id: 159,
   name: "Under Arm Waxing- Honey",
-  link: "/services/under-arm-waxing-honey",
+  link: "/beauty-services/under-arm-waxing-honey",
   main_desc:
     "Gentle honey wax hair removal for clean underarms.",
   section_1: {
@@ -1637,7 +1703,7 @@ export const servicesData = [
 {
   id: 160,
   name: "Under Arm Waxing- Rica",
-  link: "/services/under-arm-waxing-rica",
+  link: "/beauty-services/under-arm-waxing-rica",
   main_desc:
     "Rica wax underarm hair removal for sensitive skin.",
   section_1: {
@@ -1665,7 +1731,7 @@ export const servicesData = [
 {
   id: 161,
   name: "Full Legs Waxing- Honey",
-  link: "/services/full-legs-waxing-honey",
+  link: "/beauty-services/full-legs-waxing-honey",
   main_desc:
     "Honey wax hair removal for smooth and soft legs.",
   section_1: {
@@ -1693,7 +1759,7 @@ export const servicesData = [
 {
   id: 162,
   name: "Full Legs Waxing- Rica",
-  link: "/services/full-legs-waxing-rica",
+  link: "/beauty-services/full-legs-waxing-rica",
   main_desc:
     "Premium Rica wax for gentle and effective leg hair removal.",
   section_1: {
@@ -1721,7 +1787,7 @@ export const servicesData = [
 {
   id: 163,
   name: "Foot Reflexology",
-  link: "/services/foot-reflexology",
+  link: "/beauty-services/foot-reflexology",
   main_desc:
     "Therapeutic foot massage targeting pressure points for relaxation.",
   section_1: {
@@ -1749,7 +1815,7 @@ export const servicesData = [
 {
   id: 164,
   name: "Head Champi",
-  link: "/services/head-champi",
+  link: "/beauty-services/head-champi",
   main_desc:
     "Traditional head massage for deep relaxation and stress relief.",
   section_1: {
@@ -1777,7 +1843,7 @@ export const servicesData = [
 {
   id: 100,
   name: "Hair cut - Short",
-  link: "/services/hair-cut-short",
+  link: "/salon/hair-cut-short",
   main_desc: "Professional haircut service for short hair to enhance style and shape.",
   section_1: {
     desc_1:
@@ -1804,7 +1870,7 @@ export const servicesData = [
 {
   id: 101,
   name: "Hair cut- Medium",
-  link: "/services/hair-cut-medium",
+  link: "/salon/hair-cut-medium",
   main_desc: "Stylish haircut designed to add balance and movement to medium-length hair.",
   section_1: {
     desc_1:
@@ -1831,7 +1897,7 @@ export const servicesData = [
 {
   id: 102,
   name: "Hair cut - Long",
-  link: "/services/hair-cut-long",
+  link: "/salon/hair-cut-long",
   main_desc: "Precision haircut for long hair to maintain length while enhancing shape.",
   section_1: {
     desc_1:
@@ -1858,7 +1924,7 @@ export const servicesData = [
 {
   id: 103,
   name: "Hair cut- Men",
-  link: "/services/hair-cut-men",
+  link: "/salon/hair-cut-men",
   main_desc: "Classic and modern men’s haircut tailored to individual style.",
   section_1: {
     desc_1:
@@ -1885,7 +1951,7 @@ export const servicesData = [
 {
   id: 104,
   name: "Hair styling",
-  link: "/services/hair-styling",
+  link: "/salon/hair-styling",
   main_desc: "Professional hair styling for events, occasions, or daily elegance.",
   section_1: {
     desc_1:
@@ -1912,7 +1978,7 @@ export const servicesData = [
 {
   id: 105,
   name: "Hair Trimming",
-  link: "/services/hair-trimming",
+  link: "/salon/hair-trimming",
   main_desc: "Maintenance trim to keep hair healthy and well-shaped.",
   section_1: {
     desc_1:
@@ -1939,7 +2005,7 @@ export const servicesData = [
 {
   id: 106,
   name: "Inoa Hair color- Global- Short",
-  link: "/services/inoa-hair-color-global-short",
+  link: "/salon/inoa-hair-color-global-short",
   main_desc: "Ammonia-free global hair color for short hair using Inoa.",
   section_1: {
     desc_1:
@@ -1966,7 +2032,7 @@ export const servicesData = [
 {
   id: 107,
   name: "Inoa Hair color- Global- Medium",
-  link: "/services/inoa-hair-color-global-medium",
+  link: "/salon/inoa-hair-color-global-medium",
   main_desc:
     "Premium ammonia-free global hair coloring for medium-length hair.",
   section_1: {
@@ -1994,7 +2060,7 @@ export const servicesData = [
 {
   id: 108,
   name: "Inoa Hair color- Global - Long",
-  link: "/services/inoa-hair-color-global-long",
+  link: "/salon/inoa-hair-color-global-long",
   main_desc:
     "Ammonia-free global hair coloring for long hair with superior shine and nourishment.",
   section_1: {
@@ -2023,7 +2089,7 @@ export const servicesData = [
 {
   id: 109,
   name: "Hair Root Touch up- Majirel",
-  link: "/services/hair-root-touch-up-majirel",
+  link: "/salon/hair-root-touch-up-majirel",
   main_desc:
     "Professional root touch-up using Majirel for seamless color correction.",
   section_1: {
@@ -2051,7 +2117,7 @@ export const servicesData = [
 {
   id: 110,
   name: "Hair Root Touch up- Inoa",
-  link: "/services/hair-root-touch-up-inoa",
+  link: "/salon/hair-root-touch-up-inoa",
   main_desc:
     "Ammonia-free root touch-up for gentle and effective color maintenance.",
   section_1: {
@@ -2079,7 +2145,7 @@ export const servicesData = [
 {
   id: 111,
   name: "Majirel Hair color- Global - Short",
-  link: "/services/majirel-hair-color-global-short",
+  link: "/salon/majirel-hair-color-global-short",
   main_desc:
     "Intense global hair coloring for short hair using Majirel.",
   section_1: {
@@ -2107,7 +2173,7 @@ export const servicesData = [
 {
   id: 112,
   name: "Majirel Hair color- Global - Medium",
-  link: "/services/majirel-hair-color-global-medium",
+  link: "/salon/majirel-hair-color-global-medium",
   main_desc:
     "Deep conditioning global hair color for medium-length hair.",
   section_1: {
@@ -2135,7 +2201,7 @@ export const servicesData = [
 {
   id: 113,
   name: "Majirel Hair color- Global- Long",
-  link: "/services/majirel-hair-color-global-long",
+  link: "/salon/majirel-hair-color-global-long",
   main_desc:
     "Professional global hair coloring for long hair using Majirel.",
   section_1: {
@@ -2167,7 +2233,7 @@ export const servicesData = [
 {
   id: 114,
   name: "Hair Keratin- Short",
-  link: "/services/hair-keratin-short",
+  link: "/salon/hair-keratin-short",
   main_desc:
     "Keratin treatment for short hair to reduce frizz and improve smoothness.",
   section_1: {
@@ -2195,7 +2261,7 @@ export const servicesData = [
 {
   id: 115,
   name: "Hair Keratin- Medium",
-  link: "/services/hair-keratin-medium",
+  link: "/salon/hair-keratin-medium",
   main_desc:
     "Professional keratin smoothing treatment for medium-length hair.",
   section_1: {
@@ -2223,7 +2289,7 @@ export const servicesData = [
 {
   id: 116,
   name: "Hair Keratin- Long",
-  link: "/services/hair-keratin-long",
+  link: "/salon/hair-keratin-long",
   main_desc:
     "Advanced keratin treatment for long hair to restore shine and smoothness.",
   section_1: {
@@ -2254,7 +2320,7 @@ export const servicesData = [
 {
   id: 117,
   name: "Hair Smoothening- Short",
-  link: "/services/hair-smoothening-short",
+  link: "/salon/hair-smoothening-short",
   main_desc:
     "Professional hair smoothening treatment for short hair to reduce frizz and enhance shine.",
   section_1: {
@@ -2282,7 +2348,7 @@ export const servicesData = [
 {
   id: 118,
   name: "Hair Smoothening - Medium",
-  link: "/services/hair-smoothening-medium",
+  link: "/salon/hair-smoothening-medium",
   main_desc:
     "Medium-length hair smoothening treatment for sleek, frizz-free, and manageable hair.",
   section_1: {
@@ -2310,7 +2376,7 @@ export const servicesData = [
 {
   id: 119,
   name: "Hair Smoothening- Long",
-  link: "/services/hair-smoothening-long",
+  link: "/salon/hair-smoothening-long",
   main_desc:
     "Advanced smoothening for long hair to reduce frizz, enhance shine, and improve manageability.",
   section_1: {
@@ -2338,7 +2404,7 @@ export const servicesData = [
 {
   id: 120,
   name: "Beard Trim",
-  link: "/services/beard-trim",
+  link: "/salon/beard-trim",
   main_desc:
     "Professional beard trimming for a neat, clean, and well-groomed appearance.",
   section_1: {
@@ -2366,7 +2432,7 @@ export const servicesData = [
 {
   id: 121,
   name: "Beard Shave",
-  link: "/services/beard-shave",
+  link: "/salon/beard-shave",
   main_desc:
     "Professional beard shaving for a smooth and clean facial look.",
   section_1: {
@@ -2394,7 +2460,7 @@ export const servicesData = [
 {
   id: 122,
   name: "Hair Highlights- Per Streak",
-  link: "/services/hair-highlights-per-streak",
+  link: "/salon/hair-highlights-per-streak",
   main_desc:
     "Professional hair highlights to add depth, dimension, and brightness.",
   section_1: {
@@ -2421,7 +2487,7 @@ export const servicesData = [
 {
   id: 123,
   name: "Balliage Treatment- Short",
-  link: "/services/balliage-treatment-short",
+  link: "/salon/balliage-treatment-short",
   main_desc:
     "Balayage highlighting for short hair for natural sun-kissed look.",
   section_1: {
@@ -2449,7 +2515,7 @@ export const servicesData = [
 {
   id: 124,
   name: "Balliage Treatment- Medium",
-  link: "/services/balliage-treatment-medium",
+  link: "/salon/balliage-treatment-medium",
   main_desc:
     "Balayage highlights for medium-length hair for a modern, natural finish.",
   section_1: {
@@ -2477,7 +2543,7 @@ export const servicesData = [
 {
   id: 125,
   name: "Balliage Treatment- Long",
-  link: "/services/balliage-treatment-long",
+  link: "/salon/balliage-treatment-long",
   main_desc:
     "Balayage coloring for long hair to create flowing, natural highlights.",
   section_1: {
@@ -2504,7 +2570,7 @@ export const servicesData = [
 {
   id: 126,
   name: "Hair Blow Dry",
-  link: "/services/hair-blow-dry",
+  link: "/salon/hair-blow-dry",
   main_desc:
     "Professional blow-dry to style and add volume for polished hair.",
   section_1: {
@@ -2531,7 +2597,7 @@ export const servicesData = [
 {
   id: 127,
   name: "Hair Spa- Loreal - Short",
-  link: "/services/hair-spa-loreal-short",
+  link: "/salon/hair-spa-loreal-short",
   main_desc:
     "Short hair spa treatment with L'Oréal products for deep nourishment and shine.",
   section_1: {
@@ -2559,7 +2625,7 @@ export const servicesData = [
 {
   id: 128,
   name: "Hair Spa- Loreal - Medium",
-  link: "/services/hair-spa-loreal-medium",
+  link: "/salon/hair-spa-loreal-medium",
   main_desc:
     "Medium hair spa treatment using L’Oréal products for hydration, shine, and repair.",
   section_1: {
@@ -2586,7 +2652,7 @@ export const servicesData = [
 {
   id: 129,
   name: "Hair spa- Loreal- Long",
-  link: "/services/hair-spa-loreal-long",
+  link: "/salon/hair-spa-loreal-long",
   main_desc:
     "Long hair spa treatment using L’Oréal products for ultimate nourishment and shine.",
   section_1: {
@@ -2613,7 +2679,7 @@ export const servicesData = [
 {
   id: 130,
   name: "Hair Spa- Moroccon- Short",
-  link: "/services/hair-spa-moroccon-short",
+  link: "/salon/hair-spa-moroccon-short",
   main_desc:
     "Short hair spa with Moroccan oil for hydration, shine, and frizz control.",
   section_1: {
@@ -2641,7 +2707,7 @@ export const servicesData = [
 {
   id: 131,
   name: "Hair Spa- Moroccon- Medium",
-  link: "/services/hair-spa-moroccon-medium",
+  link: "/salon/hair-spa-moroccon-medium",
   main_desc:
     "Medium-length hair spa using Moroccan oil for nourishment, shine, and frizz control.",
   section_1: {
@@ -2669,7 +2735,7 @@ export const servicesData = [
 {
   id: 132,
   name: "Hair Spa- Moroccon- Long",
-  link: "/services/hair-spa-moroccon-long",
+  link: "/salon/hair-spa-moroccon-long",
   main_desc:
     "Long hair spa using Moroccan oil for deep nourishment, shine, and frizz control.",
   section_1: {
@@ -2696,7 +2762,7 @@ export const servicesData = [
 {
   id: 133,
   name: "Hair Botox- Short",
-  link: "/services/hair-botox-short",
+  link: "/salon/hair-botox-short",
   main_desc:
     "Hair Botox treatment for short hair to restore strength, shine, and softness.",
   section_1: {
@@ -2724,7 +2790,7 @@ export const servicesData = [
 {
   id: 134,
   name: "Hair Botox - Medium",
-  link: "/services/hair-botox-medium",
+  link: "/salon/hair-botox-medium",
   main_desc:
     "Hair Botox for medium-length hair to improve health, shine, and manageability.",
   section_1: {
@@ -2752,7 +2818,7 @@ export const servicesData = [
 {
   id: 135,
   name: "Hair Botox- Long",
-  link: "/services/hair-botox-long",
+  link: "/salon/hair-botox-long",
   main_desc:
     "Hair Botox treatment for long hair to restore shine, smoothness, and vitality.",
   section_1: {
@@ -2779,7 +2845,7 @@ export const servicesData = [
 {
   id: 136,
   name: "Olaplex- Short",
-  link: "/services/olaplex-short",
+  link: "/salon/olaplex-short",
   main_desc:
     "Olaplex treatment for short hair to repair, strengthen, and protect hair bonds.",
   section_1: {
@@ -2807,7 +2873,7 @@ export const servicesData = [
 {
   id: 137,
   name: "Olaplex- Medium",
-  link: "/services/olaplex-medium",
+  link: "/salon/olaplex-medium",
   main_desc:
     "Olaplex treatment for medium hair to restore strength, smoothness, and shine.",
   section_1: {
@@ -2831,11 +2897,65 @@ export const servicesData = [
   after: afterSalon,
   questions: faqsSalon,
 },
+{
+  id: 138,
+  name: "Olaplex- Long",
+  link: "/salon/olaplex-long",
+  main_desc:
+    "Olaplex treatment for long hair designed to repair damage, strengthen bonds, and restore healthy shine.",
+  section_1: {
+    desc_1:
+      "Rebuilds broken hair bonds caused by coloring, bleaching, and heat styling for long hair.",
+    desc_2:
+      "Helps prevent split ends and breakage while improving overall hair strength.",
+    desc_3:
+      "Leaves long hair smooth, manageable, and visibly healthier.",
+  },
+  benefits: [
+    "Deep bond repair",
+    "Prevents split ends",
+    "Strengthens long hair",
+    "Adds natural shine",
+    "Improves manageability",
+    "Reduces breakage",
+  ],
+  areas: ["Hair"],
+  before: beforeSalon,
+  after: afterSalon,
+  questions: faqsSalon,
+},
+{
+  id: 139,
+  name: "Hair Wash",
+  link: "/salon/hair-wash",
+  main_desc:
+    "Professional hair wash service that cleanses the scalp and hair while maintaining moisture and shine.",
+  section_1: {
+    desc_1:
+      "Gently removes dirt, oil, and product buildup from the scalp and hair.",
+    desc_2:
+      "Uses high-quality products suitable for all hair types.",
+    desc_3:
+      "Leaves hair feeling fresh, light, and revitalized.",
+  },
+  benefits: [
+    "Deep scalp cleansing",
+    "Hydrates hair",
+    "Improves hair freshness",
+    "Enhances natural shine",
+    "Relaxing experience",
+    "Suitable for all hair types",
+  ],
+  areas: ["Hair", "Scalp"],
+  before: beforeSalon,
+  after: afterSalon,
+  questions: faqsSalon,
+},
 // Laser
 {
     id: 1,
     name: "Beard Shaping- Laser",
-    link: "/services/beard-shaping-laser",
+    link: "/laser-removal/beard-shaping-laser",
     main_desc:
       "Laser beard shaping for precise, long-lasting grooming and well-defined lines.",
     section_1: {
@@ -2862,7 +2982,7 @@ export const servicesData = [
   {
     id: 2,
     name: "Full Body LHR- Female",
-    link: "/services/full-body-lhr-female",
+    link: "/laser-removal/full-body-lhr-female",
     main_desc:
       "Complete full-body laser hair removal for women for smooth, soft, and hair-free skin.",
     section_1: {
@@ -2889,7 +3009,7 @@ export const servicesData = [
   {
     id: 3,
     name: "Full Body LHR- Male",
-    link: "/services/full-body-lhr-male",
+    link: "/laser-removal/full-body-lhr-male",
     main_desc:
       "Comprehensive full-body laser hair removal for men for a well-groomed, smooth appearance.",
     section_1: {
@@ -2916,7 +3036,7 @@ export const servicesData = [
   {
     id: 4,
     name: "Upper Lip LHR",
-    link: "/services/upper-lip-lhr",
+    link: "/laser-removal/upper-lip-lhr",
     main_desc:
       "Targeted laser hair removal for the upper lip for smooth, hair-free skin.",
     section_1: {
@@ -2943,7 +3063,7 @@ export const servicesData = [
   {
     id: 5,
     name: "Under Arm LHR",
-    link: "/services/under-arm-lhr",
+    link: "/laser-removal/under-arm-lhr",
     main_desc:
       "Laser hair removal for underarms for smooth, soft, and hair-free skin.",
     section_1: {
@@ -2970,7 +3090,7 @@ export const servicesData = [
   {
     id: 6,
     name: "Full Arm LHR",
-    link: "/services/full-arm-lhr",
+    link: "/laser-removal/full-arm-lhr",
     main_desc:
       "Laser hair removal for full arms for smooth, hair-free skin with professional results.",
     section_1: {
@@ -2997,7 +3117,7 @@ export const servicesData = [
 {
   id: 7,
   name: "Full Legs LHR",
-  link: "/services/full-legs-lhr",
+  link: "/laser-removal/full-legs-lhr",
   main_desc:
     "Comprehensive laser hair removal for full legs, giving smooth, hair-free skin from thighs to ankles.",
   section_1: {
@@ -3025,7 +3145,7 @@ export const servicesData = [
 {
   id: 8,
   name: "Front LHR",
-  link: "/services/front-lhr",
+  link: "/laser-removal/front-lhr",
   main_desc:
     "Laser hair removal for the front body area, including chest and abdomen, for smooth, clean skin.",
   section_1: {
@@ -3053,7 +3173,7 @@ export const servicesData = [
 {
   id: 9,
   name: "Back LHR",
-  link: "/services/back-lhr",
+  link: "/laser-removal/back-lhr",
   main_desc:
     "Laser hair removal for the back area to achieve smooth, hair-free skin with professional results.",
   section_1: {
@@ -3081,7 +3201,7 @@ export const servicesData = [
 {
   id: 10,
   name: "Upper Body LHR",
-  link: "/services/upper-body-lhr",
+  link: "/laser-removal/upper-body-lhr",
   main_desc:
     "Laser hair removal for the upper body including chest, shoulders, and upper arms for a smooth, groomed look.",
   section_1: {
@@ -3109,7 +3229,7 @@ export const servicesData = [
 {
   id: 11,
   name: "Lower Body LHR",
-  link: "/services/lower-body-lhr",
+  link: "/laser-removal/lower-body-lhr",
   main_desc:
     "Laser hair removal for the lower body including legs, bikini, and thighs for smooth, hair-free skin.",
   section_1: {
@@ -3137,7 +3257,7 @@ export const servicesData = [
 {
   id: 12,
   name: "Half Face LHR",
-  link: "/services/half-face-lhr",
+  link: "/laser-removal/half-face-lhr",
   main_desc:
     "Targeted laser hair removal for half of the face for precise grooming and smooth skin.",
   section_1: {
@@ -3164,7 +3284,7 @@ export const servicesData = [
 {
   id: 13,
   name: "Bikini LHR",
-  link: "/services/bikini-lhr",
+  link: "/laser-removal/bikini-lhr",
   main_desc:
     "Professional laser hair removal for the bikini area, providing smooth, hair-free skin with comfort and precision.",
   section_1: {
@@ -3192,7 +3312,7 @@ export const servicesData = [
 {
   id: 14,
   name: "Primelase LHR - Full Body Male",
-  link: "/services/primelase-full-body-male",
+  link: "/laser-removal/primelase-full-body-male",
   main_desc:
     "Complete full-body laser hair removal for men, targeting all major areas for smooth, hair-free skin.",
   section_1: {
@@ -3220,7 +3340,7 @@ export const servicesData = [
 {
   id: 15,
   name: "Primelase LHR - Full Body Female",
-  link: "/services/primelase-full-body-female",
+  link: "/laser-removal/primelase-full-body-female",
   main_desc:
     "Comprehensive full-body laser hair removal for women, ensuring smooth, hair-free skin across all areas.",
   section_1: {
@@ -3248,7 +3368,7 @@ export const servicesData = [
 {
   id: 16,
   name: "Primelase LHR - Full Face",
-  link: "/services/primelase-full-face",
+  link: "/laser-removal/primelase-full-face",
   main_desc:
     "Full-face laser hair removal for a smooth, clean, and hair-free appearance.",
   section_1: {
@@ -3276,7 +3396,7 @@ export const servicesData = [
 {
   id: 17,
   name: "Primelase LHR - Half Face",
-  link: "/services/primelase-half-face",
+  link: "/laser-removal/primelase-half-face",
   main_desc:
     "Targeted half-face laser hair removal for precise and professional grooming results.",
   section_1: {
@@ -3304,7 +3424,7 @@ export const servicesData = [
 {
   id: 18,
   name: "Primelase LHR - Beard Shaping",
-  link: "/services/primelase-beard-shaping",
+  link: "/laser-removal/primelase-beard-shaping",
   main_desc:
     "Laser hair removal and shaping for the beard area to achieve a neat, defined, and groomed look.",
   section_1: {
@@ -3332,7 +3452,7 @@ export const servicesData = [
 {
   id: 19,
   name: "Primelase LHR - Lower Body",
-  link: "/services/primelase-lower-body",
+  link: "/laser-removal/primelase-lower-body",
   main_desc:
     "Laser hair removal for the lower body including legs and intimate areas for smooth, hair-free skin.",
   section_1: {
@@ -3360,7 +3480,7 @@ export const servicesData = [
 {
   id: 20,
   name: "Primelase LHR - Upper Body",
-  link: "/services/primelase-upper-body",
+  link: "/laser-removal/primelase-upper-body",
   main_desc:
     "Laser hair removal for the upper body including chest, shoulders, and arms for a smooth and groomed appearance.",
   section_1: {
@@ -3388,7 +3508,7 @@ export const servicesData = [
 {
   id: 21,
   name: "Primelase LHR - Front",
-  link: "/services/primelase-front",
+  link: "/laser-removal/primelase-front",
   main_desc:
     "Targeted laser hair removal for the front body area to achieve smooth, hair-free skin.",
   section_1: {
@@ -3416,7 +3536,7 @@ export const servicesData = [
 {
   id: 22,
   name: "Primelase LHR - Back",
-  link: "/services/primelase-back",
+  link: "/laser-removal/primelase-back",
   main_desc:
     "Laser hair removal for the back area, ensuring smooth, hair-free skin with professional results.",
   section_1: {
@@ -3444,7 +3564,7 @@ export const servicesData = [
 {
   id: 23,
   name: "Primelase LHR - Full Arm",
-  link: "/services/primelase-full-arm",
+  link: "/laser-removal/primelase-full-arm",
   main_desc:
     "Laser hair removal for the full arms, delivering smooth, hair-free skin from shoulders to wrists.",
   section_1: {
@@ -3472,7 +3592,7 @@ export const servicesData = [
 {
   id: 24,
   name: "Primelase LHR - Full Legs",
-  link: "/services/primelase-full-legs",
+  link: "/laser-removal/primelase-full-legs",
   main_desc:
     "Complete laser hair removal for full legs, ensuring smooth and hair-free skin from thighs to ankles.",
   section_1: {
@@ -3500,7 +3620,7 @@ export const servicesData = [
 {
   id: 25,
   name: "Primelase LHR - Under Arm",
-  link: "/services/primelase-under-arm",
+  link: "/laser-removal/primelase-under-arm",
   main_desc:
     "Laser hair removal for underarms, providing smooth, hair-free, and fresh skin.",
   section_1: {
@@ -3528,7 +3648,7 @@ export const servicesData = [
 {
   id: 26,
   name: "Primelase LHR - Upper Lip",
-  link: "/services/primelase-upper-lip",
+  link: "/laser-removal/primelase-upper-lip",
   main_desc:
     "Precise laser hair removal for the upper lip area, leaving skin smooth and hair-free.",
   section_1: {
@@ -3557,7 +3677,7 @@ export const servicesData = [
   {
     id: 27,
     name: "Detox Therapy",
-    link: "/services/detox-therapy",
+    link: "/ayurveda/detox-therapy",
     main_desc:
       "A holistic detox therapy designed to cleanse the body, eliminate toxins, and promote overall health and well-being.",
     section_1: {
@@ -3584,7 +3704,7 @@ export const servicesData = [
   {
     id: 28,
     name: "Abhyangam Therapy",
-    link: "/services/abhyangam-therapy",
+    link: "/ayurveda/abhyangam-therapy",
     main_desc:
       "A traditional Ayurvedic oil massage therapy that deeply nourishes the skin and relaxes the mind and body.",
     section_1: {
@@ -3611,7 +3731,7 @@ export const servicesData = [
   {
     id: 29,
     name: "Udawartanam Therapy",
-    link: "/services/udawartanam-therapy",
+    link: "/ayurveda/udawartanam-therapy",
     main_desc:
       "A specialized Ayurvedic massage using herbal powders to invigorate the body, reduce fat, and improve skin texture.",
     section_1: {
@@ -3638,7 +3758,7 @@ export const servicesData = [
   {
     id: 30,
     name: "Kati Vasti",
-    link: "/services/kati-vasti",
+    link: "/ayurveda/kati-vasti",
     main_desc:
       "An Ayurvedic therapy targeting the lower back to relieve pain, stiffness, and improve spinal health.",
     section_1: {
@@ -3665,7 +3785,7 @@ export const servicesData = [
   {
     id: 31,
     name: "Janu Vasti",
-    link: "/services/janu-vasti",
+    link: "/ayurveda/janu-vasti",
     main_desc:
       "Ayurvedic therapy focusing on the knees to relieve pain, stiffness, and improve joint mobility.",
     section_1: {
@@ -3692,7 +3812,7 @@ export const servicesData = [
   {
     id: 32,
     name: "Greeva Vasti",
-    link: "/services/greeva-vasti",
+    link: "/ayurveda/greeva-vasti",
     main_desc:
       "A traditional Ayurvedic treatment for the neck and upper back to relieve tension and stiffness.",
     section_1: {
@@ -3719,7 +3839,7 @@ export const servicesData = [
   {
     id: 33,
     name: "Potli Massage- Full Body",
-    link: "/services/potli-massage-full-body",
+    link: "/ayurveda/potli-massage-full-body",
     main_desc:
       "A therapeutic massage using herbal poultices to relieve muscle tension, improve circulation, and rejuvenate the body.",
     section_1: {
@@ -3746,7 +3866,7 @@ export const servicesData = [
   {
     id: 34,
     name: "Accupressure Dry Massage",
-    link: "/services/accupressure-dry-massage",
+    link: "/ayurveda/accupressure-dry-massage",
     main_desc:
       "A therapeutic dry massage using pressure techniques to stimulate energy points and relieve tension.",
     section_1: {
@@ -3773,7 +3893,7 @@ export const servicesData = [
   {
     id: 35,
     name: "Deep Tissue Oil Massage",
-    link: "/services/deep-tissue-oil-massage",
+    link: "/ayurveda/deep-tissue-oil-massage",
     main_desc:
       "A targeted massage using herbal oils to relieve deep muscle tension, improve flexibility, and restore body balance.",
     section_1: {
@@ -3800,7 +3920,7 @@ export const servicesData = [
   {
     id: 36,
     name: "Body Steam",
-    link: "/services/body-steam",
+    link: "/ayurveda/body-steam",
     main_desc:
       "A therapeutic steam therapy that detoxifies the body, improves circulation, and promotes relaxation.",
     section_1: {
@@ -3829,7 +3949,7 @@ export const servicesData = [
   {
     id: 37,
     name: "Hydra Facial",
-    link: "/services/hydra-facial",
+    link: "/skin/hydra-facial",
     main_desc: "Deep cleansing, exfoliation, and hydration for rejuvenated, radiant skin.",
     section_1: {
       desc_1: "Hydra Facial begins with a gentle yet thorough cleansing and exfoliation process that removes dead skin cells, excess oils, and impurities from the skin surface, creating a fresh and clean canvas for treatment.",
@@ -3852,7 +3972,7 @@ export const servicesData = [
   {
     id: 38,
     name: "Carbon Facial",
-    link: "/services/carbon-facial",
+    link: "/skin/carbon-facial",
     main_desc: "Advanced carbon laser treatment to revitalize skin, reduce pigmentation, and tighten pores.",
     section_1: {
       desc_1: "Carbon facial involves applying a thin layer of carbon paste across the face, which penetrates into pores and binds to debris, oil, and dead skin cells, preparing the skin for laser treatment.",
@@ -3875,7 +3995,7 @@ export const servicesData = [
   {
     id: 39,
     name: "Q-switch Laser",
-    link: "/services/q-switch-laser",
+    link: "/skin/q-switch-laser",
     main_desc: "Targeted laser treatment for pigment correction, tattoo removal, and skin rejuvenation.",
     section_1: {
       desc_1: "Q-switch laser delivers high-intensity pulses that penetrate the skin and break down pigment particles, effectively targeting tattoos, melasma, freckles, and sun spots without harming surrounding skin tissues.",
@@ -3898,7 +4018,7 @@ export const servicesData = [
   {
     id: 40,
     name: "RF Session",
-    link: "/services/rf-session",
+    link: "/skin/rf-session",
     main_desc: "Radiofrequency therapy for skin tightening, contouring, and collagen stimulation.",
     section_1: {
       desc_1: "RF (Radiofrequency) therapy delivers controlled heat energy to the deep dermal layers of the skin, stimulating collagen and elastin fibers and promoting cellular renewal, which helps in firming and tightening sagging skin.",
@@ -3921,7 +4041,7 @@ export const servicesData = [
   {
     id: 41,
     name: "Cryo T-shock - Face",
-    link: "/services/cryo-t-shock-face",
+    link: "/skin/cryo-t-shock-face",
     main_desc: "Innovative cryotherapy for skin rejuvenation, tightening, and revitalization.",
     section_1: {
       desc_1: "Cryo T-shock alternates between controlled cold and warm temperatures to stimulate skin metabolism, boost circulation, and enhance collagen production for youthful, healthy skin.",
@@ -3944,7 +4064,7 @@ export const servicesData = [
   {
     id: 42,
     name: "Skin Hydration",
-    link: "/services/skin-hyderation",
+    link: "/skin/skin-hyderation",
     main_desc: "Deep hydration treatment for dry, dehydrated, and dull skin.",
     section_1: {
       desc_1: "This treatment infuses the skin with hyaluronic acid, vitamins, peptides, and other nourishing serums to deeply replenish moisture levels and restore skin’s natural softness and elasticity.",
@@ -3967,7 +4087,7 @@ export const servicesData = [
   {
     id: 43,
     name: "Face Lifting",
-    link: "/services/face-lifting",
+    link: "/skin/face-lifting",
     main_desc: "Non-surgical face lifting treatment to reduce sagging, tighten skin, and restore youthful contours.",
     section_1: {
       desc_1: "Face lifting treatments stimulate collagen production and tighten underlying tissues, lifting sagging skin and improving overall facial contours without invasive surgery.",
@@ -3990,7 +4110,7 @@ export const servicesData = [
   {
     id: 44,
     name: "Lip Tinting",
-    link: "/services/lip-tinting",
+    link: "/skin/lip-tinting",
     main_desc: "Professional lip tinting treatment for natural color enhancement and hydrated, soft lips.",
     section_1: {
       desc_1: "Lip tinting adds a subtle yet natural-looking color to enhance the appearance of lips while keeping them hydrated and nourished using gentle, skin-safe pigments.",
@@ -4013,7 +4133,7 @@ export const servicesData = [
   {
     id: 45,
     name: "Face PRP",
-    link: "/services/face-prp",
+    link: "/skin/face-prp",
     main_desc: "Platelet-Rich Plasma therapy for skin rejuvenation, collagen stimulation, and natural glow.",
     section_1: {
       desc_1: "Face PRP uses your body’s own plasma, rich in growth factors, to stimulate collagen production, repair damaged skin, and enhance cellular renewal for a youthful, healthy appearance.",
@@ -4036,7 +4156,7 @@ export const servicesData = [
   {
     id: 46,
     name: "Threadlift - MONO",
-    link: "/services/threadlift-mono",
+    link: "/skin/threadlift-mono",
     main_desc: "Non-surgical thread lift using Mono threads to lift, tighten, and rejuvenate skin.",
     section_1: {
       desc_1: "Mono threadlift involves inserting fine, dissolvable threads beneath the skin to stimulate collagen production, creating a subtle lift and improved skin texture.",
@@ -4059,7 +4179,7 @@ export const servicesData = [
   {
     id: 47,
     name: "Threadlift - COG",
-    link: "/services/threadlift-cog",
+    link: "/skin/threadlift-cog",
     main_desc: "Advanced thread lift with COG threads for a stronger, defined lift and facial contouring.",
     section_1: {
       desc_1: "COG threads have tiny barbs that anchor into the skin, providing a stronger lifting effect compared to Mono threads, ideal for moderate sagging and contour enhancement.",
@@ -4082,7 +4202,7 @@ export const servicesData = [
   {
     id: 48,
     name: "Face Botox - MR - 1 Unit - Dysport Allergan",
-    link: "/services/face-botox-mr-1-unit-dysport-allergan",
+    link: "/skin/face-botox-mr-1-unit-dysport-allergan",
     main_desc: "Targeted Botox treatment to relax muscles, reduce fine lines, and prevent wrinkles using Dysport Allergan.",
     section_1: {
       desc_1: "Botox injections are administered precisely into specific facial muscles to temporarily relax them, reducing dynamic wrinkles and preventing new lines from forming.",
@@ -4105,7 +4225,7 @@ export const servicesData = [
   {
     id: 49,
     name: "Face Botox - MR - 1 Unit - Dysport Botulax",
-    link: "/services/face-botox-mr-1-unit-dysport-botulax",
+    link: "/skin/face-botox-mr-1-unit-dysport-botulax",
     main_desc: "Botox treatment with Dysport Botulax for targeted wrinkle reduction and facial rejuvenation.",
     section_1: {
       desc_1: "Dysport Botulax injections work by temporarily relaxing targeted facial muscles, softening expression lines and giving a smoother appearance.",
@@ -4128,7 +4248,7 @@ export const servicesData = [
   {
     id: 50,
     name: "Face Botox - MR - 5 Unit - Dysport Allergan",
-    link: "/services/face-botox-mr-5-unit-dysport-allergan",
+    link: "/skin/face-botox-mr-5-unit-dysport-allergan",
     main_desc: "Moderate Botox treatment to relax facial muscles, reduce wrinkles, and enhance smoothness with Dysport Allergan.",
     section_1: {
       desc_1: "5 Unit Dysport Allergan is used for moderate lines and wrinkles, such as forehead creases, crow’s feet, and glabellar lines, delivering a more pronounced smoothing effect.",
@@ -4151,7 +4271,7 @@ export const servicesData = [
   {
     id: 51,
     name: "Face Botox - MR - 5 Unit - Botulax",
-    link: "/services/face-botox-mr-5-unit-botulax",
+    link: "/skin/face-botox-mr-5-unit-botulax",
     main_desc: "Botox treatment with 5 Units of Botulax for wrinkle reduction, muscle relaxation, and natural facial rejuvenation.",
     section_1: {
       desc_1: "Botulax 5 Unit injections target moderate expression lines, reducing wrinkles and preventing new lines from forming while ensuring a natural look.",
@@ -4174,7 +4294,7 @@ export const servicesData = [
   {
     id: 52,
     name: "Face Botox - MR - 10 Unit - Allergan",
-    link: "/services/face-botox-mr-10-unit-allegran",
+    link: "/skin/face-botox-mr-10-unit-allegran",
     main_desc: "Comprehensive Botox treatment for advanced wrinkles and pronounced expression lines using Allergan.",
     section_1: {
       desc_1: "10 Unit Allergan Botox is designed for clients with more pronounced wrinkles, targeting multiple facial areas to relax muscles and smooth deep lines effectively.",
@@ -4197,7 +4317,7 @@ export const servicesData = [
   {
     id: 53,
     name: "Face Botox - MR - 10 Unit - Botulax",
-    link: "/services/face-botox-mr-10-unit-botulax",
+    link: "/skin/face-botox-mr-10-unit-botulax",
     main_desc: "Botox treatment with 10 Units of Botulax to address deep wrinkles and restore youthful facial appearance.",
     section_1: {
       desc_1: "This treatment targets advanced lines and dynamic wrinkles, relaxing facial muscles and softening expression marks for a refreshed, rejuvenated look.",
@@ -4220,7 +4340,7 @@ export const servicesData = [
   {
     id: 54,
     name: "Tattoo Removal - per inch",
-    link: "/services/tattoo-removal-per-inch",
+    link: "/skin/tattoo-removal-per-inch",
     main_desc: "Precision laser treatment to safely remove unwanted tattoos with minimal skin damage.",
     section_1: {
       desc_1: "Tattoo removal uses advanced Q-switched or Pico laser technology to break down tattoo pigments into smaller particles, which the body naturally eliminates over time.",
@@ -4243,7 +4363,7 @@ export const servicesData = [
   {
     id: 55,
     name: "Eyebrow Lifting",
-    link: "/services/eyebrow-lifting",
+    link: "/skin/eyebrow-lifting",
     main_desc: "Non-surgical eyebrow lift to enhance the brow arch and rejuvenate the eye area.",
     section_1: {
       desc_1: "Eyebrow lifting uses precise techniques to elevate and reshape the brows, creating a more youthful, refreshed eye area without surgery.",
@@ -4266,7 +4386,7 @@ export const servicesData = [
   {
     id: 56,
     name: "Lip Filler",
-    link: "/services/lip-filler",
+    link: "/skin/lip-filler",
     main_desc: "Dermal filler treatment to enhance lip volume, shape, and hydration.",
     section_1: {
       desc_1: "Lip filler uses hyaluronic acid-based injections to add volume, improve symmetry, and restore natural fullness to lips.",
@@ -4289,7 +4409,7 @@ export const servicesData = [
   {
     id: 57,
     name: "Fillers",
-    link: "/services/fillers",
+    link: "/skin/fillers",
     main_desc: "Dermal filler treatments for facial volume restoration, contouring, and wrinkle reduction.",
     section_1: {
       desc_1: "Fillers use safe, biocompatible substances to restore lost facial volume, smooth wrinkles, and contour areas like cheeks, chin, and jawline.",
@@ -4312,7 +4432,7 @@ export const servicesData = [
   {
     id: 58,
     name: "Nose Fillers",
-    link: "/services/nose-fillers",
+    link: "/skin/nose-fillers",
     main_desc: "Non-surgical nose reshaping using dermal fillers for contouring and correction.",
     section_1: {
       desc_1: "Nose filler injections allow for reshaping and correcting minor imperfections, such as bumps or asymmetry, without surgical intervention.",
@@ -4335,7 +4455,7 @@ export const servicesData = [
   {
     id: 59,
     name: "Face Peel",
-    link: "/services/face-peel",
+    link: "/skin/face-peel",
     main_desc: "Chemical peel for exfoliation, skin rejuvenation, and improved texture.",
     section_1: {
       desc_1: "Face peel gently removes dead skin cells, stimulates cell turnover, and reveals smoother, brighter skin while improving texture and tone.",
@@ -4358,7 +4478,7 @@ export const servicesData = [
   {
     id: 60,
     name: "Arm Peel",
-    link: "/services/arm-peel",
+    link: "/skin/arm-peel",
     main_desc: "Chemical peel for arms to smooth texture, reduce pigmentation, and revitalize the skin.",
     section_1: {
       desc_1: "Arm peel removes dead skin cells and promotes cellular renewal, improving the appearance of uneven skin and pigmentation.",
@@ -4381,7 +4501,7 @@ export const servicesData = [
   {
     id: 61,
     name: "Knee Peel",
-    link: "/services/knee-peel",
+    link: "/skin/knee-peel",
     main_desc: "Chemical peel for knees to brighten, smooth, and improve skin texture.",
     section_1: {
       desc_1: "Knee peel targets rough, pigmented, or dry skin on the knees, promoting exfoliation and cellular renewal.",
@@ -4404,7 +4524,7 @@ export const servicesData = [
   {
     id: 62,
     name: "Elbow Peel",
-    link: "/services/elbow-peel",
+    link: "/skin/elbow-peel",
     main_desc: "Chemical peel treatment for elbows to soften, brighten, and revitalize skin.",
     section_1: {
       desc_1: "Elbow peel exfoliates rough or thickened skin, promoting smoother, softer, and healthier-looking skin.",
@@ -4427,7 +4547,7 @@ export const servicesData = [
   {
     id: 63,
     name: "Lip Peel",
-    link: "/services/lip-peel",
+    link: "/skin/lip-peel",
     main_desc: "Chemical peel for lips to smooth texture, reduce lines, and restore softness.",
     section_1: {
       desc_1: "Lip peel exfoliates dry, cracked, or pigmented lips, promoting cell turnover for softer and smoother lips.",
@@ -4450,7 +4570,7 @@ export const servicesData = [
   {
     id: 64,
     name: "Under Eye Peel",
-    link: "/services/under-eye-peel",
+    link: "/skin/under-eye-peel",
     main_desc: "Gentle chemical peel to brighten, smooth, and rejuvenate the under-eye area.",
     section_1: {
       desc_1: "Under-eye peel targets dark circles, fine lines, and dull skin, promoting exfoliation and cellular renewal.",
@@ -4473,7 +4593,7 @@ export const servicesData = [
   {
     id: 65,
     name: "Under Arm Peel",
-    link: "/services/under-arm-peel",
+    link: "/skin/under-arm-peel",
     main_desc: "Chemical peel for underarms to lighten, smooth, and refresh skin.",
     section_1: {
       desc_1: "Under-arm peel exfoliates dead skin and reduces pigmentation, helping achieve smoother, brighter skin in the underarm area.",
@@ -4496,7 +4616,7 @@ export const servicesData = [
   {
     id: 66,
     name: "HIFU - (Face + Neck)",
-    link: "/services/hifu-face-neck",
+    link: "/skin/hifu-face-neck",
     main_desc: "High-Intensity Focused Ultrasound treatment for non-surgical lifting and tightening of face and neck skin.",
     section_1: {
       desc_1: "HIFU uses ultrasound energy to target deep layers of the skin, stimulating collagen production and providing a lifting effect for face and neck areas.",
@@ -4519,7 +4639,7 @@ export const servicesData = [
   {
     id: 67,
     name: "Carbon Facial - Tribeam",
-    link: "/services/carbon-facial-tribeam",
+    link: "/skin/carbon-facial-tribeam",
     main_desc: "Advanced carbon laser facial for deep cleansing, pigmentation reduction, and skin rejuvenation.",
     section_1: {
       desc_1: "Carbon facial with Tribeam laser uses a carbon-based lotion combined with laser energy to remove dead skin cells, cleanse pores, and target pigmentation.",
@@ -4542,7 +4662,7 @@ export const servicesData = [
   {
     id: 68,
     name: "Laser Toning - Tribeam",
-    link: "/services/laser-toning-tribeam",
+    link: "/skin/laser-toning-tribeam",
     main_desc: "Laser toning treatment for skin brightening, pigmentation reduction, and evening out skin tone.",
     section_1: {
       desc_1: "Tribeam laser toning targets pigmentation, freckles, and uneven skin tone by delivering precise energy to the skin without damaging surrounding tissue.",
@@ -4565,7 +4685,7 @@ export const servicesData = [
   {
     id: 69,
     name: "4D Laser - Tribeam",
-    link: "/services/4d-laser-tribeam",
+    link: "/skin/4d-laser-tribeam",
     main_desc: "Advanced 4D laser treatment for skin tightening, rejuvenation, and overall facial enhancement.",
     section_1: {
       desc_1: "The 4D Tribeam laser uses a combination of fractional, Q-switched, and toning lasers to target multiple skin concerns simultaneously.",
@@ -4588,7 +4708,7 @@ export const servicesData = [
   {
     id: 70,
     name: "Photo Facial - Advance",
-    link: "/services/photo-facial-advance",
+    link: "/skin/photo-facial-advance",
     main_desc: "Advanced IPL-based photo facial for rejuvenation, pigmentation correction, and skin brightening.",
     section_1: {
       desc_1: "Photo Facial Advance uses Intense Pulsed Light (IPL) to penetrate the skin, targeting pigmentation, sun damage, redness, and uneven tone.",
@@ -4611,7 +4731,7 @@ export const servicesData = [
   {
     id: 71,
     name: "Photo Facial - Pro",
-    link: "/services/photo-facial-pro",
+    link: "/skin/photo-facial-pro",
     main_desc: "Professional IPL photo facial to address pigmentation, redness, and skin rejuvenation.",
     section_1: {
       desc_1: "Photo Facial Pro uses advanced IPL technology to target and break down pigmentation, vascular lesions, and uneven skin tone without harming surrounding tissue.",
@@ -4634,7 +4754,7 @@ export const servicesData = [
   {
     id: 72,
     name: "Pink Glow",
-    link: "/services/pink-glow",
+    link: "/skin/pink-glow",
     main_desc: "Facial treatment for brightening, hydration, and radiant skin with a natural pinkish glow.",
     section_1: {
       desc_1: "Pink Glow facial uses nourishing serums and gentle exfoliation to remove dull, dead skin and enhance blood circulation for healthy-looking skin.",
@@ -4657,7 +4777,7 @@ export const servicesData = [
   {
     id: 73,
     name: "Derma Pen",
-    link: "/services/derma-pen",
+    link: "/skin/derma-pen",
     main_desc: "Microneedling treatment for skin rejuvenation, collagen stimulation, and scar reduction.",
     section_1: {
       desc_1: "Derma Pen uses fine needles to create micro-channels in the skin, stimulating natural collagen production and enhancing absorption of serums.",
@@ -4680,7 +4800,7 @@ export const servicesData = [
   {
     id: 74,
     name: "Aquagold",
-    link: "/services/aquagold",
+    link: "/skin/aquagold",
     main_desc: "Micro-channel infusion treatment for hydration, glow, and rejuvenation using specialized serums.",
     section_1: {
       desc_1: "Aquagold delivers nourishing serums directly into the skin through fine micro-channels, providing deep hydration, brightening, and skin rejuvenation.",
@@ -4703,7 +4823,7 @@ export const servicesData = [
   {
     id: 75,
     name: "Exocobio Exosomes (Face)",
-    link: "/services/exocobio-exosomes-face",
+    link: "/skin/exocobio-exosomes-face",
     main_desc: "Advanced regenerative facial treatment using exosomes for skin rejuvenation and healing.",
     section_1: {
       desc_1: "Exosomes are cell-derived vesicles that stimulate tissue repair, collagen production, and cellular renewal for healthy, youthful skin.",
@@ -4726,7 +4846,7 @@ export const servicesData = [
   {
     id: 76,
     name: "Skinvive / ml Vital",
-    link: "/services/skinvive-ml-vital",
+    link: "/skin/skinvive-ml-vital",
     main_desc: "Professional skin booster injections for hydration, glow, and revitalization.",
     section_1: {
       desc_1: "Skinvive injections deliver hydrating, nourishing ingredients into the dermis to restore moisture, improve elasticity, and rejuvenate the skin.",
@@ -4749,7 +4869,7 @@ export const servicesData = [
   {
     id: 77,
     name: "Juverderm Fillers",
-    link: "/services/juverderm-fillers",
+    link: "/skin/juverderm-fillers",
     main_desc: "Premium dermal filler treatment for facial volume restoration, contouring, and wrinkle reduction.",
     section_1: {
       desc_1: "Juverderm fillers restore lost volume, smooth wrinkles, and enhance facial contours with natural-looking results using high-quality hyaluronic acid.",
@@ -4772,7 +4892,7 @@ export const servicesData = [
   {
     id: 78,
     name: "Restylene Fillers",
-    link: "/services/restylene-fillers",
+    link: "/skin/restylene-fillers",
     main_desc: "Premium dermal fillers for wrinkle reduction, facial contouring, and rejuvenation.",
     section_1: {
       desc_1: "Restylene fillers are injected into targeted areas to restore volume, reduce wrinkles, and enhance facial contours for a youthful appearance.",
@@ -4795,7 +4915,7 @@ export const servicesData = [
   {
     id: 79,
     name: "Korean PDO Threads (COGG)",
-    link: "/services/korean-pdo-threads-cogg",
+    link: "/skin/korean-pdo-threads-cogg",
     main_desc: "PDO thread lift using COGG threads for lifting, tightening, and facial rejuvenation.",
     section_1: {
       desc_1: "COGG PDO threads are inserted under the skin to mechanically lift sagging areas, stimulate collagen, and improve skin texture.",
@@ -4818,7 +4938,7 @@ export const servicesData = [
   {
     id: 80,
     name: "Mint (COGG) PLLA Threads",
-    link: "/services/mint-cogg-plla-threads",
+    link: "/skin/mint-cogg-plla-threads",
     main_desc: "PLLA thread lift using Mint COGG threads for facial lifting, tightening, and rejuvenation.",
     section_1: {
       desc_1: "Mint PLLA COGG threads lift sagging skin, stimulate natural collagen, and improve overall facial texture and firmness.",
@@ -4841,7 +4961,7 @@ export const servicesData = [
   {
     id: 81,
     name: "ASCE Plus Exosomes",
-    link: "/services/asce-plus-exosomes",
+    link: "/skin/asce-plus-exosomes",
     main_desc: "Advanced facial treatment using exosomes to rejuvenate and repair skin at a cellular level.",
     section_1: {
       desc_1: "ASCE Plus Exosomes deliver regenerative vesicles that promote collagen production, improve elasticity, and restore youthful skin.",
@@ -4864,7 +4984,7 @@ export const servicesData = [
   {
     id: 82,
     name: "Ruby PDRN (1ml)",
-    link: "/services/ruby-pdrn-1ml",
+    link: "/skin/ruby-pdrn-1ml",
     main_desc: "PDRN-based skin rejuvenation injection for hydration, healing, and anti-aging effects.",
     section_1: {
       desc_1: "Ruby PDRN stimulates tissue repair, promotes collagen production, and enhances skin hydration and elasticity for healthier-looking skin.",
@@ -4887,7 +5007,7 @@ export const servicesData = [
   {
     id: 83,
     name: "Ruby Dia PDRN (2ml)",
-    link: "/services/ruby-dia-pdrn-2ml",
+    link: "/skin/ruby-dia-pdrn-2ml",
     main_desc: "Advanced 2ml PDRN treatment for enhanced skin rejuvenation, hydration, and anti-aging benefits.",
     section_1: {
       desc_1: "Ruby Dia PDRN delivers regenerative molecules to stimulate collagen, repair skin tissue, and restore elasticity and hydration.",
@@ -4910,7 +5030,7 @@ export const servicesData = [
   {
     id: 84,
     name: "Black Diamond PDRN (1ML)",
-    link: "/services/black-diamond-pdrn-1ml",
+    link: "/skin/black-diamond-pdrn-1ml",
     main_desc: "Premium PDRN injection for intense skin rejuvenation, hydration, and anti-aging benefits.",
     section_1: {
       desc_1: "Black Diamond PDRN provides powerful regenerative effects, stimulating collagen, enhancing elasticity, and improving hydration for radiant skin.",
@@ -4934,7 +5054,7 @@ export const servicesData = [
   {
     id: 85,
     name: "Cryo T-shock - Tummy",
-    link: "/services/cryo-t-shock-tummy",
+    link: "/slimming/cryo-t-shock-tummy",
     main_desc: "Non-invasive fat reduction and body contouring treatment targeting stubborn tummy fat using advanced Cryo T-shock technology.",
     section_1: {
       desc_1: "Cryo T-shock technology combines cold and heat therapy to break down fat cells while stimulating circulation and metabolism in the tummy area.",
@@ -4957,7 +5077,7 @@ export const servicesData = [
   {
     id: 86,
     name: "Bipolar- Face",
-    link: "/services/bipolar-face",
+    link: "/slimming/bipolar-face",
     main_desc: "Facial slimming and skin tightening treatment using bipolar radiofrequency technology for a youthful, lifted appearance.",
     section_1: {
       desc_1: "Bipolar radiofrequency penetrates deep into facial tissues, stimulating collagen production and enhancing skin elasticity.",
@@ -4980,7 +5100,7 @@ export const servicesData = [
   {
     id: 87,
     name: "Bipolar- Tummy",
-    link: "/services/bipolar-tummy",
+    link: "/slimming/bipolar-tummy",
     main_desc: "Non-surgical tummy contouring using bipolar radiofrequency technology to tighten skin and reduce localized fat.",
     section_1: {
       desc_1: "Bipolar RF energy targets fat cells and stimulates collagen production in the abdominal area, promoting a firmer and smoother appearance.",
@@ -5003,7 +5123,7 @@ export const servicesData = [
   {
     id: 88,
     name: "Bipolar per body area",
-    link: "/services/bipolar-per-body-area",
+    link: "/slimming/bipolar-per-body-area",
     main_desc: "Targeted body contouring and skin tightening for specific areas using advanced bipolar radiofrequency technology.",
     section_1: {
       desc_1: "This treatment focuses on specific body areas to reduce mild fat deposits and firm the skin using controlled RF energy.",
@@ -5026,7 +5146,7 @@ export const servicesData = [
   {
     id: 89,
     name: "NMS- Neuro Muscular Stimulator",
-    link: "/services/nms-neuro-muscular-stimulator",
+    link: "/slimming/nms-neuro-muscular-stimulator",
     main_desc: "Muscle toning and body contouring therapy using electrical stimulation to strengthen and sculpt targeted areas.",
     section_1: {
       desc_1: "NMS technology uses electrical impulses to stimulate muscle contraction, enhancing tone, definition, and strength in the treated area.",
@@ -5049,7 +5169,7 @@ export const servicesData = [
   {
     id: 90,
     name: "Cryo T-shock Per Body Area",
-    link: "/services/cryo-t-shock-per-body-area",
+    link: "/slimming/cryo-t-shock-per-body-area",
     main_desc: "Localized fat reduction and skin tightening for specific body areas using advanced Cryo T-shock technology.",
     section_1: {
       desc_1: "Cryo T-shock alternates between cold and heat therapy to break down fat cells while stimulating circulation in the chosen area.",
@@ -5072,7 +5192,7 @@ export const servicesData = [
   {
     id: 91,
     name: "Focuslift",
-    link: "/services/focuslift",
+    link: "/slimming/focuslift",
     main_desc: "Advanced non-surgical lifting and toning treatment to reduce sagging and contour targeted body areas.",
     section_1: {
       desc_1: "Focuslift uses energy-based technology to stimulate collagen and elastin in the treated area for firmer, tighter skin.",
@@ -5095,7 +5215,7 @@ export const servicesData = [
   {
     id: 92,
     name: "Cavitation",
-    link: "/services/cavitation",
+    link: "/slimming/cavitation",
     main_desc: "Ultrasound cavitation treatment for non-invasive fat reduction and body contouring in stubborn areas.",
     section_1: {
       desc_1: "Cavitation uses ultrasonic waves to break down fat cells, which are then naturally eliminated by the body’s lymphatic system.",
@@ -5118,7 +5238,7 @@ export const servicesData = [
   {
     id: 93,
     name: "BCA Diet Consultation",
-    link: "/services/bca-diet-consultation",
+    link: "/slimming/bca-diet-consultation",
     main_desc: "Personalized diet and body composition analysis to complement slimming and body contouring treatments.",
     section_1: {
       desc_1: "BCA (Body Composition Analysis) provides detailed insight into fat, muscle, and water percentages to create a tailored diet plan.",
@@ -5141,7 +5261,7 @@ export const servicesData = [
   {
     id: 94,
     name: "EGVT",
-    link: "/services/egvt",
+    link: "/slimming/egvt",
     main_desc: "Electro-Gastrovascular Therapy (EGVT) for digestive wellness and improved metabolism to support body slimming.",
     section_1: {
       desc_1: "EGVT uses gentle electrical stimulation to enhance digestive system function, promoting better nutrient absorption and metabolism.",
@@ -5165,7 +5285,7 @@ export const servicesData = [
   {
     id: 95,
     name: "Hair PRP",
-    link: "/services/hair-prp",
+    link: "/hair/hair-prp",
     main_desc: "Platelet-rich plasma (PRP) therapy to stimulate hair follicles, promote hair growth, and strengthen thinning hair naturally.",
     section_1: {
       desc_1: "PRP therapy uses your own blood plasma enriched with growth factors, injected into the scalp to rejuvenate dormant hair follicles.",
@@ -5188,7 +5308,7 @@ export const servicesData = [
   {
     id: 96,
     name: "Hair GFC",
-    link: "/services/hair-gfc",
+    link: "/hair/hair-gfc",
     main_desc: "Growth Factor Concentrate (GFC) therapy to revitalize scalp, stimulate hair follicles, and promote thicker hair growth.",
     section_1: {
       desc_1: "GFC involves injecting growth factors derived from your own blood to stimulate hair follicle activity and promote regeneration.",
@@ -5211,7 +5331,7 @@ export const servicesData = [
   {
     id: 97,
     name: "QR678",
-    link: "/services/qr678",
+    link: "/hair/qr678",
     main_desc: "Advanced peptide-based therapy to stimulate hair growth and improve hair density in thinning or receding areas.",
     section_1: {
       desc_1: "QR678 contains bioactive peptides that enhance hair follicle function, stimulating hair regeneration and improving growth cycle.",
@@ -5234,7 +5354,7 @@ export const servicesData = [
   {
     id: 98,
     name: "GFC Exosomes",
-    link: "/services/gfc-exosomes",
+    link: "/hair/gfc-exosomes",
     main_desc: "Exosome therapy combined with growth factors to rejuvenate scalp cells and promote robust hair growth.",
     section_1: {
       desc_1: "GFC Exosomes deliver bioactive molecules to scalp cells, stimulating regeneration and activating dormant hair follicles.",
@@ -5257,7 +5377,7 @@ export const servicesData = [
   {
     id: 99,
     name: "Exocobio Exosomes (Hair)",
-    link: "/services/exocobio-exosomes-hair",
+    link: "/hair/exocobio-exosomes-hair",
     main_desc: "Exosome therapy for hair restoration, targeting scalp rejuvenation and stimulation of new hair growth.",
     section_1: {
       desc_1: "Exocobio Exosomes deliver regenerative bioactive molecules directly to the scalp to activate hair follicle stem cells.",

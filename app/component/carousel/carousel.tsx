@@ -8,6 +8,7 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel"
 import Image from "next/image"
+import Link from "next/link"
 
 export function CarouselSize() {
   return (
@@ -28,6 +29,9 @@ export function CarouselSize() {
                <Image className={`object-cover rounded-xl !w-full ${index%2 == 0 ? "!h-[280px] md:!h-[350px]":"!h-[230px] md:!h-[300px]"}`} width={400} height={100} src={item.img} alt={item.name } />
                 <h3 className="text-xl font-semibold">{item.name }</h3>
                 <p className="text-xs md:text-sm font-medium">{item.description}</p>
+                <Link href={item.link}><span className="relative text-[var(--main)] text-[0.9rem] cursor-pointer transition-all duration-300 ease-in-out 
+                   after:content-[''] after:absolute after:left-0 after:-bottom-1 after:w-0 after:h-[1px] 
+                   after:bg-[var(--main)] after:transition-all after:duration-300 hover:after:w-full">Learn more</span></Link>
             </div>
           </CarouselItem>
         ))}

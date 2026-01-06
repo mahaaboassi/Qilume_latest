@@ -86,7 +86,7 @@ const Navbar = ()=>{
             </Link>
         </div>
         <ul className={`hidden lg:flex gap-5 items-center  ${openMenu?Style.active:""}`}>
-                <li className="flex md:hidden" onClick={()=>setOpenMenu(false)}>
+                <li className="flex lg:hidden" onClick={()=>setOpenMenu(false)}>
                         <svg xmlns="http://www.w3.org/2000/svg" width="10" height="21" viewBox="0 0 29 40" fill="none">
                         <path d="M29 4.7L11.0756 20L29 35.3L23.4818 40L-1.31887e-06 20L23.4818 3.33228e-06L29 4.7Z" fill="#72383D"/>
                         </svg>
@@ -97,7 +97,21 @@ const Navbar = ()=>{
                             onMouseLeave={handleLeave}
                               className="relative">
                                 <div className="flex gap-2">
-                                    <span className="uppercase font-semibold text-[0.9rem] xl:text-[1.05rem] " >{e.name}</span>
+                                    <span className="uppercase font-semibold flex gap-2 cursor-pointer items-center text-[0.9rem] xl:text-[1.05rem] " >
+                                        {e.name}
+                                        <div className="">
+                                            <svg style={{ transform: "rotate(-270deg)" }} xmlns="http://www.w3.org/2000/svg" width="10" height="32" viewBox="0 0 40 62" fill="none">
+                                            <g clipPath="url(#clip0_2224_1343)">
+                                                <path d="M1.16537 56.1068C-0.418843 57.4792 -0.382974 59.6791 1.24907 61.0162C2.87513 62.3533 5.48162 62.323 7.06584 60.9455L38.8219 33.3008L35.8747 30.884L38.8339 33.3059C40.4181 31.9234 40.3822 29.7185 38.7442 28.3814C38.6964 28.341 38.6486 28.3057 38.6007 28.2704L7.05986 1.05459C5.47564 -0.32285 2.87513 -0.353123 1.24309 0.983954C-0.382974 2.32103 -0.418843 4.51585 1.16537 5.8933L30.1356 30.8941L1.16537 56.1068Z" fill="#1f1a1a"/>
+                                            </g>
+                                            <defs>
+                                                <clipPath id="clip0_2224_1343">
+                                                <rect width="40" height="62" fill="white"/>
+                                                </clipPath>
+                                            </defs>
+                                            </svg>
+                                        </div>
+                                    </span>
                                     <span className="flex md:hidden">
                                         <svg style={{transform:"rotate(180deg)"}} xmlns="http://www.w3.org/2000/svg" width="10" height="21" viewBox="0 0 29 40" fill="none">
                                         <path d="M29 4.7L11.0756 20L29 35.3L23.4818 40L-1.31887e-06 20L23.4818 3.33228e-06L29 4.7Z" fill="#72383D"/>
@@ -105,7 +119,7 @@ const Navbar = ()=>{
                                     </span>
                                 </div>
                                 {/* Services Menu  */}
-                                { "name" in currentCat &&  <div className="fixed shadow-xl grid grid-cols-3 lg:flex lg:flex-col gap-2 lg:gap-10 left-0 right-0 layout-doc !py-[30px] top-[95px] md:top-[70px] z-100 bg-white">
+                                { "name" in currentCat &&  <div className="fixed shadow-xl grid grid-cols-3 lg:flex lg:flex-col gap-2 lg:gap-10 left-0 right-0 layout-doc !py-[30px] top-[95px] md:top-[100px]  z-100 bg-white">
                                     <div className="col-span-1 lg:flex gap-5 items-center justify-center">
                                         {
                                             servicesRef && servicesRef.map((e,idx)=>{

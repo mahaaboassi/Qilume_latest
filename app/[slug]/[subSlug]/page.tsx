@@ -12,7 +12,26 @@ import { useEffect, useState } from "react";
 /* =======================
    Animation Variants
 ======================= */
-
+type Item = {
+  id: number;
+  name: string;
+  link: string;
+  main_desc: string;
+  section_1: {
+    desc_1: string;
+    desc_2: string;
+    desc_3: string;
+  };
+  benefits: string[];
+  areas: string[];
+  before: string[];
+  after: string[];
+  questions: {
+    ques: string;
+    answer: string;
+  }[];
+  images?: string[];
+};
 const sectionVariants = (direction: "left" | "right"): Variants => ({
   hidden: {
     opacity: 0,
@@ -53,12 +72,13 @@ const dividerVariants: Variants = {
 
 const ServiceDetails = ()=>{
       const params = useParams()
-      const slug = params.slug as string
+      const slug = params.subSlug as string
+
       if (!slug) {
         redirect("/")
       }
         
-      const article = servicesData.find(item => item.link.split("/").pop() === slug)
+      const article: Item | undefined = servicesData.find(item => item.link.split("/").pop() === slug)
       // ❌ If slug not found → go back to news page
       if (!article) {
         redirect("/")
@@ -76,7 +96,6 @@ const ServiceDetails = ()=>{
           if(data) category = element
 
         })
-        
         
         if(category) setImages(getRandomImages(category?.images || [], 2))
       },[article])
@@ -102,7 +121,7 @@ const ServiceDetails = ()=>{
                   >
                     <div>
                       <span className="text-[var(--main)]">
-                        Service 
+                        {"Service"} 
                       </span>
                       <h2 className="heading !text-4xl">About the treatment</h2>
                     </div>
@@ -138,7 +157,7 @@ const ServiceDetails = ()=>{
                 />
               
             </motion.div>
-         <motion.div
+            {<motion.div
               key={`Our_Service_`}
               className="flex flex-col gap-10"
               initial="hidden"
@@ -215,11 +234,11 @@ const ServiceDetails = ()=>{
                   variants={dividerVariants}
                 />
               
-            </motion.div>
-            <div className="flex flex-col gap-10">
+            </motion.div>}
+            {<div className="flex flex-col gap-10">
                 <h2 className="heading !text-4xl text-center">Before & After Care</h2>
                 <div className="grid md:grid-cols-2 gap-10">
-                    <div className="flex flex-col gap-5 bg-[var(--third)] rounded-xl p-5 ">
+                    <div className="flex flex-col shadow rounded-xl p-5 ">
                         <h3 className="heading !text-xl">Before Treatment</h3>
                         <ul className="flex flex-col gap-2 text-sm md:text-md xl:text-[0.95rem] font-medium">
                         {article.before.map((ele, i) => (
@@ -246,7 +265,7 @@ const ServiceDetails = ()=>{
                         ))}
                         </ul>
                     </div>
-                    <div className="flex flex-col gap-5 bg-[var(--third)] rounded-xl p-5 ">
+                    <div className="flex flex-col gap-5 shadow rounded-xl p-5 ">
                         <h3 className="heading !text-xl">After Treatment</h3>
                         <ul className="flex flex-col gap-2 text-sm md:text-md xl:text-[0.95rem] font-medium">
                         {article.after.map((ele, i) => (
@@ -274,8 +293,8 @@ const ServiceDetails = ()=>{
                         </ul>
                     </div>
                 </div>
-            </div>
-            <div className="flex flex-col gap-10 bg-[var(--third)] relative rounded-xl pt-5 px-5">
+            </div>}
+            {<div className="flex flex-col gap-10 bg-[var(--grey)] relative rounded-xl pt-5 px-5">
                 <div className="grid lg:grid-cols-2 gap-10">
                     <div className="flex items-end"><Image className="w-full object-cover" width={500} height={400} alt="FAQ Banner" src="/images/faq.png" /></div>
                     <div className="flex flex-col gap-10 justify-center">
@@ -288,7 +307,7 @@ const ServiceDetails = ()=>{
                         </ul>
                     </div>
                 </div>
-            </div>
+            </div>}
             <ContactForm/>
             <Ready title="Prefer to Book Directly?" description="Call us now to schedule your consultation with one of our expert aestheticians." 
                 link= "tel:+919667929992"

@@ -6,7 +6,7 @@ import styles from "./Hero.module.css";
 
 type Props = {
   title: string;
-  description: string;
+  description: string | undefined;
 };
 
 const containerVariants: Variants = {
