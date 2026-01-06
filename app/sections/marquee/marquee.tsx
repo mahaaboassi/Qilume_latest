@@ -17,7 +17,7 @@ const texts = [
   "Science-Backed Beauty & Wellness",
 ]
 const Marquee = ()=>{
-    return(<div className="bg-[var(--main)] py-5 text-[var(--light)] layout-doc gap-2 md:gap-5 !py-5 flex flex-col md:flex-row justify-between items-center">
+    return(<div className="bg-[var(--main)]  text-[var(--light)] layout-doc gap-2 md:gap-5 !py-5 flex flex-col md:flex-row justify-between items-center">
         {/* <div>
             <p className="text-center !text-[var(--light)]  md:text-start text-sm md:text-lg">⁠Safe and Effective Skin Treatments guided by Global Aesthetic Experts</p>
         </div> */}

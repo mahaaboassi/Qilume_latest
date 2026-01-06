@@ -13,7 +13,7 @@ const Contact = ()=>{
         <div className={`flex flex-col gap-10 md:gap-20 ${Style.container}`}>
             <div className="flex flex-col gap-5 layout-doc">
                 <div className="grid sm:grid-cols-2 md:grid-cols-4 gap-5 sm:gap-10">
-                    {contact.map((e,idx)=>(<div key={`Contact_page_${idx}`} className={`bg-[var(--third)] rounded-xl flex gap-3 flex-col items-center p-5 ${Style.card}`}>
+                    {contact.map((e,idx)=>(e.name != "Whatsapp" && <div key={`Contact_page_${idx}`} className={`bg-[var(--third)] rounded-xl flex gap-3 flex-col items-center p-5 ${Style.card}`}>
                         <div className="w-[60px] h-[60px] rounded-xl bg-[var(--light)] flex justify-center items-center">{e.icon}</div>
                         <h2 className="!text-sm font-semibold heading">{e.name}</h2>
                         <p className="text-[0.9rem] font-medium text-center">{e.value}</p>

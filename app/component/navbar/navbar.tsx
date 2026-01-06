@@ -112,11 +112,6 @@ const Navbar = ()=>{
                                             </svg>
                                         </div>
                                     </span>
-                                    {/* <span className="flex md:hidden">
-                                        <svg style={{transform:"rotate(180deg)"}} xmlns="http://www.w3.org/2000/svg" width="10" height="21" viewBox="0 0 29 40" fill="none">
-                                        <path d="M29 4.7L11.0756 20L29 35.3L23.4818 40L-1.31887e-06 20L23.4818 3.33228e-06L29 4.7Z" fill="#72383D"/>
-                                        </svg>
-                                    </span> */}
                                 </div>
                                 {/* Services Menu  */}
                                 { "name" in currentCat &&  <div className="fixed shadow-xl grid grid-cols-3 lg:flex lg:flex-col gap-2 lg:gap-10 left-0 right-0 layout-doc !py-[30px] top-[95px] md:top-[100px] lg:top-[70px]  z-100 bg-white">

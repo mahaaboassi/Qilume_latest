@@ -10,10 +10,13 @@ export default function Home() {
   return (<div>
     <Hero/>
 
-    <Marquee/>
-    <div className="bg-[var(--light)] flex flex-col gap-10 pt-10">
-      <Treatments/>
-      <WhenNeed/>
+    
+    <div className="bg-[var(--light)] flex flex-col gap-5 md:gap-20 ">
+      <Marquee/>
+      <div className="pt-10">
+        <Treatments/>
+      </div>
+      <WhenNeed/> 
       <Review/>
       <Hint/>
       <Instagram/>

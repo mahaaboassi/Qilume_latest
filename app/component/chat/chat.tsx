@@ -11,14 +11,13 @@ const Chat = () => {
                     contact.map((e,idx)=>{
                         const delay = idx * 150;
                     if(e.name != "Working Hours" && e.name != "Find Us")
-                        return<Link style={{
-                            // animation: ``,
-                            animationDelay: `${delay}ms`,
-                        }} className={`${Style.icon}`} href={e.link}><div className="flex items-center gap-2" key={`Contact_${e.name}_${idx}`}>
-                            <div className={` w-[40px] h-[40px] rounded-[10px] bg-[var(--second)] flex justify-center items-center`}>
-                                {e.icon}
+                        return<Link style={{animationDelay: `${delay}ms`}} key={`Contact_Chat_${e.name}_${idx}`}
+                        className={`${Style.icon}`} href={e.link}>
+                            <div className="flex items-center gap-2">
+                                <div className={` w-[40px] h-[40px] rounded-[10px] bg-[var(--second)] flex justify-center items-center`}>
+                                    {e.icon}
+                                </div>
                             </div>
-                        </div>
                         </Link>
                     })
                 }
