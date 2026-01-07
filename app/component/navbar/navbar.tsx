@@ -93,7 +93,7 @@ const Navbar = ()=>{
                 </li>
                 {data.map((e,idx)=>(<li key={`Navbar_${idx}`}>
                     {e.name == "Services" ? 
-                        <div  onMouseEnter={() => handleEnter(servicesRef[0])}
+                        <div onMouseEnter={() => handleEnter(servicesRef[0])}
                             onMouseLeave={handleLeave}
                               className="relative">
                                 <div className="flex gap-2">

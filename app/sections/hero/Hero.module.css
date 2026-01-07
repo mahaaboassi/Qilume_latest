@@ -43,3 +43,37 @@
     var(--light) 100%
   );
 }
+.videoContainer{
+  height:  650px;
+}
+@media (max-width:1500px) {
+  .videoContainer{
+    height: 400px;
+  }
+}
+@media (max-width:1200px) {
+  .videoContainer{
+    height: 340px;
+  }
+}
+@media (max-width:768px) {
+  .videoContainer{
+    height: 330px;
+  }
+}
+
+@media (max-width:750px) {
+  .videoContainer{
+    height: 230px;
+  }
+}
+@media (max-width:600px) {
+  .videoContainer{
+    height: 180px;
+  }
+}
+@media (max-width:400px) {
+  .videoContainer{
+    height: 150px;
+  }
+}
