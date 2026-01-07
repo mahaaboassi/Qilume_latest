@@ -61,7 +61,16 @@
 .containerServices:hover::before{
      width: 80%;
 }
-
+.phoneIcon{
+    animation: vibration 0.7s linear infinite;
+}
+@keyframes vibration {
+    0% { transform: translateX(0); }
+    25% { transform: translateX(-2px); }
+    50% { transform: translateX(2px); }
+    75% { transform: translateX(-2px); }
+    100% { transform: translateX(0); }
+}
 @media (max-width: 1100px) {
     .nav button {
         font-size: 1rem;
