@@ -12,9 +12,80 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select"
+
+
 const ContactForm = ()=>{
+    const [formData, setFormData] = React.useState({
+        name: "",
+        email: "",
+        message: "",
+        phone: "",
+        service: "",
+        date: ""
+    })
+    const [errors, setErrors] = React.useState<{ [key: string]: string }>({})
+    const [submitting, setSubmitting] = React.useState(false)
+    const [success, setSuccess] = React.useState(false)
+
+    const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+        console.log(e);
+        
+        setFormData({ ...formData, [e.target.name]: e.target.value })
+        setErrors({ ...errors, [e.target.name]: "" }) // clear error when editing
+    }
+    const handleSelectChange = (value: string) => {
+    setFormData({ ...formData, service: value })
+    setErrors({ ...errors, service: "" })
+    }
+    const validate = () => {
+        const newErrors: { [key: string]: string } = {}
+        if (!formData.name.trim()) newErrors.name = "Name is required."
+        if (!formData.email.trim()) newErrors.email = "Email is required."
+        // if (!formData.phone.trim()) newErrors.phone = "Phone is required."
+        // if (!formData.service.trim()) newErrors.service = "Service is required."
+        // if (!formData.date.trim()) newErrors.date = "Date is required."
+        else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) newErrors.email = "Invalid email address."
+        if (!formData.message.trim()) newErrors.message = "Message is required."
+        return newErrors
+    }
+
+    const handleSubmit = async (e: React.FormEvent) => {
+        e.preventDefault()
+        const validationErrors = validate()
+        if (Object.keys(validationErrors).length > 0) {
+        setErrors(validationErrors)
+        return
+        }
+        
+        setSubmitting(true)
+        setSuccess(false)
+        
+        try {
+        const res = await fetch("/api/send-email", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify(formData),
+        })
+
+        const data = await res.json()
+
+        if (res.ok) {
+            setFormData({ name: "", email: "", message: "", service: "", date: "", phone: "" })
+            setSuccess(true)
+            // Clear success message after 5 seconds
+            setTimeout(() => setSuccess(false), 5000)
+        } else {
+            setErrors({ submit: data.message || "Failed to send message" })
+        }
+        } catch (error) {
+        console.error(error)
+        setErrors({ submit: "Network error. Please try again." })
+        } finally {
+        setSubmitting(false)
+        }
+    }
     return(<div className="grid md:grid-cols-2 gap-10">
-                <form className="flex flex-col gap-10 bg-[var(--grey)] p-5 rounded-xl">
+                <form onSubmit={handleSubmit}  className="flex flex-col gap-10 bg-[var(--grey)] p-5 rounded-xl">
                     <div className="flex flex-col gap-2">
                         <h2 className="!text-2xl md:!text-3xl heading">We'd Love to Hear from You</h2>
                         <p className="text-[0.8rem] md:text-sm"> Have a question, a project in mind, or just want to say hello?  
@@ -24,44 +95,75 @@ const ContactForm = ()=>{
                         <div className="grid md:grid-cols-2 gap-5">
                             <div className="flex flex-col gap-2">
                                 <Label>Full Name</Label>
-                                <Input type="text" placeholder="Name" />
+                                <Input              
+                                    name="name"
+                                    value={formData.name}
+                                    onChange={handleChange} 
+                                    type="text" placeholder="Name" />
+                                {errors.name && <span className="text-red-500 text-sm w-full">{errors.name}</span>}
                             </div>
                             <div className="flex flex-col gap-2">
-                                <Label>Full Name</Label>
-                                <Input type="text" placeholder="Name" />
+                                <Label>Email</Label>
+                                <Input
+                                    name="email"
+                                    value={formData.email}
+                                    onChange={handleChange}
+                                    type="text" placeholder="Email" />
+                                {errors.email && <span className="text-red-500 text-sm w-full">{errors.email}</span>}
                             </div>
                         </div>
                         <div className="grid md:grid-cols-2 gap-5">
                             <div className="flex flex-col gap-2">
                                 <Label>Phone</Label>
-                                <Input type="number" placeholder="Phone" />
+                                <Input
+                                    name="phone"
+                                    value={formData.phone}
+                                    onChange={handleChange}
+                                    type="tel"
+                                    placeholder="Phone" />
+                                {errors.phone && <span className="text-red-500 text-sm w-full">{errors.phone}</span>}
                             </div>
                             <div className="flex flex-col gap-2">
                                 <Label>Date</Label>
-                                <Input type="date" placeholder="Date" />
+                                <Input
+                                    name="date"
+                                    value={formData.date}
+                                    onChange={handleChange}
+                                    type="date" placeholder="Date" />
+                                {errors.date && <span className="text-red-500 text-sm w-full">{errors.date}</span>}
                             </div>
                         </div>
                         <div className="flex flex-col gap-2 select">
                             <Label>Select Service</Label>
-                            <Select>
-                            <SelectTrigger className="w-full">
-                                <SelectValue placeholder="Service" />
-                            </SelectTrigger>
-                            <SelectContent>
-                                <SelectGroup>
-                                <SelectLabel>Services</SelectLabel>
-                                <SelectItem value="Botox">Botox</SelectItem>
-                                <SelectItem value="Fillers">Fillers</SelectItem>
-                                <SelectItem value="Thread Lifts">Thread Lifts</SelectItem>
-                                <SelectItem value="HIFU">HIFU</SelectItem>
-                                <SelectItem value="Laser Skin Toning">Laser Skin Toning</SelectItem>
-                                <SelectItem value="Cryo T-Shock">Cryo T-Shock</SelectItem>
-                                <SelectItem value="Laser Hair Reduction">Laser Hair Reduction</SelectItem>
-                                <SelectItem value="Dermaplaning">Dermaplaning</SelectItem>
-                                <SelectItem value="MediFacials">MediFacials</SelectItem>
-                                </SelectGroup>
-                            </SelectContent>
+                            <Select value={formData.service} onValueChange={handleSelectChange}>
+                                <SelectTrigger className="w-full">
+                                    <SelectValue placeholder="Service" />
+                                </SelectTrigger>
+                                <SelectContent>
+                                    <SelectGroup>
+                                    <SelectLabel>Treatment</SelectLabel>
+                                    <SelectItem value="Beauty Services">Beauty Services</SelectItem>
+                                    <SelectItem value="Salon">Salon</SelectItem>
+                                    <SelectItem value="Laser Removal">Laser Removal</SelectItem>
+                                    <SelectItem value="Ayurveda">Ayurveda</SelectItem>
+                                    <SelectItem value="LSkin">Skin</SelectItem>
+                                    <SelectItem value="Slimming">Slimming</SelectItem>
+                                    <SelectItem value="Hair">Hair</SelectItem>
+                                    </SelectGroup>
+                                </SelectContent>
                             </Select>
+                            {errors.service && <span className="text-red-500 text-sm w-full">{errors.service}</span>}
+                        </div>
+                        <div className="flex flex-col gap-2">
+                            <Label>Message</Label>
+                            <textarea
+                                name="message"
+                                value={formData.message}
+                                onChange={handleChange}
+                                placeholder="Your message"
+                                className="min-h-[80px] bg-[var(--light)]  rounded-md border p-3 text-sm"
+                            />
+                            {errors.message && <span className="text-red-500 text-sm w-full">{errors.message}</span>}
                         </div>
                         <div>
                             <button className="w-full justify-center items-center flex"> Submit</button>
