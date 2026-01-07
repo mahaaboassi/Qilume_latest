@@ -1,5 +1,6 @@
 "use client"
 import { contact, servicesData, servicesRef } from "@/app/data/data"
+import { em } from "framer-motion/m"
 import Image from "next/image"
 import Link from "next/link"
 import { ReactNode, useEffect, useState } from "react"
@@ -25,6 +26,59 @@ const companyLinks:Item[] = [{
 }]
 
 const Footer = ()=>{
+    const [ formData, setFormData ] = useState<{ [key: string]: string }>({
+        key: "subscription",
+        email: ""
+    });
+    const [errors, setErrors] = useState<{ [key: string]: string }>({})
+    const [submitting, setSubmitting] = useState(false)
+    const [success, setSuccess] = useState(false)
+    const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+        setFormData({ ...formData, [e.target.name]: e.target.value })
+        setErrors({ ...errors, [e.target.name]: "" }) // clear error when editing
+    }
+    const validate = () => {
+        const newErrors: { [key: string]: string } = {}
+        if (!formData.email.trim()) newErrors.email = "Email is required."
+        else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) newErrors.email = "Invalid email address."
+        return newErrors
+    }
+
+    const handleSubmit = async (e: React.FormEvent) => {
+        e.preventDefault()
+        const validationErrors = validate()
+        if (Object.keys(validationErrors).length > 0) {
+        setErrors(validationErrors)
+        return
+        }
+        
+        setSubmitting(true)
+        setSuccess(false)
+        
+        try {
+        const res = await fetch("/api/send-email", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify(formData),
+        })
+
+        const data = await res.json()
+
+        if (res.ok) {
+            setFormData({ key: "subscription", email: "" })
+            setSuccess(true)
+            // Clear success message after 5 seconds
+            setTimeout(() => setSuccess(false), 5000)
+        } else {
+            setErrors({ submit: data.message || "Failed to send subscription" })
+        }
+        } catch (error) {
+        console.error(error)
+        setErrors({ submit: "Network error. Please try again." })
+        } finally {
+        setSubmitting(false)
+        }
+    }
     return(<footer className="pt-10 bg-[var(--main)] text-[var(--grey)]">
 
         <div className="layout-doc flex flex-col gap-5">
@@ -82,16 +136,28 @@ const Footer = ()=>{
                             </li>))}
                         </ul>
                     </div>
-                    <div className="col-span-3 xs:col-span-2">
+                    <form onSubmit={handleSubmit} className="col-span-3 xs:col-span-2">
                         <h4 className="heading uppercase text-xl h-[70px] flex items-center">Subscribe Now</h4>
                         <div className="flex flex-col gap-3">
                             <p className="text-[0.9rem] !text-[var(--light)]">Be the First to Know, Subscribe Now!</p>
                             <div className="flex container-subscriber h-[50px] w-full">
-                                <input className="w-full pl-2 h-full" placeholder="Please  enter your email" />
-                                <button>Subscribe</button>
+                                <input value={formData.email} name='email' onChange={handleChange}  className="w-full pl-2 h-full" placeholder="Please  enter your email" />
+                                <button>{submitting? "Submitting..." : "Subscribe"}</button>
                             </div>
+                            {errors.email && <span className="text-red-500 text-sm">{errors.email}</span>}
                         </div>
-                    </div>
+                        {success && (
+                            <div className="mt-2 p-2 bg-green-100 border border-green-400 text-green-700 rounded-lg flex items-center gap-2">
+                            <span className="font-medium">Subsciption sent successfully! Thank you.</span>
+                            </div>
+                        )}
+
+                        {errors.submit && (
+                            <div className="mt-2 p-2 bg-red-100 border border-red-400 text-red-700 rounded-lg">
+                            <span className="font-medium">{errors.submit}</span>
+                            </div>
+                        )}
+                    </form>
                 </div>
             </div>
             <hr className="bg-[var(--main)] opacity-30 h-[2px] w-full" />

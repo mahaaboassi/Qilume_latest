@@ -16,6 +16,7 @@ import {
 
 const ContactForm = ()=>{
     const [formData, setFormData] = React.useState({
+        key: "contact",
         name: "",
         email: "",
         message: "",
@@ -68,7 +69,7 @@ const ContactForm = ()=>{
         const data = await res.json()
 
         if (res.ok) {
-            setFormData({ name: "", email: "", message: "", service: "", date: "", phone: "" })
+            setFormData({ key: "contact", name: "", email: "", message: "", service: "", date: "", phone: "" })
             setSuccess(true)
             // Clear success message after 5 seconds
             setTimeout(() => setSuccess(false), 5000)
@@ -89,17 +90,17 @@ const ContactForm = ()=>{
                         <p className="text-[0.8rem] md:text-sm"> Have a question, a project in mind, or just want to say hello?  
                             We’re here to listen and ready to help.</p>
                     </div>
-                        {success && (
-                            <div className="p-2 bg-green-100 border border-green-400 text-green-700 rounded-lg flex items-center gap-2">
-                            <span className="font-medium">Message sent successfully! We will get back to you soon.</span>
-                            </div>
-                        )}
+                    {success && (
+                        <div className="p-2 bg-green-100 border border-green-400 text-green-700 rounded-lg flex items-center gap-2">
+                        <span className="font-medium">Message sent successfully! We will get back to you soon.</span>
+                        </div>
+                    )}
 
-                        {errors.submit && (
-                            <div className="p-2 bg-red-100 border border-red-400 text-red-700 rounded-lg">
-                            <span className="font-medium">{errors.submit}</span>
-                            </div>
-                        )}
+                    {errors.submit && (
+                        <div className="p-2 bg-red-100 border border-red-400 text-red-700 rounded-lg">
+                        <span className="font-medium">{errors.submit}</span>
+                        </div>
+                    )}
                     <div className="flex flex-col gap-5">
                         <div className="grid md:grid-cols-2 gap-5">
                             <div className="flex flex-col gap-2">

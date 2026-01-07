@@ -2,6 +2,7 @@ import nodemailer from "nodemailer"
 import { type NextRequest, NextResponse } from "next/server"
 
 interface ContactFormData {
+  key: string
   name: string
   email: string
   message: string
@@ -13,12 +14,17 @@ interface ContactFormData {
 export async function POST(req: NextRequest) {
   try {
     const body = (await req.json()) as ContactFormData
-     console.log(body);
-    
-    const { name, email, message, date, service, phone } = body
 
-    if (!name || !email || !message) {
-      return NextResponse.json({ message: "Name, Email, and Message are required." }, { status: 400 })
+    const { name, email, message, date, service, phone, key } = body
+
+    if(key === "contact") {
+      if (!name || !email || !message) {
+        return NextResponse.json({ message: "Name, email, and message are required." }, { status: 400 })
+      }
+    } else if(key === "subscription") {
+      if (!email) {
+        return NextResponse.json({ message: "Email is required." }, { status: 400 })
+      }
     }
     const transporter = nodemailer.createTransport({
       service: "gmail",
@@ -28,7 +34,89 @@ export async function POST(req: NextRequest) {
       },
     })
 
-    const htmlTemplate = `
+    const htmlTemplate = key ==="subscription" ? `
+      <!DOCTYPE html>
+      <html lang="en">
+      <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>New Subscription Form Website</title>
+      </head>
+      <body style="margin: 0; padding: 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #f8f9fa;">
+        <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="background-color: #f8f9fa;">
+          <tr>
+            <td align="center" style="padding: 40px 20px;">
+              <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="600" style="max-width: 600px; background-color: #ffffff; border-radius: 12px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+                <!-- Header -->
+                <tr>
+                  <td style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); padding: 40px 30px; text-align: center; border-radius: 12px 12px 0 0;">
+                    <h1 style="margin: 0; color: #ffffff; font-size: 28px; font-weight: 600; text-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+                      📧 New Subscription Form Website
+                    </h1>
+                    <p style="margin: 10px 0 0 0; color: #e8eaff; font-size: 16px; opacity: 0.9;">
+                      Qilume Aesthetics Website
+                    </p>
+                  </td>
+                </tr>
+                
+                <!-- Content -->
+                <tr>
+                  <td style="padding: 40px 30px;">
+                    <div style="margin-bottom: 30px;">
+                      <p style="margin: 0 0 20px 0; color: #4a5568; font-size: 16px; line-height: 1.6;">
+                        You've received a new subscription from your website form:
+                      </p>
+                    </div>
+                    
+                    <!-- Contact Details -->
+                    <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="margin-bottom: 30px;">
+                      <tr>
+                        <td style="padding: 20px; background-color: #f7fafc; border-radius: 8px; border-left: 4px solid #667eea;">
+                            <tr>
+                              <td style="padding-bottom: 15px;">
+                                <strong style="color: #2d3748; font-size: 14px; text-transform: uppercase; letter-spacing: 0.5px;">📧 Email</strong>
+                                <p style="margin: 5px 0 0 0;">
+                                  <a href="mailto:${email}" style="color: #667eea; text-decoration: none; font-size: 16px; font-weight: 500;">${email}</a>
+                                </p>
+                              </td>
+                            </tr>
+                          </table>
+                        </td>
+                      </tr>
+                    </table>
+                    
+                    <!-- Action Button -->
+                    <div style="text-align: center; margin: 30px 0;">
+                      <a href="mailto:${email}?subject=Re: Your subscription to Qilume Aesthetics" 
+                         style="display: inline-block; padding: 12px 30px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: #ffffff; text-decoration: none; border-radius: 6px; font-weight: 600; font-size: 16px; box-shadow: 0 2px 4px rgba(102, 126, 234, 0.3);">
+                        Reply to ${name}
+                      </a>
+                    </div>
+                  </td>
+                </tr>
+                
+                <!-- Footer -->
+                <tr>
+                  <td style="padding: 30px; background-color: #f7fafc; text-align: center; border-radius: 0 0 12px 12px; border-top: 1px solid #e2e8f0;">
+                    <p style="margin: 0; color: #718096; font-size: 14px; line-height: 1.5;">
+                      This message was sent from the contact form on your website.<br/>
+                      <strong>Qilume Aesthetics</strong> • ${new Date().toLocaleDateString("en-US", {
+                        year: "numeric",
+                        month: "long",
+                        day: "numeric",
+                        hour: "2-digit",
+                        minute: "2-digit",
+                      })}
+                    </p>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+        </table>
+      </body>
+      </html>
+    `: `
       <!DOCTYPE html>
       <html lang="en">
       <head>
