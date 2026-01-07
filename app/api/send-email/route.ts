@@ -33,7 +33,8 @@ export async function POST(req: NextRequest) {
         pass: "tcsg ymyc unzm rysj",
       },
     })
-    const htmlTemplateSubscription = `<!DOCTYPE html>
+    
+    const htmlTemplate = key === "subscription" ? `<!DOCTYPE html>
         <html lang="en">
         <head>
             <meta charset="UTF-8">
@@ -118,8 +119,7 @@ export async function POST(req: NextRequest) {
             </table>
         </body>
         </html>
-        `
-    const htmlTemplateContact = ` <!DOCTYPE html>
+        `: ` <!DOCTYPE html>
               <html lang="en">
               <head>
                 <meta charset="UTF-8">
@@ -268,15 +268,14 @@ export async function POST(req: NextRequest) {
               </body>
               </html>
               `
-    const htmlTemplate = key ==="subscription" ? htmlTemplateSubscription: htmlTemplateContact
 
 
     const mailOptions = {
       from: email,
     //   to: "info@qilumeaesthetics.com",
       to: "maha.assi@arizglobal.com",
-      subject: `New Message from ${name}`,
-      text: `Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`,
+      subject: `New Message from ${email}`,
+      text: `Email: ${email}`,
       html: htmlTemplate,
     }
 
