@@ -27,7 +27,7 @@ const Hero = ()=>{
         <div className={styles.overlay}>
             
         </div>
-        <div className="flex justify-between items-center h-[400px] md:h-[550px] xl:h-[620px]  layout-doc">
+        <div className="flex justify-between items-center h-[400px] md:h-[550px] xl:h-[620px] layout-doc">
             <div className="flex gap-4 md:gap-6 flex-col ">
                 <h1 className="heading text-5xl md:text-7xl font-bold">
                     <span className="text-[var(--main)]">QILUMÈ</span>
