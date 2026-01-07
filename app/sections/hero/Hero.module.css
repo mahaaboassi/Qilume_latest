@@ -5,18 +5,18 @@
   inset: 0;
   z-index: -2;            /* behind content */
   pointer-events: none;   /* allow clicks through */
-  background: rgba(0, 0, 0, 0); /* transparent base */
+  background: rgba(41, 41, 41, 0.582); /* transparent base */
   overflow: hidden;
 }
 
 /* Horizontal scanning line */
-.overlay::before {
+/* .overlay::before {
   content: '';
   position: absolute;
-  top: 0;                 /* fixed vertical position */
-  right: -50px;            /* start left outside viewport */
-  width: 50px;            /* thickness of line */
-  height: 100%;           /* full height of screen */
+  top: 0;             
+  right: -50px;         
+  width: 50px;          
+  height: 100%;         
   background: linear-gradient(
     90deg,
     rgba(255, 255, 255, 0) 0%,
@@ -24,7 +24,7 @@
     rgba(255, 255, 255, 0) 100%
   );
   animation: scanLeftRight 4s linear infinite alternate;
-}
+} */
 
 /* Keyframes: left → right and reverse */
 @keyframes scanLeftRight {
@@ -46,9 +46,15 @@
 .videoContainer{
   height:  650px;
 }
+.containerDiv{
+  height:  550px;
+}
 @media (max-width:1500px) {
   .videoContainer{
     height: 400px;
+  }
+  .containerDiv{
+    height:  300px;
   }
 }
 @media (max-width:1200px) {
