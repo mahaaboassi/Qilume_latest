@@ -132,7 +132,8 @@ const Footer = ()=>{
                         <h4 className="heading uppercase text-xl h-[70px] flex items-center">Company</h4>
                         <ul className="text-[0.9rem] flex flex-col gap-2">
                             {companyLinks.map((e,idx)=>(<li key={`Company_Links_${e.name}_${idx}`}>
-                                <Link href={e.link} >{e.name}</Link>
+                                <Link className="relative after:content-[''] after:absolute after:-bottom-1 after:left-0 after:w-[30%] after:h-[1px]
+                                after:bg-[var(--second)] hover:after:w-[80%] after:transition-all after:duration-300" href={e.link} >{e.name}</Link>
                             </li>))}
                         </ul>
                     </div>
