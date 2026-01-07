@@ -13,9 +13,10 @@ const Chat = () => {
                     if(e.name != "Working Hours" && e.name != "Find Us")
                         return<Link style={{animationDelay: `${delay}ms`}} key={`Contact_Chat_${e.name}_${idx}`}
                         className={`${Style.icon}`} href={e.link}>
-                            <div className="flex items-center gap-2">
-                                <div className={` w-[40px] h-[40px] rounded-[10px] bg-[var(--second)] flex justify-center items-center`}>
+                            <div className="flex relative items-center gap-2">
+                                <div className={`w-[40px] h-[40px] hover:w-[42px] hover:h-[42px] transition-all duration-100 rounded-[10px] bg-[var(--second)] flex justify-center items-center`}>
                                     {e.icon}
+                                    <div className={`absolute left-10 inline-block whitespace-nowrap bg-[var(--light)] shadow text-[var(--main)] px-2 py-0.5 rounded-tr-lg rounded-br-lg ${Style.tooltip}`}>{e.value}</div>
                                 </div>
                             </div>
                         </Link>
