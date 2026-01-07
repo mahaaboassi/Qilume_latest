@@ -28,8 +28,6 @@ const ContactForm = ()=>{
     const [success, setSuccess] = React.useState(false)
 
     const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
-        console.log(e);
-        
         setFormData({ ...formData, [e.target.name]: e.target.value })
         setErrors({ ...errors, [e.target.name]: "" }) // clear error when editing
     }
@@ -91,6 +89,17 @@ const ContactForm = ()=>{
                         <p className="text-[0.8rem] md:text-sm"> Have a question, a project in mind, or just want to say hello?  
                             We’re here to listen and ready to help.</p>
                     </div>
+                        {success && (
+                            <div className="p-2 bg-green-100 border border-green-400 text-green-700 rounded-lg flex items-center gap-2">
+                            <span className="font-medium">Message sent successfully! We will get back to you soon.</span>
+                            </div>
+                        )}
+
+                        {errors.submit && (
+                            <div className="p-2 bg-red-100 border border-red-400 text-red-700 rounded-lg">
+                            <span className="font-medium">{errors.submit}</span>
+                            </div>
+                        )}
                     <div className="flex flex-col gap-5">
                         <div className="grid md:grid-cols-2 gap-5">
                             <div className="flex flex-col gap-2">
@@ -166,9 +175,10 @@ const ContactForm = ()=>{
                             {errors.message && <span className="text-red-500 text-sm w-full">{errors.message}</span>}
                         </div>
                         <div>
-                            <button className="w-full justify-center items-center flex"> Submit</button>
+                            <button className="w-full justify-center items-center flex"> {submitting ? "Sending..." : "Submit"}</button>
                         </div>
                     </div>
+                    
                 </form>
                 <div>
                     <iframe className="w-full h-full rounded-xl min-h-[300px]" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7016.228867761749!2d77.06204794345076!3d28.445966603068324!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d19593455e077%3A0x73a856c8aa5c70ab!2sQilum%C3%A9%20Aesthetics%20Skin%20Care%20Clinic%20in%20Gurgaon%20%7C%20Best%20Skin%20Specialist%20in%20Gurgaon%20%7C%20Laser%20Hair%20Removal%20in%20Gurgaon!5e0!3m2!1sen!2sae!4v1766875527194!5m2!1sen!2sae" loading="lazy"></iframe>
