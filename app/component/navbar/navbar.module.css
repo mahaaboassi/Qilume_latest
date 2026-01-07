@@ -103,6 +103,10 @@
     .nav button {
         font-size: 0.7rem;
     }
+    .phoneIcon svg{
+        width: 15px;
+        height: auto;
+    }
 }
 @media (max-width: 350px) {
     .nav button svg{
@@ -118,5 +122,11 @@
     .cat svg{
         width:  20px;
         height: auto;
+    }
+
+}
+@media (max-width:320px) {
+    .phoneIcon{
+        display: none;
     }
 }

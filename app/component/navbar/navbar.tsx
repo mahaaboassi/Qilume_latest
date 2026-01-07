@@ -175,7 +175,7 @@ const Navbar = ()=>{
         <div className="flex items-center gap-2">
             <div>
                 <Link href={"tel:+919667929992"}>
-                    <div className={`text-[var(--main)] ${Style.phoneIconContainer} text-lg font-medium flex !gap-0.5 md:gap-2 items-center`}>
+                    <div className={`text-[var(--main)] ${Style.phoneIconContainer} text-xs md:text-lg font-medium flex !gap-0.5 md:gap-2 items-center`}>
                         <div className={`${Style.phoneIcon}`}>
                             <svg xmlns="http://www.w3.org/2000/svg" width="19" height="20" viewBox="0 0 20 21" fill="none">
                             <g clipPath="url(#clip0_2059_1346)">
