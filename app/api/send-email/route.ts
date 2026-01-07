@@ -119,7 +119,7 @@ export async function POST(req: NextRequest) {
         </body>
         </html>
         `
-    const htmlTemplateContact = `<!DOCTYPE html>
+    const htmlTemplateContact = ` <!DOCTYPE html>
               <html lang="en">
               <head>
                 <meta charset="UTF-8">
@@ -158,6 +158,18 @@ export async function POST(req: NextRequest) {
                               <tr>
                                 <td style="padding:20px; background-color:#f7fafc; border-radius:8px; border-left:4px solid #73393E;">
                                   <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+                                    <tr>
+                                    <td style="padding-bottom:15px;">
+                                    <strong style="display:flex; align-items:center; gap:5px; color:#73393E; font-size:14px; text-transform:uppercase; letter-spacing:0.5px;">
+                                        <!-- Pink User SVG -->
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#C96C67" viewBox="0 0 24 24">
+                                        <path d="M12 12c2.7 0 4.9-2.2 4.9-4.9S14.7 2.2 12 2.2 7.1 4.4 7.1 7.1 9.3 12 12 12zm0 2c-3.3 0-9.8 1.7-9.8 5v2.7h19.6V19c0-3.3-6.5-5-9.8-5z"/>
+                                        </svg>
+                                        Name
+                                    </strong>
+                                    <p style="margin:5px 0 0 0; font-size:16px; font-weight:500;">${name}</p>
+                                    </td> 
+                                    </tr>      
                                     <tr>
                                       <td style="padding-bottom:15px;">
                                         <strong style="display:flex; align-items:center; gap:5px; color:#73393E; font-size:14px; text-transform:uppercase; letter-spacing:0.5px;">
@@ -231,7 +243,7 @@ export async function POST(req: NextRequest) {
                             <div style="text-align:center; margin:30px 0;">
                               <a href="mailto:${email}?subject=Re: Your message to Qilume Aesthetics" 
                                 style="display:inline-block; padding:12px 30px; background:linear-gradient(135deg, white 0%, #C96C67 100%); color:#73393E; text-decoration:none; border-radius:6px; font-weight:600; font-size:16px;">
-                                Reply to ${email}
+                                Reply to ${name}
                               </a>
                             </div>
                           </td>
