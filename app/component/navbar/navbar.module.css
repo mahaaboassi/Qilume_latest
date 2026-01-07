@@ -61,8 +61,11 @@
 .containerServices:hover::before{
      width: 80%;
 }
-.phoneIcon{
+.phoneIconContainer .phoneIcon{
     animation: vibration 0.7s linear infinite;
+}
+.phoneIconContainer:hover .phoneIcon{
+    animation-play-state: paused;
 }
 @keyframes vibration {
     0% { transform: translateX(0); }
