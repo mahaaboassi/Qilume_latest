@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+        <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>New Subscription Form Website</title>
+        </head>
+        <body style="margin: 0; padding: 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #f8f9fa;">
+            <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="background-color: #f8f9fa;">
+            <tr>
+                <td align="center" style="padding: 40px 20px;">
+                <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="600" style="max-width: 600px; background-color: #ffffff; border-radius: 12px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+                    <!-- Header -->
+                    <tr>
+                    <td style="background: linear-gradient(135deg, white 0%, #C96C67 100%); padding: 40px 30px; text-align: center; border-radius: 12px 12px 0 0;">
+                        <h1 style="margin: 0; color: #73393E; font-size: 28px; font-weight: 600; text-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+                        New Subscription Form Website
+                        </h1>
+                        <p style="margin: 10px 0 0 0; color: #e8eaff; font-size: 16px; opacity: 0.9;">
+                        Qilume Aesthetics Website
+                        </p>
+                    </td>
+                    </tr>
+                    
+                    <!-- Content -->
+                    <tr>
+                    <td style="padding: 40px 30px;">
+                        <div style="margin-bottom: 30px;">
+                        <p style="margin: 0 0 20px 0; color: #4a5568; font-size: 16px; line-height: 1.6;">
+                            You've received a new subscription from your website form:
+                        </p>
+                        </div>
+                        
+                        <!-- Contact Details -->
+                        <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="margin-bottom: 30px;">
+                                  <tr>
+                                      <td style="padding-bottom:15px;">
+                                        <strong style="display:flex; align-items:center; gap:5px; color:#73393E; font-size:14px; text-transform:uppercase; letter-spacing:0.5px;">
+                                          <!-- Pink Email SVG -->
+                                          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#C96C67" viewBox="0 0 24 24">
+                                            <path d="M2 4a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v16a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V4zm2 0v.01L12 13 20 4.01V4H4zm16 16V6l-8 7-8-7v14h16z"/>
+                                          </svg>
+                                          Email
+                                        </strong>
+                                        <p style="margin:5px 0 0 0; font-size:16px; font-weight:500;">
+                                          <a href="mailto:${email}" style="color:#73393E; text-decoration:none;">${email}</a>
+                                        </p>
+                                      </td>
+                                    </tr>
+                            </table>
+                            </td>
+                        </tr>
+                        </table>
+                        
+                        <!-- Action Button -->
+                        <div style="text-align: center; margin: 30px 0;">
+                        <a href="mailto:${email}?subject=Re: Your subscription to Qilume Aesthetics" 
+                            style="display: inline-block; padding: 12px 30px; background: linear-gradient(135deg, white 0%, #C96C67 100%); color: #72383D; text-decoration: none; border-radius: 6px; font-weight: 600; font-size: 16px; box-shadow: 0 2px 4px rgba(102, 126, 234, 0.3);">
+                            Reply to ${email}
+                        </a>
+                        </div>
+                    </td>
+                    </tr>
+                    
+                    <!-- Footer -->
+                    <tr>
+                    <td style="padding: 30px; background-color: #f7fafc; text-align: center; border-radius: 0 0 12px 12px; border-top: 1px solid #e2e8f0;">
+                        <p style="margin: 0; color: #718096; font-size: 14px; line-height: 1.5;">
+                        This message was sent from the subscription form on your website.<br/>
+                        <strong>Qilume Aesthetics</strong> • ${new Date().toLocaleDateString("en-US", {
+                            year: "numeric",
+                            month: "long",
+                            day: "numeric",
+                            hour: "2-digit",
+                            minute: "2-digit",
+                        })}
+                        </p>
+                    </td>
+                    </tr>
+                </table>
+                </td>
+            </tr>
+            </table>
+        </body>
+        </html>
+        
