@@ -12,7 +12,7 @@ const AboutSection = () => {
               </h2>
               <p className="text-[0.7rem] xxs:text-sm md:text-md xl:text-[1.1rem] font-medium">QILUMÈ is an emerging integrative beauty and wellness clinic in India, combining advanced aesthetic science with holistic care. Designed for beauty and grounded in wellness, we deliver personalized skin, hair, and body treatments led by expert professionals and medical-grade technology.</p>
               <p className="text-[0.7rem] xxs:text-sm md:text-md xl:text-[1.1rem] font-medium">Our approach focuses on natural results, safety, and long-term confidence enhancing what’s already yours, not covering it.</p>
-              <div><Link href={"/contact"}><button>Book an Appoitement</button></Link></div>
+              <div><Link href={"/contact"}><button>Book an Appointment</button></Link></div>
           </div>
                
                 
