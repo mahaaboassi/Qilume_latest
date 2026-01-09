@@ -21,7 +21,7 @@ const companyLinks:Item[] = [{
     name: "Contact",
     link: "/contact"
 },{
-    name: "News",
+    name: "News & Updates",
     link: "/news"
 }]
 
@@ -164,7 +164,7 @@ const Footer = ()=>{
             <hr className="bg-[var(--main)] opacity-30 h-[2px] w-full" />
             <div>
                 <h4 className="heading uppercase text-xl h-[70px] flex items-center">Treatment</h4>
-                <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-7 gap-4">
+                <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4">
                     {servicesRef.map((ele,idx)=>(<div key={`Cat_Services_Footer_${ele.name}_${idx}`}>
                         <Link href={ele.link} className="font-semibold mb-2 block">
                            <h5 className="font-semibold mb-4">{ele.name}</h5>
@@ -202,7 +202,7 @@ const Footer = ()=>{
             </div>
             <hr className="bg-[var(--main)] opacity-30 h-[2px] w-full" />
             <div className="flex flex-col lg:flex-row justify-between gap-2 pb-5">
-                <p className="text-[0.9rem] !text-[var(--light)]">© 2025, All Rights Reserved, Powered by <Link href={"https://arizglobal.com"}>ArizGlobal</Link></p>
+                <p className="text-[0.9rem] !text-[var(--light)]">© 2025, All Rights Reserved, Powered by <Link target="_blank" href={"https://arizglobal.com"}>ArizGlobal</Link></p>
                 <div className="flex  gap-2 text-[0.9rem]">
                     <div><Link className="underline" href={"/terms-and-conditions"}>Terms & Conditions</Link></div>
                     <div><Link className="underline" href={"/privacy-policy"}>Privacy Policy</Link></div>

@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Hero from "./sections/hero/hero";
 import Hint from "./sections/hint/hint";
 import Instagram from "./sections/instagram/instagram";
@@ -5,6 +6,8 @@ import Marquee from "./sections/marquee/marquee";
 import Review from "./sections/review/review";
 import Treatments from "./sections/treatments/treatments";
 import WhenNeed from "./sections/when/whenNeed";
+import Link from "next/link";
+import AboutSection from "./sections/about/about";
 
 export default function Home() {
   return (<div>
@@ -16,7 +19,8 @@ export default function Home() {
       <Treatments/>
       <WhenNeed/> 
       <Review/>
-      <Hint/>
+      {/* <Hint/> */}
+      <AboutSection/>
       <Instagram/>
     </div>
 

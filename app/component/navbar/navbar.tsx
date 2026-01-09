@@ -28,7 +28,7 @@ const Navbar = ()=>{
         name: "Services",
         link: "/services",
     },{
-        name: "News",
+        name: "News & Updates",
         link: "/news",
     },{
         name: "Contact",
@@ -97,12 +97,13 @@ const Navbar = ()=>{
                             onMouseLeave={handleLeave}
                               className="relative">
                                 <div className="flex gap-2">
-                                    <span className="uppercase font-medium flex gap-2 cursor-pointer items-center text-[0.9rem] xl:text-[1.05rem] " >
+                                    <span className="uppercase hover:text-[var(--main)] font-medium flex gap-2 cursor-pointer items-center text-[0.9rem] xl:text-[1.05rem] " >
                                         {e.name}
                                         <div className="">
                                             <svg style={{ transform: "rotate(-270deg)" }} xmlns="http://www.w3.org/2000/svg" width="10" height="32" viewBox="0 0 40 62" fill="none">
                                             <g clipPath="url(#clip0_2224_1343)">
-                                                <path d="M1.16537 56.1068C-0.418843 57.4792 -0.382974 59.6791 1.24907 61.0162C2.87513 62.3533 5.48162 62.323 7.06584 60.9455L38.8219 33.3008L35.8747 30.884L38.8339 33.3059C40.4181 31.9234 40.3822 29.7185 38.7442 28.3814C38.6964 28.341 38.6486 28.3057 38.6007 28.2704L7.05986 1.05459C5.47564 -0.32285 2.87513 -0.353123 1.24309 0.983954C-0.382974 2.32103 -0.418843 4.51585 1.16537 5.8933L30.1356 30.8941L1.16537 56.1068Z" fill="#1f1a1a"/>
+                                                <path d="M1.16537 56.1068C-0.418843 57.4792 -0.382974 59.6791 1.24907 61.0162C2.87513 62.3533 5.48162 62.323 7.06584 60.9455L38.8219 33.3008L35.8747 30.884L38.8339 33.3059C40.4181 31.9234 40.3822 29.7185 38.7442 28.3814C38.6964 28.341 38.6486 28.3057 38.6007 28.2704L7.05986 1.05459C5.47564 -0.32285 2.87513 -0.353123 1.24309 0.983954C-0.382974 2.32103 -0.418843 4.51585 1.16537 5.8933L30.1356 30.8941L1.16537 56.1068Z"
+                                                 fill="currentColor"/>
                                             </g>
                                             <defs>
                                                 <clipPath id="clip0_2224_1343">
@@ -149,7 +150,7 @@ const Navbar = ()=>{
                                     
                                 </div>}
                         </div> 
-                        : <Link className="uppercase font-medium text-[0.9rem] xl:text-[1.05rem] " onMouseEnter={()=>setCurrentCat({})} onClick={()=>setOpenMenu(false)} href={e.link}>{e.name}</Link> }
+                        : <Link className="uppercase hover:text-[var(--main)] font-medium text-[0.9rem] xl:text-[1.05rem] " onMouseEnter={()=>setCurrentCat({})} onClick={()=>setOpenMenu(false)} href={e.link}>{e.name}</Link> }
                     
                 </li>))}
                 <li className="flex md:hidden">
